@@ -3,6 +3,13 @@
 - hosts: localhost
   connection: local
 
+  tasks:
+    - name: install personal homebrew cask applications
+      homebrew_cask: name={{item}} state=present
+      with_items:
+        - atom
+        - coderunner
+
   vars:
     - computername: cportable
     - git_user_name: Chris White
