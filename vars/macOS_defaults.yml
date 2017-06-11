@@ -1,0 +1,33 @@
+osx_defaults:
+
+  # Behavior
+  - { domain: "NSGlobalDomain", key: "ApplePressAndHoldEnabled", type: boolean, value: true } # Character accents popup on, key repeate off
+ 
+  # UI
+  - { domain: "NSGlobalDomain", key: "NSWindowResizeTime", type: float, value: 0.001 } # Make windows rezize as quickly as possible
+  - { domain: "com.apple.dock", key: "expose-animation-duration", type: float, value: 0.1 } # Make windows rezize as quickly as possible
+
+  # Dock
+  - { domain: "com.apple.dock", key: "tilesize", type: float, value: 20 } # Set icon size
+  - { domain: "com.apple.dock", key: "largesize", type: float, value: 48 } # Set icon size when magnified
+  - { domain: "com.apple.dock", key: "magnification", type: boolean, value: true } # Turn on magnification
+  # - { domain: "com.apple.dock", key: "orientation", type: string, value: left } # Position on the left side of the screen
+  - { domain: "com.apple.dock", key: "orientation", type: string, value: right } # Position on the left side of the screen
+  - { domain: "com.apple.dock", key: "pinning", type: string, value: start } # Pin to top
+  - { domain: "com.apple.dock", key: "autohide", type: boolean, value: true } # Auto-hide
+  - { domain: "com.apple.dock", key: "autohide-delay", type: float, value: 0 } # Hide immediately
+  - { domain: "com.apple.dock", key: "autohide-time-modifier", type: float, value: 0.4 } # Speed up autohide animation
+  - { domain: "com.apple.dock", key: "show-process-indicators", type: boolean, value: true } # Show whether app is running
+  - { domain: "com.apple.dock", key: "showhidden", type: boolean, value: true } # Indicate when an app is hidden by fading icon
+  - { domain: "com.apple.dock", key: "minimize-to-application", type: int, value: 1 } # Minimized windows are grouped under application
+  - { domain: "com.apple.dock", key: "enable-spring-load-actions-on-all-items", type: boolean, value: true } # When dragging something onto Dock icon bring the app forward
+
+
+  # Graphics
+  - { domain: "com.apple.screencapture", key: "expose-animation-duration", type: string, value: png } # Screen captures set to .png format
+
+  # Network
+  - { domain: "com.apple.desktopservices", key: "DSDontWriteNetworkStores", type: boolean, value: true } # Stop creating DS files on network storage  
+
+  # Apps
+  - { domain: "com.apple.SoftwareUpdate.plist", key: "ScheduleFrequency", type: int, value: 1 } # Check for updates every day
