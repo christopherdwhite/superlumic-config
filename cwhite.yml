@@ -77,7 +77,7 @@
 
   roles:
     - profile-all
-    - profile-developer
+    # - profile-developer
 
   vars:
     - computername: moneta
