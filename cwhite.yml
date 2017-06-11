@@ -20,14 +20,20 @@
   # Variables
   vars:
 
-    ## Computer
-    - computername: cportable
-    - osx_defaults:
+    # Computer
+    # Name (used by superlumic-computername)
+    - computername: cportable # (defaulted)
+
+    # macOS Defaults (used by superlumic-osx-defaults)
+    - osx_defaults: 
       - domain: 'com.apple.dock'
         key: 'autohide'
         type: boolean
         value: false
 
-    ## Git (Used by superlumic-homebrew)
+    # Git Settings (used by superlumic-homebrew)
     - git_user_name: Chris White                  # (defaulted)
     - git_user_email: chris@christopherdwhite.com # (defaulted)
+
+  vars_files:
+    - vars/macOS_defaults.yml
