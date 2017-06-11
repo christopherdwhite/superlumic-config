@@ -3,19 +3,22 @@
 - hosts: localhost
   connection: local
 
-  tasks:
-    - name: install personal homebrew cask applications
+  tasks:    
+    - name: install personal cask applications
       homebrew_cask: name={{item}} state=present
       with_items:
         - atom
         - coderunner
+
+  roles:
+    - profile-all
 
   vars:
     - computername: cportable
     - git_user_name: Chris White
     - git_user_email: chris@christopherdwhite.com
     - osx_defaults:
-        - domain: 'com.apple.dock'
-          key: 'autohide'
-          type: boolean
-          value: false
+      - domain: 'com.apple.dock'
+        key: 'autohide'
+        type: boolean
+        value: false
