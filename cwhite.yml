@@ -3,15 +3,12 @@
 - hosts: localhost
   connection: local
 
-  tasks:    
-    - name: install personal cask applications
+  tasks:
+    - name: install personal homebrew cask applications
       homebrew_cask: name={{item}} state=present
       with_items:
         - atom
         - coderunner
-
-  roles:
-    - profile-all
 
   vars:
     - computername: cportable
