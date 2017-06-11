@@ -3,10 +3,7 @@
 - hosts: localhost
   connection: local
 
-  tasks:
-
-  roles:
-
   vars:
     - computername: cportable
     - git_user_name: Chris White
+    - git_user_email: chris@christopherdwhite.com
