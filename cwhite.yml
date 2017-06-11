@@ -10,6 +10,9 @@
         - atom
         - coderunner
 
+  roles:
+    - profile-all
+
   vars:
     - computername: cportable2
     - git_user_name: Chris White
