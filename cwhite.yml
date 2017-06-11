@@ -14,7 +14,7 @@
 
   # Roles (required)
   roles:
-    
+
     - profile-all
 
   # Variables
@@ -28,6 +28,6 @@
         type: boolean
         value: false
 
-    ## Git
-    - git_user_name: Chris White
-    - git_user_email: chris@christopherdwhite.com
+    ## Git (Used by superlumic-homebrew)
+    - git_user_name: Chris White                  # (defaulted)
+    - git_user_email: chris@christopherdwhite.com # (defaulted)
