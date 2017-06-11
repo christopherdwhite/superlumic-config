@@ -4,46 +4,46 @@
   connection: local
 
   tasks:
-    - name: install node
-      homebrew: name={{item}} state=latest
-      with_items:
-        - node
-        - docker
-        - docker-compose
-        - docker-machine
-        - docker-machine-driver-xhyve
-        - apm-bash-completion
-        - brew-cask-completion
+    # - name: install node
+    #   homebrew: name={{item}} state=latest
+    #   with_items:
+    #     - node
+    #     - docker
+    #     - docker-compose
+    #     - docker-machine
+    #     - docker-machine-driver-xhyve
+    #     - apm-bash-completion
+    #     - brew-cask-completion
     - homebrew_tap:
         name: codekitchen/dinghy
-    - shell: chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-      become: yes
-    - shell: chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-      become: yes        
+    # - shell: chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+    #   become: yes
+    # - shell: chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+    #   become: yes        
     - name: install personal cask applications
       homebrew_cask: name={{item}} state=present
       with_items:
-        - istat-menus
-        - kaleidoscope
-        - hazel
-        - tower
-        - superduper
-        - keepingyouawake
+        # - istat-menus
+        # - kaleidoscope
+        # - hazel
+        # - tower
+        # - superduper
+        # - keepingyouawake
         - atom
-        - spotify
-        - google-chrome
-        - microsoft-office
-        - paw
-        - adobe-creative-cloud
-        - alfred
-        - dropbox
-        - google-drive
-        - grammarly
-        - handbrake
-        - jaxx
-        - mist
-        - robomongo
-        - skype
+        # - spotify
+        # - google-chrome
+        # - microsoft-office
+        # - paw
+        # - adobe-creative-cloud
+        # - alfred
+        # - dropbox
+        # - google-drive
+        # - grammarly
+        # - handbrake
+        # - jaxx
+        # - mist
+        # - robomongo
+        # - skype
     - name: create ssh directory
       become: yes
       file:
