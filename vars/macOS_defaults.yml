@@ -97,3 +97,7 @@ osx_defaults:
 
   # TextEdit
   - { domain: "com.apple.TextEdit", key: "RichText", type: int, value:  } # Set TextEdit to create new files as plain text by default
+
+
+  - { domain: "NSGlobalDomain", key: "AppleInterfaceStyle", type: string, value: dark } # Set Menubar and Dock to Dark UI
+
