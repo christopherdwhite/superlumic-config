@@ -35,5 +35,5 @@
     - git_user_name: Chris White                  # (defaulted)
     - git_user_email: chris@christopherdwhite.com # (defaulted)
 
-  vars_files:
+  # vars_files:
     # - vars/macOS_defaults.yml # (used by superlumic-osx-defaults)
