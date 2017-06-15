@@ -24,10 +24,10 @@
       - domain: "NSGlobalDomain"
         key: "KeyRepeat"
         type: int
-        value: 3
-      # - domain: 'NSGlobalDomain'
-      #   key: 'AppleInterfaceStyle'
-      #   state: absent
+        value: 2
+      - domain: 'NSGlobalDomain'
+        key: 'AppleInterfaceStyle'
+        state: absent
 
 
 
