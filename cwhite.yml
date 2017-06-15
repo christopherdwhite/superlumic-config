@@ -20,10 +20,13 @@
   # Variables
   vars:
 
+    - osx_defaults: domain="NSGlobalDomain" key=AppleInterfaceStyle state="absent"
     - osx_defaults:
       - domain: 'NSGlobalDomain'
         key: 'AppleInterfaceStyle'
-        state: 'absent'
+        type: string
+        value: whatever
+        state: absent
 
     # Computer Name (used by superlumic-computername)
     - computername: cportable # (defaulted)
@@ -33,4 +36,4 @@
     - git_user_email: chris@christopherdwhite.com # (defaulted)
 
   vars_files:
-    - vars/macOS_defaults.yml # (used by superlumic-osx-defaults)
+    # - vars/macOS_defaults.yml # (used by superlumic-osx-defaults)
