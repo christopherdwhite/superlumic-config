@@ -1,26 +1,53 @@
 ---
 
-- name: superlumic
-  hosts: localhost
-  connection: local
+### Superlumic Playbook
+# 
+# Overview: Superlumic configuration for setting up my production system quickly and making sure everything remains in compliance
+# Applies to: Workstation
+#
+# Description:
+#   Ensures that my development systems are easy to setup and are martained to my specification. 
+# 
+#   This configuration includes the following elements:
+#     - Set computer name
+#     - Set git settings
+#     - Set macOS preferences
+#     - Install apps
+#       - From Homebrew Cask
+#     - Run profile-all role
+#
+# Notes:
+#   - I have tagged lines as (defaulted) below where the role has default settings that will be used if you do not set them. 
+#       Unless you want defaults make sure they are set.
+#
+# Credit: I borrowed a lot of the style, documentation and organization from the amazing gist below but note that it is an old and sometimes out of date playbook with some problems.
+#   https://gist.github.com/marktheunissen/2979474
+# 
+###
 
-  # Tasks
-  tasks:
+- name: superlumic  # Playbook name
+  hosts: localhost  # Run on localhost
+  connection: local # Run locally
 
-    - name: install personal homebrew cask applications
-      homebrew_cask: name={{item}} state=present
-      with_items:
-        - atom
-        - coderunner
 
-  # Roles (required)
-  roles:
-
-    - profile-all
-
-  # Variables
+  ### Variables
+  #
+  # Playbook attribute: vars
+  # Default: none
+  # Required: no
+  # Description:
+  #   Set configuration variables passed to templates & included playbooks
+  #
   vars:
 
+    # Computer Name (used by superlumic-computername module)
+    - computername: cportable # (defaulted)
+
+    # Git Settings (used by superlumic-homebrew)
+    - git_user_name: Chris White                  # (defaulted)
+    - git_user_email: chris@christopherdwhite.com # (defaulted)
+
+    # TODO: Delete after finished testing, using var_filess for defaults below
     - osx_defaults:
       - domain: "NSGlobalDomain"
         key: "KeyRepeat"
@@ -31,13 +58,63 @@
         state: absent
 
 
-
-    # Computer Name (used by superlumic-computername)
-    - computername: cportable # (defaulted)
-
-    # Git Settings (used by superlumic-homebrew)
-    - git_user_name: Chris White                  # (defaulted)
-    - git_user_email: chris@christopherdwhite.com # (defaulted)
-
+  ### Variable Files
+  # 
+  # Playbook attribute: vars_files
+  # Required: no
+  # Description:
+  #   Specifies a list of YAML files to load variables from.
+  #
   # vars_files:
-    # - vars/macOS_defaults.yml # (used by superlumic-osx-defaults)
+  #
+  #   # List of macOS preferences (used by ...)
+  #   - vars/macOS_defaults.yml
+
+
+  ### Tasks
+  #
+  # Playbook attribute: tasks
+  # Required: yes
+  # Description:
+  #   A list of tasks to perform in this playbook.
+  #
+  tasks:
+
+    # Install apps from Homebrew Cask
+    - name: install personal homebrew cask applications
+      homebrew_cask: name={{item}} state=present
+      with_items:
+        - atom
+        - coderunner
+
+
+  ### Roles
+  #
+  # Playbook attribute: roles
+  # Required: yes
+  # Description:
+  #   ...
+  #    
+  roles:
+
+    ### Profile: All 
+    # 
+    # Description:
+    #   Everything in this role should be applied to every system using the playbook
+    #
+    - profile-all
+
+    ### Specific Profiles
+    # 
+    # Description:
+    #   These roles should be selectively applied for users and/or system tasks
+
+
+  ### Todo
+  # 
+  # - [ ] Figure out OS X defaults role
+  # - [ ] Add Homebrew Casks
+  # - [ ] Add Mac App Store role and apps
+  # - [ ] Add more profiles
+  # - [ ] Setup Handlers
+  # - [ ] Figure out where to put a system variable with a default configuration path and set in configuration
