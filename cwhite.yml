@@ -20,11 +20,16 @@
   # Variables
   vars:
 
-    - osx_defaults: domain="NSGlobalDomain" key=AppleInterfaceStyle state="absent"
     - osx_defaults:
-      - domain: 'NSGlobalDomain'
-        key: 'AppleInterfaceStyle'
-        state: absent
+      - domain: "NSGlobalDomain"
+        key: "KeyRepeat"
+        type: int
+        value: 2
+      # - domain: 'NSGlobalDomain'
+      #   key: 'AppleInterfaceStyle'
+      #   state: absent
+
+
 
     # Computer Name (used by superlumic-computername)
     - computername: cportable # (defaulted)
