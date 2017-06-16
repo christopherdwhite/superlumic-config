@@ -80,13 +80,22 @@
         - atom
         - coderunner
 
+    - osx_defaults:
+        domain: com.apple.Safari
+        key: IncludeInternalDebugMenu
+        type: bool
+        value: true
+        state: present
+
+
     # TODO: Delete after finished testing, using var_filess for defaults below
     - osx_defaults:
-      - domain: "NSGlobalDomain"
+        domain: "NSGlobalDomain"
         key: "KeyRepeat"
         type: int
         value: 2
-      - domain: 'NSGlobalDomain'
+    - osx_defaults:
+        domain: 'NSGlobalDomain'
         key: 'AppleInterfaceStyle'
         state: absent
 
