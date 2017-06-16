@@ -30,6 +30,7 @@
   connection: local # Run locally
 
 
+
   ### Variables
   #
   # Playbook attribute: vars
@@ -47,15 +48,7 @@
     - git_user_name: Chris White                  # (defaulted)
     - git_user_email: chris@christopherdwhite.com # (defaulted)
 
-    # TODO: Delete after finished testing, using var_filess for defaults below
-    - osx_defaults:
-      - domain: "NSGlobalDomain"
-        key: "KeyRepeat"
-        type: int
-        value: 2
-      - domain: 'NSGlobalDomain'
-        key: 'AppleInterfaceStyle'
-        state: absent
+
 
   ### Variable Files
   # 
@@ -68,6 +61,7 @@
   #
   #   # List of macOS preferences (used by ...)
   #   - vars/macOS_defaults.yml
+
 
 
   ### Tasks
@@ -86,12 +80,15 @@
         - atom
         - coderunner
 
+    # TODO: Delete after finished testing, using var_filess for defaults below
     - osx_defaults:
-        domain: com.apple.Safari
-        key: IncludeInternalDebugMenu
-        type: bool
-        value: true
-        state: present
+      - domain: "NSGlobalDomain"
+        key: "KeyRepeat"
+        type: int
+        value: 2
+      - domain: 'NSGlobalDomain'
+        key: 'AppleInterfaceStyle'
+        state: absent
 
 
 
