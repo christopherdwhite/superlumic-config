@@ -119,6 +119,7 @@
     #   These are task specefic roles applied to servers, virtual machines or other clients designed for that specefic task
     #     This might include an Apache, PHP and MySQL server for doing PHP-centric web-development
     # 
+    - roles-parallels-vm # Sets natural scrolling to off since nesting inverts it
 
 
 
@@ -129,3 +130,4 @@
   # - [ ] Add more profiles
   # - [ ] Setup Handlers
   # - [ ] Figure out where to put a system variable with a default configuration path and set in configuration
+  # - [ ] Set environment variables for roles?
