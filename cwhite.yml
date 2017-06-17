@@ -88,44 +88,42 @@
         state: present
 
 
-    # TODO: Delete after finished testing, using var_filess for defaults below
-    - osx_defaults:
-        domain: "NSGlobalDomain"
-        key: "KeyRepeat"
-        type: int
-        value: 2
-    - osx_defaults:
-        domain: 'NSGlobalDomain'
-        key: 'AppleInterfaceStyle'
-        state: absent
-
-
-
   ### Roles
   #
   # Playbook attribute: roles
   # Required: yes
   # Description:
-  #   ...
+  #   The roles each of my Ansible managed clients may be setup for
   #    
   roles:
 
-    ### Profile: All 
+    ### Primary Role
     # 
+    # Role: Workstation
     # Description:
-    #   Everything in this role should be applied to every system using the playbook
+    #   This is my primary working computer role with everything I want on my day-to-day
+    #     This role uses dependencies to organize and modularize into sub-roles by focus or actions
     #
-    - profile-all
+    - workstation
 
-    ### Specific Profiles
+    ### Contextual Profiles
     # 
     # Description:
-    #   These roles should be selectively applied for users and/or system tasks
+    #   These are profiles that will change my workstation depending on what I'm working on
+    #     For example, if I'm working on a PHP project I may want different dev packages in Atom or Sublime
+    #
+
+    ### Task Specific Roles
+    # 
+    # Description
+    #   These are task specefic roles applied to servers, virtual machines or other clients designed for that specefic task
+    #     This might include an Apache, PHP and MySQL server for doing PHP-centric web-development
+    # 
+
 
 
   ### Todo
   # 
-  # - [ ] Figure out OS X defaults role
   # - [ ] Add Homebrew Casks
   # - [ ] Add Mac App Store role and apps
   # - [ ] Add more profiles
