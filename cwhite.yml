@@ -116,7 +116,7 @@
     ### Task Specific Roles
     # 
     # Description
-    #   These are task specefic roles applied to servers, virtual machines or other clients designed for that specefic task
+    #   These are task specefic roles applied to servers, virtual machines or other clients designed for or as part of that specific task
     #     This might include an Apache, PHP and MySQL server for doing PHP-centric web-development
     # 
     - roles-parallels-vm # Sets natural scrolling to off since nesting inverts it
