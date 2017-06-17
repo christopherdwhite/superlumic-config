@@ -10,3 +10,5 @@ galaxy_info:
         - all
   categories:
     - system
+  dependencies:
+    - { role: workstation-preferences }
