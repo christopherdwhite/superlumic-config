@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Roderik van der Veer
+  description: Ansible role for my primary working computer with everything I want to set up for my day-to-day system.
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+    - name: Darwin
+      versions:
+        - all
+  categories:
+    - system
+  dependencies:
+    - { role: workstation-preferences }
