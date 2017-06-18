@@ -28,6 +28,7 @@
 - name: superlumic  # Playbook name
   hosts: localhost  # Run on localhost
   connection: local # Run locally
+  strategy: debug
   # remote_user: root # User to run tasks as
 
   ### Variables
