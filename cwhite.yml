@@ -28,8 +28,7 @@
 - name: superlumic  # Playbook name
   hosts: localhost  # Run on localhost
   connection: local # Run locally
-
-
+  # remote_user: root # User to run tasks as
 
   ### Variables
   #
@@ -125,9 +124,12 @@
 
   ### Todo
   # 
-  # - [ ] Add Homebrew Casks
-  # - [ ] Add Mac App Store role and apps
-  # - [ ] Add more profiles
-  # - [ ] Setup Handlers
-  # - [ ] Figure out where to put a system variable with a default configuration path and set in configuration
-  # - [ ] Set environment variables for roles?
+  # - Add Killall Handlers
+  # - Determine if there's a native control for changing computer name
+  # - Store computer name as environment variable, if var doesn't exist (in other words, the first time it's run, prompt for computer name)
+  # - Add Homebrew Casks
+  # - Add Mac App Store role and apps
+  # - Add more profiles
+  # - Setup Handlers
+  # - Figure out where to put a system variable with a default configuration path and set in configuration
+  # - Set environment variables for roles?

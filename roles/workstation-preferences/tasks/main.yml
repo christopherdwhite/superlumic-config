@@ -12,6 +12,6 @@
 - name: Setup default preferences
   osx_defaults:
     domain: "NSGlobalDomain"
-    key: "KeyRepeat"
-    type: int
-    value: 2
+    key: "AppleInterfaceStyle"
+    type: string
+    value: dark
