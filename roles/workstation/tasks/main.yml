@@ -1,4 +1,1 @@
 ---
-
-- name: Print some shit
-  debug: "workstation ran"
