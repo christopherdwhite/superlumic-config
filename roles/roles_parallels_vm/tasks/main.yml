@@ -1,8 +1,0 @@
----
-
-- name: Disable natural scrolling
-  osx_defaults:
-    domain: "NSGlobalDomain"
-    key: "com.apple.swipescrolldirection"
-    type: boolean
-    value: false

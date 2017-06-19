@@ -1,7 +1,7 @@
 ---
 galaxy_info:
-  author: Roderik van der Veer
-  description: Ansible role my primary working computer with all the settings and preferences I want to set up for my day-to-day system
+  author: Chris White
+  description: Ansible role to setup my macOS system preferences
   license: MIT
   min_ansible_version: 1.2
   platforms:
