@@ -7,10 +7,18 @@
 #   Rather than having one very long role for my day-to-day workstation setup I wanted to organize and modularize the configuration into sub-roles.
 #   The most direct and obvious way to accomplish this seemed to be using include_role tasks instead of dependencies.
 #
+
+### Bug
+#
+# Note: this currently doesn't work, there's a bug when trying to use a loop with an include_role and will need to be worked around for now.
+# I'm going to list them as seperate tasks but I'll leave this ready to uncommont when the bug is fixed.
+# https://github.com/ansible/ansible/issues/21285
+#
+# - name: Include workstation-preferences role
+#   include_role:
+#     name: "{{ item }}"
+#   with_items:
+#     - { name: "workstation-preferences" }
+
 - name: Include workstation-preferences role
-  include_role:
-    name: "{{ item }}"
-  with_items:
-    - { name: "workstation-preferences" }
-  loop_control:
-    loop_var: item
+  include_role: workstation-preferences
