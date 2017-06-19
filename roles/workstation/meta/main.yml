@@ -1,7 +1,7 @@
 ---
 galaxy_info:
-  author: Roderik van der Veer
-  description: Ansible role for my primary working computer with everything I want to set up for my day-to-day system.
+  author: Chris White
+  description: Ansible role for my primary working computer with everything I want to set up for my day-to-day system. This role primarily just references other roles as dependencies for modularization.
   license: MIT
   min_ansible_version: 1.2
   platforms:
@@ -11,4 +11,5 @@ galaxy_info:
   categories:
     - system
   dependencies:
-    - { role: workstation-preferences }
+    - { role: workstation_preferences }
+

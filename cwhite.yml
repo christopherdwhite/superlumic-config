@@ -80,14 +80,6 @@
         - atom
         - coderunner
 
-    - osx_defaults:
-        domain: com.apple.Safari
-        key: IncludeInternalDebugMenu
-        type: bool
-        value: true
-        state: present
-
-
   ### Roles
   #
   # Playbook attribute: roles
@@ -119,7 +111,7 @@
     #   These are task specefic roles applied to servers, virtual machines or other clients designed for or as part of that specific task
     #     This might include an Apache, PHP and MySQL server for doing PHP-centric web-development
     # 
-    - roles-parallels-vm # Sets natural scrolling to off since nesting inverts it
+    - roles_parallels_vm # Sets natural scrolling to off since nesting inverts it
 
 
 
