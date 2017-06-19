@@ -11,4 +11,5 @@ galaxy_info:
   categories:
     - system
   dependencies:
-    - { role: 'workstation_preferences' }
+    - { role: 'workstation-preferences' }
+  allow_duplicates: yes

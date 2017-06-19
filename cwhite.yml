@@ -97,7 +97,6 @@
     #     This role uses dependencies to organize and modularize into sub-roles by focus or actions
     #
     - workstation
-    - workstation-preferences
 
     ### Contextual Profiles
     # 
