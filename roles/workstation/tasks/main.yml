@@ -11,4 +11,6 @@
   include_role:
     name: "{{ item }}"
   with_items:
-    - workstation-preferences
+    - { name: "workstation-preferences" }
+  loop_control:
+    loop_var: item
