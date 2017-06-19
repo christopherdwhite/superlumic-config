@@ -1,0 +1,12 @@
+---
+
+### Roles
+# 
+# Task attribute: include_role
+# Description:
+#   Rather than having one very long role for my day-to-day workstation setup I wanted to organize and modularize the configuration into sub-roles.
+#   The most direct and obvious way to accomplish this seemed to be using include_role tasks instead of dependencies.
+#
+- name: Include workstation-preferences role
+  include_role:
+    name: workstation-preferences

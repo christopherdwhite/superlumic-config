@@ -89,6 +89,14 @@
   #    
   roles:
 
+    ### Common
+    # 
+    # Role: Workstation
+    # Description:
+    #   This role should includes anything that should be the same across each and every system.
+    #
+    - common
+
     ### Primary Role
     # 
     # Role: Workstation
