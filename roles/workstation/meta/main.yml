@@ -12,3 +12,4 @@ galaxy_info:
     - system
   dependencies:
     - { role: '/usr/local/superlumic/config/roles/workstation_preferences' }
+    
