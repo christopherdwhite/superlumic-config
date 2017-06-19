@@ -8,4 +8,4 @@
     array_add: "{{ item.0.array_add | default(false) }}"
     value: "{{ item.0.value }}"
   with_items:
-    - {{ defaults }}
+    - "{{ defaults }}"
