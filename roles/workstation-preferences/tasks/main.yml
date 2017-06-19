@@ -10,3 +10,15 @@
   with_items:
     - "{{ defaults }}"
   notify: "restart macos preferences"
+
+- name: Write Admin macOS defaults
+  osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type }}"
+    array_add: "{{ item.array_add | default(false) }}"
+    value: "{{ item.value }}"
+  with_items:
+    - "{{ admin_defaults }}"
+  notify: "restart macos preferences"
+  become: true
