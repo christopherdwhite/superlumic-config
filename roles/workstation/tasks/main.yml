@@ -21,4 +21,5 @@
 #     - { name: "workstation-preferences" }
 
 - name: Include workstation-preferences role
-  include_role: workstation-preferences
+  include_role:
+    name: workstation-preferences
