@@ -4,56 +4,56 @@ defaults:
 
   # Behavior
   - { domain: "NSGlobalDomain", key: "ApplePressAndHoldEnabled", type: boolean, value: true } # Character accents popup on, key repeate off
-  # - { domain: "NSGlobalDomain", key: "InitialKeyRepeat", type: int, value: 25 } # Set my prefered delay for key repeat
-  # - { domain: "NSGlobalDomain", key: "KeyRepeat", type: int, value: 2 } # Set key repeat to fast
+  - { domain: "NSGlobalDomain", key: "InitialKeyRepeat", type: int, value: 25 } # Set my prefered delay for key repeat
+  - { domain: "NSGlobalDomain", key: "KeyRepeat", type: int, value: 2 } # Set key repeat to fast
  
-  # # UI
-  # - { domain: "NSGlobalDomain", key: "NSWindowResizeTime", type: float, value: 0.001 } # Make windows rezize as quickly as possible
-  # - { domain: "com.apple.dock", key: "expose-animation-duration", type: float, value: 0.1 } # Set Mission Control animations to be faster than default in macOS versions earlier than Sierra
-  # - { domain: "com.apple.dock", key: "AppleActionOnDoubleClick", type: string, value: Maximize } # Double clicking on App titlebar maximizes app window
+  # UI
+  - { domain: "NSGlobalDomain", key: "NSWindowResizeTime", type: float, value: 0.001 } # Make windows rezize as quickly as possible
+  - { domain: "com.apple.dock", key: "expose-animation-duration", type: float, value: 0.1 } # Set Mission Control animations to be faster than default in macOS versions earlier than Sierra
+  - { domain: "com.apple.dock", key: "AppleActionOnDoubleClick", type: string, value: Maximize } # Double clicking on App titlebar maximizes app window
 
-  # # Dock
-  # - { domain: "com.apple.dock", key: "tilesize", type: float, value: 20 } # Set icon size
-  # - { domain: "com.apple.dock", key: "largesize", type: float, value: 48 } # Set icon size when magnified
-  # - { domain: "com.apple.dock", key: "magnification", type: boolean, value: true } # Turn on magnification
-  # - { domain: "com.apple.dock", key: "size-immutable", type: boolean, value: true } # Lock icon size
-  # - { domain: "com.apple.dock", key: "orientation", type: string, value: left } # Position on the left side of the screen
-  # - { domain: "com.apple.dock", key: "pinning", type: string, value: start } # Pin to top
-  # - { domain: "com.apple.dock", key: "autohide", type: boolean, value: true } # Auto-hide
-  # - { domain: "com.apple.dock", key: "autohide-delay", type: float, value: 0 } # Hide immediately
-  # - { domain: "com.apple.dock", key: "autohide-time-modifier", type: float, value: 0.4 } # Speed up autohide animation
-  # - { domain: "com.apple.dock", key: "show-process-indicators", type: boolean, value: true } # Show whether app is running
-  # - { domain: "com.apple.dock", key: "showhidden", type: boolean, value: true } # Indicate when an app is hidden by fading icon
-  # - { domain: "com.apple.dock", key: "minimize-to-application", type: boolean, value: true } # Minimize app windows to application icon
-  # - { domain: "com.apple.dock", key: "contents-immutable", type: boolean, value: true } # Lock Dock icon positions
+  # Dock
+  - { domain: "com.apple.dock", key: "tilesize", type: float, value: 20 } # Set icon size
+  - { domain: "com.apple.dock", key: "largesize", type: float, value: 48 } # Set icon size when magnified
+  - { domain: "com.apple.dock", key: "magnification", type: boolean, value: true } # Turn on magnification
+  - { domain: "com.apple.dock", key: "size-immutable", type: boolean, value: true } # Lock icon size
+  - { domain: "com.apple.dock", key: "orientation", type: string, value: left } # Position on the left side of the screen
+  - { domain: "com.apple.dock", key: "pinning", type: string, value: start } # Pin to top
+  - { domain: "com.apple.dock", key: "autohide", type: boolean, value: true } # Auto-hide
+  - { domain: "com.apple.dock", key: "autohide-delay", type: float, value: 0 } # Hide immediately
+  - { domain: "com.apple.dock", key: "autohide-time-modifier", type: float, value: 0.4 } # Speed up autohide animation
+  - { domain: "com.apple.dock", key: "show-process-indicators", type: boolean, value: true } # Show whether app is running
+  - { domain: "com.apple.dock", key: "showhidden", type: boolean, value: true } # Indicate when an app is hidden by fading icon
+  - { domain: "com.apple.dock", key: "minimize-to-application", type: boolean, value: true } # Minimize app windows to application icon
+  - { domain: "com.apple.dock", key: "contents-immutable", type: boolean, value: true } # Lock Dock icon positions
 
-  # # MultiTouch Trackpad Behavior
-  # - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadThreeFingerTapGesture", type: boolean, value: true } # Enable look up and data detectors for Mac trackpad
-  # - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadThreeFingerTapGesture", type: boolean, value: true } # Enable look up and data detectors for Bluetooth trackpad
-  # - { domain: "NSGlobalDomain", key: "ContextMenuGesture", type: boolean, value: true } # Enable two finger tap as secondary/right mouse click
-  # - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadRightClick", type: boolean, value: true } # Enable two finger tap as secondary/right mouse click on Mac trackpad 
-  # - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadRightClick", type: boolean, value: true } # Enable two finger tap as secondary/right mouse click on Bluetooth trackpad 
-  # - { domain: "com.apple.AppleMultitouchTrackpad", key: "Clicking", type: boolean, value: true } # Enable tap to click on Mac trackpad
-  # - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "Clicking", type: boolean, value: true } # Enable tap to click on Bluetooth trackpad
-  # - { domain: "NSGlobalDomain", key: "com.apple.trackpad.scaling", type: float, value: 0.6875 } # Set trackpad speed to default
-  # - { domain: "NSGlobalDomain", key: "com.apple.swipescrolldirection", type: boolean, value: true } # Enable natural scrolling
-  # - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadPinch", type: boolean, value: true } # Enable pinch to zoom on Mac trackpad
-  # - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadPinch", type: boolean, value: true } # Enable pinch to zoom on Bluetooth trackpad
-  # - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadTwoFingerDoubleTapGesture", type: boolean, value: true } # Enable two finger tap smart zoom on Mac trackpad
-  # - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadTwoFingerDoubleTapGesture", type: boolean, value: true } # Enable two finger tap smart zoom on Bluetooth trackpad
-  # - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadRotate", type: boolean, value: true } # Enable canvas rotating with Mac trackpad
-  # - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadRotate", type: boolean, value: true } # Enable canvas rotating with Bluetooth trackpad
-  # - { domain: "NSGlobalDomain", key: "AppleEnableSwipeNavigateWithScrolls", type: boolean, value: true } # Enable swipe between pages (two finger horizontal swipe)
-  # - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadFourFingerHorizSwipeGesture", type: boolean, value: true } # Enable four finger swipe between full screen apps or spaces on Mac trackpad
-  # - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadFourFingerHorizSwipeGesture", type: boolean, value: true } # Enable four finger swipe between full screen apps or spaces on Bluetooth trackpad
-  # - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadThreeFingerHorizSwipeGesture", type: boolean, value: true } # Enable three finger swipe between full screen apps or spaces on Mac trackpad
-  # - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadThreeFingerHorizSwipeGesture", type: boolean, value: true } # Enable three finger swipe between full screen apps or spaces on Bluetooth trackpad
-  # - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadTwoFingerFromRightEdgeSwipeGesture", type: int, value: 3 } # Enable open and close Notification Center with two finger swipe from the side of Mac trackpad
-  # - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadTwoFingerFromRightEdgeSwipeGesture", type: int, value: 3 } # Enable open and close Notification Center with two finger swipe from the side of Bluetooth trackpad
-  # - { domain: "com.apple.dock", key: "showMissionControlGestureEnabled", type: boolean, value: true } # Enable toggle Mission Control with three finger swipe up
-  # - { domain: "com.apple.dock", key: "showAppExposeGestureEnabled", type: boolean, value: true } # Enable toggle Mission Control with three finger swipe down on Mac trackpad 
-  # - { domain: "com.apple.dock", key: "showLaunchpadGestureEnabled", type: boolean, value: true } # Enable show Launchpad with four finger pinch
-  # - { domain: "com.apple.dock", key: "showDesktopGestureEnabled", type: boolean, value: true } # Enable show Launchpad with five finger pinch
+  # MultiTouch Trackpad Behavior
+  - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadThreeFingerTapGesture", type: boolean, value: true } # Enable look up and data detectors for Mac trackpad
+  - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadThreeFingerTapGesture", type: boolean, value: true } # Enable look up and data detectors for Bluetooth trackpad
+  - { domain: "NSGlobalDomain", key: "ContextMenuGesture", type: boolean, value: true } # Enable two finger tap as secondary/right mouse click
+  - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadRightClick", type: boolean, value: true } # Enable two finger tap as secondary/right mouse click on Mac trackpad 
+  - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadRightClick", type: boolean, value: true } # Enable two finger tap as secondary/right mouse click on Bluetooth trackpad 
+  - { domain: "com.apple.AppleMultitouchTrackpad", key: "Clicking", type: boolean, value: true } # Enable tap to click on Mac trackpad
+  - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "Clicking", type: boolean, value: true } # Enable tap to click on Bluetooth trackpad
+  - { domain: "NSGlobalDomain", key: "com.apple.trackpad.scaling", type: float, value: 0.6875 } # Set trackpad speed to default
+  - { domain: "NSGlobalDomain", key: "com.apple.swipescrolldirection", type: boolean, value: true } # Enable natural scrolling
+  - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadPinch", type: boolean, value: true } # Enable pinch to zoom on Mac trackpad
+  - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadPinch", type: boolean, value: true } # Enable pinch to zoom on Bluetooth trackpad
+  - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadTwoFingerDoubleTapGesture", type: boolean, value: true } # Enable two finger tap smart zoom on Mac trackpad
+  - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadTwoFingerDoubleTapGesture", type: boolean, value: true } # Enable two finger tap smart zoom on Bluetooth trackpad
+  - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadRotate", type: boolean, value: true } # Enable canvas rotating with Mac trackpad
+  - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadRotate", type: boolean, value: true } # Enable canvas rotating with Bluetooth trackpad
+  - { domain: "NSGlobalDomain", key: "AppleEnableSwipeNavigateWithScrolls", type: boolean, value: true } # Enable swipe between pages (two finger horizontal swipe)
+  - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadFourFingerHorizSwipeGesture", type: boolean, value: true } # Enable four finger swipe between full screen apps or spaces on Mac trackpad
+  - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadFourFingerHorizSwipeGesture", type: boolean, value: true } # Enable four finger swipe between full screen apps or spaces on Bluetooth trackpad
+  - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadThreeFingerHorizSwipeGesture", type: boolean, value: true } # Enable three finger swipe between full screen apps or spaces on Mac trackpad
+  - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadThreeFingerHorizSwipeGesture", type: boolean, value: true } # Enable three finger swipe between full screen apps or spaces on Bluetooth trackpad
+  - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadTwoFingerFromRightEdgeSwipeGesture", type: int, value: 3 } # Enable open and close Notification Center with two finger swipe from the side of Mac trackpad
+  - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadTwoFingerFromRightEdgeSwipeGesture", type: int, value: 3 } # Enable open and close Notification Center with two finger swipe from the side of Bluetooth trackpad
+  - { domain: "com.apple.dock", key: "showMissionControlGestureEnabled", type: boolean, value: true } # Enable toggle Mission Control with three finger swipe up
+  - { domain: "com.apple.dock", key: "showAppExposeGestureEnabled", type: boolean, value: true } # Enable toggle Mission Control with three finger swipe down on Mac trackpad 
+  - { domain: "com.apple.dock", key: "showLaunchpadGestureEnabled", type: boolean, value: true } # Enable show Launchpad with four finger pinch
+  - { domain: "com.apple.dock", key: "showDesktopGestureEnabled", type: boolean, value: true } # Enable show Launchpad with five finger pinch
 
 
 
