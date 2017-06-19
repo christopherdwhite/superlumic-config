@@ -56,7 +56,7 @@ defaults:
   - { domain: "com.apple.dock", key: "showDesktopGestureEnabled", type: boolean, value: true } # Enable show Launchpad with five finger pinch
 
   # # Login
-  - { domain: "com.apple.loginwindow.plist", key: "LoginwindowText", type: string, value: "If found please contact: chris@christopherdwhite.com | 303-916-2189" } # Display contact info on lock screen
+  - { domain: "com.apple.loginwindow", key: "LoginwindowText", type: string, value: "If found please contact: chris@christopherdwhite.com | 303-916-2189" } # Display contact info on lock screen
 
   # # AirDrop
   - { domain: "com.apple.NetworkBrowser", key: "BrowseAllInterfaces", type: boolean, value: true } # Enable AirDrop over Ethernet and on unsupported Macs
