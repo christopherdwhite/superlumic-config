@@ -8,7 +8,4 @@
     array_add: "{{ item.1.array_add | default(false) }}"
     value: "{{ item.1.value }}"
   with_items:
-    - "{{ defaults }}"
-
-
-# fatal: [localhost]: FAILED! => {"failed": true, "msg": "the field 'args' has an invalid value, which appears to include a variable that is undefined. The error was: dict object has no element 1\n\nThe error appears to have been in '/usr/local/superlumic/config/roles/workstation-preferences/tasks/main.yml': line 3, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Write macOS defaults\n  ^ here\n"}
+    - { domain: "NSGlobalDomain", key: "ApplePressAndHoldEnabled", type: "boolean", value: "true" } # Character accents popup on, key repeate off
