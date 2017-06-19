@@ -55,16 +55,15 @@ defaults:
   - { domain: "com.apple.dock", key: "showLaunchpadGestureEnabled", type: boolean, value: true } # Enable show Launchpad with four finger pinch
   - { domain: "com.apple.dock", key: "showDesktopGestureEnabled", type: boolean, value: true } # Enable show Launchpad with five finger pinch
 
-
-
   # # Login
-  # - { domain: "com.apple.loginwindow.plist", key: "LoginwindowText", type: string, value: "chris@christopherdwhite.com | 303-916-2189" } # Display contact info on lock screen
+  - { domain: "com.apple.loginwindow.plist", key: "LoginwindowText", type: string, value: "If found please contact: chris@christopherdwhite.com | 303-916-2189" } # Display contact info on lock screen
 
   # # AirDrop
-  # - { domain: "com.apple.NetworkBrowser", key: "BrowseAllInterfaces", type: boolean, value: true } # Enable AirDrop over Ethernet and on unsupported Macs
+  - { domain: "com.apple.NetworkBrowser", key: "BrowseAllInterfaces", type: boolean, value: true } # Enable AirDrop over Ethernet and on unsupported Macs
   
   # # Graphics
-  # - { domain: "com.apple.screencapture", key: "expose-animation-duration", type: string, value: png } # Screen captures set to .png format
+  - { domain: "com.apple.screencapture", key: "type", type: string, value: png } # Screen captures set to .png format
+  - { domain: "com.apple.screencapture", key: "disable-shadow", type: bool, value: true } # Disables shadow on screenshots
 
   # # Network
   # - { domain: "com.apple.desktopservices", key: "DSDontWriteNetworkStores", type: boolean, value: true } # Stop creating DS files on network storage  

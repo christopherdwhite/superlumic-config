@@ -6,3 +6,4 @@
     key: "com.apple.swipescrolldirection"
     type: boolean
     value: false
+  notify: "restart macos preferences"

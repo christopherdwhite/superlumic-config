@@ -9,3 +9,4 @@
     value: "{{ item.value }}"
   with_items:
     - "{{ defaults }}"
+  notify: "restart macos preferences"
