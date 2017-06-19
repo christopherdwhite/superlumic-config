@@ -10,5 +10,5 @@
 - name: Include workstation-preferences role
   include_role:
     name: "{{ item }}"
-  with_items:
-     - { name: 'workstation-preferences' }
+    with_items:
+      - { name: "workstation-preferences" }
