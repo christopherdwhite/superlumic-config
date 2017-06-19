@@ -1,20 +1,6 @@
 ---
 
 defaults:
-  # Menu bar
-  - domain: "com.apple.systemuiserver"
-    settings:
-      # Remove apps
-      - { key: "menuExtras", type: "array", value: "[]" }
-      # Add apps
-      - { key: "menuExtras", type: "array", array_add: "true", value: "['/System/Library/CoreServices/Menu Extras/Battery.menu']" }
-      - { key: "menuExtras", type: "array", array_add: "true", value: "['/System/Library/CoreServices/Menu Extras/Bluetooth.menu']" }
-      - { key: "menuExtras", type: "array", array_add: "true", value: "['/System/Library/CoreServices/Menu Extras/AirPort.menu']" }
-      - { key: "menuExtras", type: "array", array_add: "true", value: "['/System/Library/CoreServices/Menu Extras/Volume.menu']" }
-
-
-
-defaults:
 
   # Behavior
   - { domain: "NSGlobalDomain", key: "ApplePressAndHoldEnabled", type: boolean, value: true } # Character accents popup on, key repeate off
