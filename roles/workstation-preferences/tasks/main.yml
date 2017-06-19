@@ -2,10 +2,10 @@
 
 - name: Write macOS defaults
   osx_defaults:
-    domain: "{{ item.1.domain }}"
-    key: "{{ item.1.key }}"
-    type: "{{ item.1.type }}"
-    array_add: "{{ item.1.array_add | default(false) }}"
-    value: "{{ item.1.value }}"
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type }}"
+    array_add: "{{ item.array_add | default(false) }}"
+    value: "{{ item.value }}"
   with_items:
     - { domain: "NSGlobalDomain", key: "ApplePressAndHoldEnabled", type: "boolean", value: "true" } # Character accents popup on, key repeate off
