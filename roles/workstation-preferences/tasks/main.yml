@@ -8,7 +8,7 @@
     type: "{{ item.type | default(string) }}"
     array_add: "{{ item.array_add | default(false) }}"
     value: "{{ item.value | default(\"This shouldn't exist\") }}"
-    state: "{{ item.state | default(present)}}"
+    state: "{{ item.state | default(\"present\"")}}"
   with_items:
     - "{{ defaults }}"
   notify: "restart macos preferences"
@@ -18,9 +18,10 @@
   osx_defaults:
     domain: "{{ item.domain }}"
     key: "{{ item.key }}"
-    type: "{{ item.type }}"
+    type: "{{ item.type | default(string) }}"
     array_add: "{{ item.array_add | default(false) }}"
-    value: "{{ item.value }}"
+    value: "{{ item.value | default(\"This shouldn't exist\") }}"
+    state: "{{ item.state | default(\"present\"")}}"
   with_items:
     - "{{ become_defaults }}"
   notify: "restart macos preferences"
