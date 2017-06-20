@@ -81,7 +81,7 @@ defaults:
   - { domain: "com.apple.Finder", key: "FXPreferredViewStyle", type: string, value: Nlsv } # Set default Finder view style as list view
   - { domain: "com.apple.Finder", key: "FXEnableExtensionChangeWarning", type: boolean, value: false } # Don't warn me when changing file extensions
   - { domain: "com.apple.finder", key: "NewWindowTarget", type: string, value: PfHm } # Set new finder window opens in user home
-  - { domain: "com.apple.finder", key: "NewWindowTargetPath", type: string, value: file://$\{HOME\} } # This gets overridden in Sierra, set it anyway
+  - { domain: "com.apple.finder", key: "NewWindowTargetPath", type: string, value: "file://${HOME}" } # This gets overridden in Sierra, set it anyway
   # - { domain: "com.apple.Finder", key: "FXDefaultSearchScope", type: string, value: SCcf } # Always use current folder as default search scope
   # - { domain: "com.apple.Finder", key: "AppleShowAllExtensions", type: boolean, value: false } # Do not show all file extensions 
   # - { domain: "com.apple.Finder", key: "ShowPathbar", type: boolean, value: true } # Show Path Bar
