@@ -5,7 +5,7 @@
   osx_defaults:
     domain: "{{ item.domain }}"
     key: "{{ item.key }}"
-    type: "{{ item.type | default(omit") }}"
+    type: "{{ item.type | default(omit) }}"
     array_add: "{{ item.array_add | default(false) }}"
     value: "{{ item.value | default(omit) }}"
     state: "{{ item.state | default(omit) }}"
