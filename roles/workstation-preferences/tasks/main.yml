@@ -5,10 +5,10 @@
   osx_defaults:
     domain: "{{ item.domain }}"
     key: "{{ item.key }}"
-    type: "{{ item.type | default(\"string\") }}"
+    type: "{{ item.type | default(omit") }}"
     array_add: "{{ item.array_add | default(false) }}"
-    value: "{{ item.value | default(\"This shouldn't exist\") }}"
-    state: "{{ item.state | default(\"present\") }}"
+    value: "{{ item.value | default(omit) }}"
+    state: "{{ item.state | default(omit) }}"
   with_items:
     - "{{ defaults }}"
   notify: "restart macos preferences"
@@ -18,7 +18,7 @@
   osx_defaults:
     domain: "{{ item.domain }}"
     key: "{{ item.key }}"
-    type: "{{ item.type | default(string) }}"
+    type: "{{ item.type | default(\"string\") }}"
     array_add: "{{ item.array_add | default(false) }}"
     value: "{{ item.value | default(\"This shouldn't exist\") }}"
     state: "{{ item.state | default(\"present\") }}"
