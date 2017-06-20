@@ -11,6 +11,7 @@ defaults:
   # UI
   - { domain: "NSGlobalDomain", key: "AppleInterfaceStyle", state: absent } # Set Menubar and Dock to Light UI
   - { domain: "NSGlobalDomain", key: "NSNavPanelExpandedStateForSaveMode", type: boolean, value: true } # Expand save dialog by default
+  - { domain: "NSGlobalDomain", key: "NSNavPanelExpandedStateForSaveMode2", type: boolean, value: true } # Expand save dialog by default second key
   - { domain: "NSGlobalDomain", key: "PMPrintingExpandedStateForPrint", type: boolean, value: true } # Expand printing preferences
   - { domain: "NSGlobalDomain", key: "PMPrintingExpandedStateForPrint2", type: boolean, value: true } # Expand printing preferences
 
@@ -77,17 +78,16 @@ defaults:
   - { domain: "com.apple.TimeMachine", key: "DoNotOfferNewDisksForBackup", type: boolean, value: true } # Do not ask to use external disks with TimeMachine
   
   # Finder
-  # - { domain: "com.apple.Finder", key: "FXPreferredViewStyle", type: string, value: Nlsv } # Set default Finder view style as list view
-  # - { domain: "NSGlobalDomain", key: "NSNavPanelExpandedStateForSaveMode", type: boolean, value: true } # Expands save dialog by default
-  # - { domain: "NSGlobalDomain", key: "NSNavPanelExpandedStateForSaveMode2", type: boolean, value: true } # Same as previous, not sure what the difference is
-  # - { domain: "NSGlobalDomain", key: "NSTableViewDefaultSizeMode", type: int, value: 1 } # Set Finder sidebar icon size to small
-  # - { domain: "com.apple.Finder", key: "FXEnableExtensionChangeWarning", type: boolean, value: false } # Don't warn me when changing file extensions
-  # - { domain: "com.apple.Finder", key: "NewWindowTargetPath", type: string, value: "file://${HOME}" } # Finder opens in Home directory
+  - { domain: "com.apple.Finder", key: "FXPreferredViewStyle", type: string, value: Nlsv } # Set default Finder view style as list view
+  - { domain: "com.apple.Finder", key: "FXEnableExtensionChangeWarning", type: boolean, value: false } # Don't warn me when changing file extensions
+  - { domain: "com.apple.finder", key: "NewWindowTarget", type: string, value: PfHm } # Set new finder window opens in user home
+  - { domain: "com.apple.finder", key: "NewWindowTargetPath", type: string, value: file://$\{HOME\} } # This gets overridden in Sierra, set it anyway
   # - { domain: "com.apple.Finder", key: "FXDefaultSearchScope", type: string, value: SCcf } # Always use current folder as default search scope
   # - { domain: "com.apple.Finder", key: "AppleShowAllExtensions", type: boolean, value: false } # Do not show all file extensions 
   # - { domain: "com.apple.Finder", key: "ShowPathbar", type: boolean, value: true } # Show Path Bar
   # - { domain: "com.apple.Finder", key: "ShowStatusBar", type: boolean, value: true } # Show Status Bar
   # - { domain: "com.apple.Finder", key: "CreateDesktop", type: boolean, value: false } # Don't show icons on Desktop
+  # - { domain: "NSGlobalDomain", key: "NSTableViewDefaultSizeMode", type: int, value: 1 } # Set Finder sidebar icon size to small
 
   # Safari
   - { domain: "com.apple.Safari", key: "IncludeInternalDebugMenu", type: boolean, value: true } # Enable Debug menu in Safari
