@@ -7,7 +7,7 @@
     key: "{{ item.key }}"
     type: "{{ item.type | default(string) }}"
     array_add: "{{ item.array_add | default(false) }}"
-    value: "{{ item.value | default(This shouldn't exist) }}"
+    value: "{{ item.value | default(\"This shouldn't exist\") }}"
     state: "{{ item.state | default(present)}}"
   with_items:
     - "{{ defaults }}"
