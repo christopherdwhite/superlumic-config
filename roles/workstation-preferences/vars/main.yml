@@ -1,8 +1,6 @@
 ---
-admin_defaults:
-  # Login
-  - { domain: "/Library/Preferences/com.apple.loginwindow", key: "LoginwindowText", type: string, value: "chris@christopherdwhite.com | 303-916-2189" } # Display contact info on lock screen
 
+# Default preferences for macOS
 defaults:
 
   # Behavior
@@ -11,24 +9,32 @@ defaults:
   - { domain: "NSGlobalDomain", key: "KeyRepeat", type: int, value: 2 } # Set key repeat to fast
  
   # UI
-  - { domain: "NSGlobalDomain", key: "NSWindowResizeTime", type: float, value: 0.001 } # Make windows rezize as quickly as possible
+  - { domain: "NSGlobalDomain", key: "AppleInterfaceStyle", state: absent } # Set Menubar and Dock to Light UI
+  - { domain: "NSGlobalDomain", key: "NSNavPanelExpandedStateForSaveMode", type: boolean, value: true } # Expand save dialog by default
+  - { domain: "NSGlobalDomain", key: "PMPrintingExpandedStateForPrint", type: boolean, value: true } # Expand printing preferences
+  - { domain: "NSGlobalDomain", key: "PMPrintingExpandedStateForPrint2", type: boolean, value: true } # Expand printing preferences
+
+  # UI Speed
   - { domain: "com.apple.dock", key: "expose-animation-duration", type: float, value: 0.1 } # Set Mission Control animations to be faster than default in macOS versions earlier than Sierra
+  - { domain: "NSGlobalDomain", key: "NSWindowResizeTime", type: float, value: 0.001 } # Speeds up how quickly Cocoa apps redraw the window size while dragging
+  
+  # Mouse Behavior
   - { domain: "com.apple.dock", key: "AppleActionOnDoubleClick", type: string, value: Maximize } # Double clicking on App titlebar maximizes app window
 
   # Dock
-  - { domain: "com.apple.dock", key: "tilesize", type: float, value: 20 } # Set icon size
-  - { domain: "com.apple.dock", key: "largesize", type: float, value: 48 } # Set icon size when magnified
-  - { domain: "com.apple.dock", key: "magnification", type: boolean, value: true } # Turn on magnification
+  - { domain: "com.apple.dock", key: "tilesize", type: float, value: 20 } # Set Dock icon size in pixels
+  - { domain: "com.apple.dock", key: "largesize", type: float, value: 48 } # Set magnified Dock icon size in pixels
+  - { domain: "com.apple.dock", key: "magnification", type: boolean, value: true } # Enable magnification on Dock
   - { domain: "com.apple.dock", key: "size-immutable", type: boolean, value: true } # Lock icon size
-  - { domain: "com.apple.dock", key: "orientation", type: string, value: left } # Position on the left side of the screen
-  - { domain: "com.apple.dock", key: "pinning", type: string, value: start } # Pin to top
-  - { domain: "com.apple.dock", key: "autohide", type: boolean, value: true } # Auto-hide
-  - { domain: "com.apple.dock", key: "autohide-delay", type: float, value: 0 } # Hide immediately
-  - { domain: "com.apple.dock", key: "autohide-time-modifier", type: float, value: 0.4 } # Speed up autohide animation
-  - { domain: "com.apple.dock", key: "show-process-indicators", type: boolean, value: true } # Show whether app is running
-  - { domain: "com.apple.dock", key: "showhidden", type: boolean, value: true } # Indicate when an app is hidden by fading icon
+  - { domain: "com.apple.dock", key: "orientation", type: string, value: left } # Position Dock on the left side of the screen
+  - { domain: "com.apple.dock", key: "pinning", type: string, value: start } # Pin Dock to start of the screen
+  - { domain: "com.apple.dock", key: "position-immutabl", type: bool, value: true } # Lock the Dock position
+  - { domain: "com.apple.dock", key: "autohide", type: boolean, value: true } # Auto-hide Dock
+  - { domain: "com.apple.dock", key: "autohide-delay", type: float, value: 0 } # Show dock immediately on Dock edge mouseover
+  - { domain: "com.apple.dock", key: "autohide-time-modifier", type: float, value: 0.4 } # Set Dock hide and appear animations to my preferred speed
+  - { domain: "com.apple.dock", key: "show-process-indicators", type: boolean, value: true } # Show app is running indicator dot
+  - { domain: "com.apple.dock", key: "showhidden", type: boolean, value: true } # Indicate when all app windows are hidden by fading icon
   - { domain: "com.apple.dock", key: "minimize-to-application", type: boolean, value: true } # Minimize app windows to application icon
-  - { domain: "com.apple.dock", key: "contents-immutable", type: boolean, value: true } # Lock Dock icon positions
 
   # MultiTouch Trackpad Behavior
   - { domain: "com.apple.AppleMultitouchTrackpad", key: "TrackpadThreeFingerTapGesture", type: boolean, value: true } # Enable look up and data detectors for Mac trackpad
@@ -58,27 +64,19 @@ defaults:
   - { domain: "com.apple.dock", key: "showLaunchpadGestureEnabled", type: boolean, value: true } # Enable show Launchpad with four finger pinch
   - { domain: "com.apple.dock", key: "showDesktopGestureEnabled", type: boolean, value: true } # Enable show Launchpad with five finger pinch
 
-  # # AirDrop
-  - { domain: "com.apple.NetworkBrowser", key: "BrowseAllInterfaces", type: boolean, value: true } # Enable AirDrop over Ethernet and on unsupported Macs
+  # Network & Airdrop
+  - { domain: "com.apple.NetworkBrowser", key: "BrowseAllInterfaces", type: boolean, value: true } # Enable AirDrop over Ethernet
+  - { domain: "com.apple.desktopservices", key: "DSDontWriteNetworkStores", type: boolean, value: true } # Stop creating .DS_store files on network storage  
   
-  # # Graphics
-  - { domain: "com.apple.screencapture", key: "type", type: string, value: png } # Screen captures set to .png format
-  - { domain: "com.apple.screencapture", key: "disable-shadow", type: bool, value: true } # Disables shadow on screenshots
+  # Screen Capture
+  - { domain: "com.apple.screencapture", key: "type", type: string, value: png } # Set screencapture format to png
+  - { domain: "com.apple.screencapture", key: "disable-shadow", type: bool, value: true } # Disable drop shadow on screenshots
+  - { domain: "com.apple.screencapture", key: "location", type: string, value: "~/Documents/Action" } # Save screenshots to Action
 
-  # # Network
-  # - { domain: "com.apple.desktopservices", key: "DSDontWriteNetworkStores", type: boolean, value: true } # Stop creating DS files on network storage  
-
-  # # Print
-  # - { domain: "com.apple.print.PrintingPrefs", key: "Quit When Finished", type: boolean, value: true } # Quit when finished printing
-  # - { domain: "NSGlobalDomain", key: "PMPrintingExpandedStateForPrint", type: boolean, value: true } # Stop creating DS files on network storage 
-
-  # # Apps
-  # - { domain: "com.apple.SoftwareUpdate.plist", key: "ScheduleFrequency", type: int, value: 1 } # Check for updates every day
-
-  # # Time Machine
-  # - { domain: "com.apple.TimeMachine", key: "DoNotOfferNewDisksForBackup", type: boolean, value: true } # Don't ask to use external disks with TimeMachine
+  # Time Machine
+  - { domain: "com.apple.TimeMachine", key: "DoNotOfferNewDisksForBackup", type: boolean, value: true } # Do not ask to use external disks with TimeMachine
   
-  # # Finder
+  # Finder
   # - { domain: "com.apple.Finder", key: "FXPreferredViewStyle", type: string, value: Nlsv } # Set default Finder view style as list view
   # - { domain: "NSGlobalDomain", key: "NSNavPanelExpandedStateForSaveMode", type: boolean, value: true } # Expands save dialog by default
   # - { domain: "NSGlobalDomain", key: "NSNavPanelExpandedStateForSaveMode2", type: boolean, value: true } # Same as previous, not sure what the difference is
@@ -91,14 +89,24 @@ defaults:
   # - { domain: "com.apple.Finder", key: "ShowStatusBar", type: boolean, value: true } # Show Status Bar
   # - { domain: "com.apple.Finder", key: "CreateDesktop", type: boolean, value: false } # Don't show icons on Desktop
 
-  # # Safari
-  # - { domain: "com.apple.Safari", key: "IncludeInternalDebugMenu", type: boolean, value: true } # Show Debug Menu
-  # - { domain: "com.apple.Safari", key: "IncludeDevelopMenu", type: boolean, value: true } # Show Develoepr Menu
-  # - { domain: "com.apple.Safari", key: "WebKitDeveloperExtrasEnabledPreferenceKey", type: boolean, value: true } # Use WebKit Inspector in any WebView 
-  # - { domain: "com.apple.Safari", key: "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled", type: boolean, value: true } # Always listed with these preferences but I'm not sure what this one does exactly
-  # - { domain: "NSGlobalDomain", key: "WebKitDeveloperExtras", type: boolean, value: true } # Enable WebKit Developer Extras
+  # Safari
+  - { domain: "com.apple.Safari", key: "IncludeInternalDebugMenu", type: boolean, value: true } # Enable Debug menu in Safari
+  - { domain: "com.apple.Safari", key: "IncludeDevelopMenu", type: boolean, value: true } # Enable Develop menu in Safari
+  - { domain: "com.apple.Safari", key: "WebKitDeveloperExtrasEnabledPreferenceKey", type: boolean, value: true } # Enable web developer tools
+  - { domain: "com.apple.Safari", key: "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled", type: boolean, value: true } # Enable web developer tools second key
+  - { domain: "NSGlobalDomain", key: "WebKitDeveloperExtras", type: boolean, value: true } # Enable WebKit developer extras in WebViews
 
-  # # TextEdit
-  # - { domain: "com.apple.TextEdit", key: "RichText", type: int, value: 0 } # Set TextEdit to create new files as plain text by default
+  # TextEdit
+  - { domain: "com.apple.TextEdit", key: "RichText", type: int, value: 0 } # Set TextEdit to create new files as plain text by default
 
-  # - { domain: "NSGlobalDomain", key: "AppleInterfaceStyle", state: "absent" } # Set Menubar and Dock to Dark UI
+# These defaults need to be set with escalated privileges, primarily anything that needs to set a key in a /Library/Preferences/ domain
+become_defaults:
+
+  # Login
+  - { domain: "/Library/Preferences/com.apple.loginwindow", key: "LoginwindowText", type: string, value: "chris@christopherdwhite.com | 303-916-2189" } # Display contact info on lock screen
+
+  # Print
+  - { domain: "/Library/Preferences/com.apple.print.PrintingPrefs", key: "Quit When Finished", type: boolean, value: true } # Quit when finished printing
+  
+  # Software Update
+  - { domain: "/Library/Preferences/com.apple.SoftwareUpdate", key: "ScheduleFrequency", type: int, value: 1 } # Schedule Apple Software Update checking for new upddates every day.

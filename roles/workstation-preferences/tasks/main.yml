@@ -1,5 +1,6 @@
 ---
 
+# Setup default preferences in macOS
 - name: Write macOS defaults
   osx_defaults:
     domain: "{{ item.domain }}"
@@ -11,7 +12,8 @@
     - "{{ defaults }}"
   notify: "restart macos preferences"
 
-- name: Write Admin macOS defaults
+# There are some settings, like those in /library/ that require escalated privileges
+- name: Write macOS defaults with escalated privileges
   osx_defaults:
     domain: "{{ item.domain }}"
     key: "{{ item.key }}"
@@ -19,6 +21,6 @@
     array_add: "{{ item.array_add | default(false) }}"
     value: "{{ item.value }}"
   with_items:
-    - "{{ admin_defaults }}"
+    - "{{ become_defaults }}"
   notify: "restart macos preferences"
   become: true
