@@ -18,7 +18,8 @@ defaults:
 
   # Menu Bar Items
   - { domain: "com.apple.systemuiserver", key: "NSStatusItem Visible com.apple.menuextra.airplay", type: boolean, value: true } # Enable displays menubar item key
-  - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/Displays.menu' ] } # Enable displays menubar item key
+  # - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/Displays.menu' ] } # Enable displays menubar item key
+  - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/User.menu' ] } # Enable displays menubar item key
 
   # UI Speed
   - { domain: "com.apple.dock", key: "expose-animation-duration", type: float, value: 0.1 } # Set Mission Control animations to be faster than default in macOS versions earlier than Sierra
