@@ -5,30 +5,30 @@ defaults:
 
   # Behavior
   - { domain: 'NSGlobalDomain', key: 'ApplePressAndHoldEnabled', type: bool, value: true } # Character accents popup on, key repeate off
-  - { domain: 'NSGlobalDomain', key: 'InitialKeyRepeat', type: int, value: 25 } # Set my prefered delay for key repeat
-  - { domain: 'NSGlobalDomain', key: 'KeyRepeat', type: int, value: 2 } # Set key repeat to fast
+  - { domain: 'NSGlobalDomain', key: 'InitialKeyRepeat',         type: int,  value: 25   } # Set my prefered delay for key repeat
+  - { domain: 'NSGlobalDomain', key: 'KeyRepeat',                type: int,  value: 2    } # Set key repeat to fast
  
   # UI
-  - { domain: 'NSGlobalDomain', key: 'AppleInterfaceStyle', state: absent } # Set Menubar and Dock to Light UI
-  - { domain: 'NSGlobalDomain', key: 'NSNavPanelExpandedStateForSaveMode', type: bool, value: true } # Expand save dialog by default
-  - { domain: 'NSGlobalDomain', key: 'NSNavPanelExpandedStateForSaveMode2', type: bool, value: true } # Expand save dialog by default second key
-  - { domain: 'NSGlobalDomain', key: 'PMPrintingExpandedStateForPrint', type: bool, value: true } # Expand printing preferences
-  - { domain: 'NSGlobalDomain', key: 'PMPrintingExpandedStateForPrint2', type: bool, value: true } # Expand printing preferences
-  - { domain: 'com.apple.finder', key: 'CreateDesktop', type: bool, value: false } # Disable icons on Desktop
+  - { domain: 'NSGlobalDomain',   key: 'AppleInterfaceStyle',                 state: absent             } # Set Menubar and Dock to Light UI
+  - { domain: 'NSGlobalDomain',   key: 'NSNavPanelExpandedStateForSaveMode',  type:  bool, value: true  } # Expand save dialog by default
+  - { domain: 'NSGlobalDomain',   key: 'NSNavPanelExpandedStateForSaveMode2', type:  bool, value: true  } # Expand save dialog by default second key
+  - { domain: 'NSGlobalDomain',   key: 'PMPrintingExpandedStateForPrint',     type:  bool, value: true  } # Expand printing preferences
+  - { domain: 'NSGlobalDomain',   key: 'PMPrintingExpandedStateForPrint2',    type:  bool, value: true  } # Expand printing preferences
+  - { domain: 'com.apple.finder', key: 'CreateDesktop',                       type:  bool, value: false } # Disable icons on Desktop
 
   # Menu Bar Items
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.battery', type: bool, value: true } # Enable battery menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.clock', type: bool, value: true } # Enable clock menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.Battery', type: bool, value: true } # Enable battery menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.clock',   type: bool, value: true } # Enable clock menubar item key
   - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.airplay', type: bool, value: true } # Enable displays menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.volume', type: bool, value: true } # Enable volume menubar item key
-  - domain: 'com.apple.systemuiserver'
-    key: 'menuExtras'
-    type: array
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.volume',  type: bool, value: true } # Enable volume menubar item key
+  - domain:   'com.apple.systemuiserver'
+    key:      'menuExtras'
+    type:      array
     value:
-      - '/System/Library/CoreServices/Menu Extras/Battery.menu' # Enable battery menubar item key
-      - '/System/Library/CoreServices/Menu Extras/Clock.menu' # Enable clock menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Battery.menu'  # Enable battery menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Clock.menu'    # Enable clock menubar item key
       - '/System/Library/CoreServices/Menu Extras/Displays.menu' # Enable displays menubar item key
-      - '/System/Library/CoreServices/Menu Extras/Volume.menu' # Enable volume menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Volume.menu'   # Enable volume menubar item key
 
   # UI Speed
   - { domain: 'com.apple.dock', key: 'expose-animation-duration', type: float, value: 0.1 } # Set Mission Control animations to be faster than default in macOS versions earlier than Sierra
