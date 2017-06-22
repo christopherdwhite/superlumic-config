@@ -21,8 +21,8 @@ defaults:
   - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/User.menu' ] } # Enable accounts menubar item key
   # - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/Displays.menu' ] } # Enable displays menubar item key
   - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ 
-      - '/System/Library/CoreServices/Menu Extras/User.menu' 
-      - '/System/Library/CoreServices/Menu Extras/Displays.menu' 
+    - '/System/Library/CoreServices/Menu Extras/User.menu' 
+    - '/System/Library/CoreServices/Menu Extras/Displays.menu' 
     ] } # Enable user menubar item key
 
   # UI Speed
