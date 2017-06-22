@@ -19,17 +19,17 @@ defaults:
   # Menu Bar Items
   - { domain: "com.apple.systemuiserver", key: "NSStatusItem Visible com.apple.menuextra.airplay", type: boolean, value: true } # Enable displays menubar item key
   - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/User.menu' ] } # Enable accounts menubar item key
-  # - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/Displays.menu' ] } # Enable displays menubar item key
+  
 
 
 
 
-  - domain: "com.apple.systemuiserver"
+  - { domain: "com.apple.systemuiserver"
     key: menuExtras
     type: array
     value:
       - "/System/Library/CoreServices/Menu Extras/User.menu"
-      - "/System/Library/CoreServices/Menu Extras/Displays.menu"
+      - "/System/Library/CoreServices/Menu Extras/Displays.menu" }
 
 
 
