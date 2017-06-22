@@ -14,7 +14,7 @@ defaults:
   - { domain: "NSGlobalDomain", key: "NSNavPanelExpandedStateForSaveMode2", type: boolean, value: true } # Expand save dialog by default second key
   - { domain: "NSGlobalDomain", key: "PMPrintingExpandedStateForPrint", type: boolean, value: true } # Expand printing preferences
   - { domain: "NSGlobalDomain", key: "PMPrintingExpandedStateForPrint2", type: boolean, value: true } # Expand printing preferences
-  - { domain: "com.apple.finder", key: "CreateDesktop", type: boolean, value: false } # Disable icons on Desktop
+  - { domain: "com.apple.finder", key: "CreateDesktop", type: bool, value: true } # Disable icons on Desktop
 
   # Menu Bar Items
   - { domain: "com.apple.systemuiserver", key: "NSStatusItem Visible com.apple.menuextra.airplay", type: boolean, value: true } # Enable displays menubar item key
