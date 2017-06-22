@@ -14,29 +14,24 @@ defaults:
   - { domain: 'NSGlobalDomain', key: 'NSNavPanelExpandedStateForSaveMode2', type: bool, value: true } # Expand save dialog by default second key
   - { domain: 'NSGlobalDomain', key: 'PMPrintingExpandedStateForPrint', type: bool, value: true } # Expand printing preferences
   - { domain: 'NSGlobalDomain', key: 'PMPrintingExpandedStateForPrint2', type: bool, value: true } # Expand printing preferences
-  - { domain: 'com.apple.finder', key: 'CreateDesktop', type: bool, value: true } # Disable icons on Desktop
+  - { domain: 'com.apple.finder', key: 'CreateDesktop', type: bool, value: false } # Disable icons on Desktop
 
   # Menu Bar Items
-  - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/User.menu' ] } # Enable accounts menubar item key
-  - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/Battery.menu' ] } # Enable battery menubar item key
-  - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/Clock.menu' ] } # Enable clock menubar item key
-  - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/Displays.menu' ] } # Enable displays menubar item key
-  - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/TextInput.menu' ] } # Enable input menubar item key
-  - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/TimeMachine.menu' ] } # Enable Time Machine menubar item key
-  - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/UniversalAccess.menu' ] } # Enable Universal Access menubar item key
-  - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/Volume.menu' ] } # Enable volume menubar item key
-  - domain: 'com.apple.systemuiserver'
-    key: menuExtras
-    type: array
-    value:
-      - '/System/Library/CoreServices/Menu Extras/User.menu' # Enable accounts menubar item key
-      - '/System/Library/CoreServices/Menu Extras/Battery.menu' # Enable battery menubar item key
-      - '/System/Library/CoreServices/Menu Extras/Clock.menu' # Enable clock menubar item key
-      - '/System/Library/CoreServices/Menu Extras/Displays.menu' # Enable displays menubar item key
-      - '/System/Library/CoreServices/Menu Extras/TextInput.menu' # Enable input menubar item key
-      - '/System/Library/CoreServices/Menu Extras/TimeMachine.menu' # Enable Time Machine menubar item key
-      - '/System/Library/CoreServices/Menu Extras/UniversalAccess.menu' # Enable Universal Access menubar item key
-      - '/System/Library/CoreServices/Menu Extras/Volume.menu' # Enable volume menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.airplay', type: bool, value: true } # Enable displays menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/Displays.menu' ] } # Enable displays menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.clock', type: bool, value: false } # Disable clock menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.battery', type: bool, value: false } # Disable battery menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.appleuser', type: bool, value: false } # Disable user account menubar item key
+
+
+
+  # Temp
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.volume', type: bool, value: false } # Disable volume menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.universalaccess', type: bool, value: false } # Disable universal accesss menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.TimeMachine', type: bool, value: false } # Disable Time Machine menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.textinput', type: bool, value: false } # Disable input menubar item key
+
+
 
   # UI Speed
   - { domain: 'com.apple.dock', key: 'expose-animation-duration', type: float, value: 0.1 } # Set Mission Control animations to be faster than default in macOS versions earlier than Sierra
