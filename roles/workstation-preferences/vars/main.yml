@@ -17,21 +17,18 @@ defaults:
   - { domain: 'com.apple.finder', key: 'CreateDesktop', type: bool, value: false } # Disable icons on Desktop
 
   # Menu Bar Items
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.battery', type: bool, value: true } # Enable battery menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.clock', type: bool, value: true } # Enable clock menubar item key
   - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.airplay', type: bool, value: true } # Enable displays menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/Displays.menu' ] } # Enable displays menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.clock', type: bool, value: false } # Disable clock menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.battery', type: bool, value: false } # Disable battery menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.appleuser', type: bool, value: false } # Disable user account menubar item key
-
-
-
-  # Temp
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.volume', type: bool, value: false } # Disable volume menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.universalaccess', type: bool, value: false } # Disable universal accesss menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.TimeMachine', type: bool, value: false } # Disable Time Machine menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.textinput', type: bool, value: false } # Disable input menubar item key
-
-
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.volume', type: bool, value: true } # Enable volume menubar item key
+  - domain: 'com.apple.systemuiserver'
+    key: 'menuExtras'
+    type: array
+    value:
+      - '/System/Library/CoreServices/Menu Extras/Battery.menu' # Enable battery menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Clock.menu' # Enable clock menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Displays.menu' # Enable displays menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Volume.menu' # Enable volume menubar item key
 
   # UI Speed
   - { domain: 'com.apple.dock', key: 'expose-animation-duration', type: float, value: 0.1 } # Set Mission Control animations to be faster than default in macOS versions earlier than Sierra
@@ -104,7 +101,6 @@ defaults:
   - { domain: 'com.apple.finder', key: 'AppleShowAllExtensions', type: bool, value: true } # Show all file extensions
   - { domain: 'com.apple.finder', key: 'ShowPathbar', type: bool, value: true } # Enable path bar in Finder
   - { domain: 'com.apple.finder', key: 'ShowStatusBar', type: bool, value: true } # Enable status bar in Finder
-  - { domain: 'com.apple.finder', key: 'CreateDesktop', type: bool, value: true } # Enable icons on Desktop
 
   # Safari
   - { domain: 'com.apple.Safari', key: 'IncludeInternalDebugMenu', type: bool, value: true } # Enable Debug menu in Safari
