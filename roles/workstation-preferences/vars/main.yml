@@ -14,25 +14,17 @@ defaults:
   - { domain: "NSGlobalDomain", key: "NSNavPanelExpandedStateForSaveMode2", type: boolean, value: true } # Expand save dialog by default second key
   - { domain: "NSGlobalDomain", key: "PMPrintingExpandedStateForPrint", type: boolean, value: true } # Expand printing preferences
   - { domain: "NSGlobalDomain", key: "PMPrintingExpandedStateForPrint2", type: boolean, value: true } # Expand printing preferences
-  - { domain: "com.apple.Finder", key: "CreateDesktop", type: boolean, value: false } # Disable icons on Desktop
+  - { domain: "com.apple.finder", key: "CreateDesktop", type: boolean, value: false } # Disable icons on Desktop
 
   # Menu Bar Items
   - { domain: "com.apple.systemuiserver", key: "NSStatusItem Visible com.apple.menuextra.airplay", type: boolean, value: true } # Enable displays menubar item key
   - { domain: "com.apple.systemuiserver", key: "menuExtras", type: array, value: [ '/System/Library/CoreServices/Menu Extras/User.menu' ] } # Enable accounts menubar item key
-  
-
-
-
-
-  - { domain: "com.apple.systemuiserver"
+  - domain: "com.apple.systemuiserver"
     key: menuExtras
     type: array
     value:
       - "/System/Library/CoreServices/Menu Extras/User.menu"
-      - "/System/Library/CoreServices/Menu Extras/Displays.menu" }
-
-
-
+      - "/System/Library/CoreServices/Menu Extras/Displays.menu"
 
   # UI Speed
   - { domain: "com.apple.dock", key: "expose-animation-duration", type: float, value: 0.1 } # Set Mission Control animations to be faster than default in macOS versions earlier than Sierra
@@ -97,15 +89,15 @@ defaults:
   - { domain: "com.apple.TimeMachine", key: "DoNotOfferNewDisksForBackup", type: boolean, value: true } # Do not ask to use external disks with TimeMachine
   
   # Finder
-  - { domain: "com.apple.Finder", key: "FXPreferredViewStyle", type: string, value: Nlsv } # Set default Finder view style as list view
-  - { domain: "com.apple.Finder", key: "FXEnableExtensionChangeWarning", type: boolean, value: false } # Don't warn me when changing file extensions
+  - { domain: "com.apple.finder", key: "FXPreferredViewStyle", type: string, value: Nlsv } # Set default Finder view style as list view
+  - { domain: "com.apple.finder", key: "FXEnableExtensionChangeWarning", type: boolean, value: false } # Don't warn me when changing file extensions
   - { domain: "com.apple.finder", key: "NewWindowTarget", type: string, value: PfHm } # Set new finder window opens in user home
   - { domain: "com.apple.finder", key: "NewWindowTargetPath", type: string, value: "file://${HOME}" } # This gets overridden in Sierra, set it anyway
-  - { domain: "com.apple.Finder", key: "FXDefaultSearchScope", type: string, value: SCcf } # Set Finder's default search scope to current folder's contents
-  - { domain: "com.apple.Finder", key: "AppleShowAllExtensions", type: boolean, value: true } # Show all file extensions
-  - { domain: "com.apple.Finder", key: "ShowPathbar", type: boolean, value: true } # Enable path bar in Finder
-  - { domain: "com.apple.Finder", key: "ShowStatusBar", type: boolean, value: true } # Enable status bar in Finder
-  - { domain: "com.apple.Finder", key: "CreateDesktop", type: boolean, value: true } # Enable icons on Desktop
+  - { domain: "com.apple.finder", key: "FXDefaultSearchScope", type: string, value: SCcf } # Set Finder's default search scope to current folder's contents
+  - { domain: "com.apple.finder", key: "AppleShowAllExtensions", type: boolean, value: true } # Show all file extensions
+  - { domain: "com.apple.finder", key: "ShowPathbar", type: boolean, value: true } # Enable path bar in Finder
+  - { domain: "com.apple.finder", key: "ShowStatusBar", type: boolean, value: true } # Enable status bar in Finder
+  - { domain: "com.apple.finder", key: "CreateDesktop", type: boolean, value: true } # Enable icons on Desktop
 
   # Safari
   - { domain: "com.apple.Safari", key: "IncludeInternalDebugMenu", type: boolean, value: true } # Enable Debug menu in Safari
