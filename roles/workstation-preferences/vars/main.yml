@@ -28,8 +28,8 @@ defaults:
     key: menuExtras
     type: array
     value:
-      "/System/Library/CoreServices/Menu Extras/User.menu"
-      "/System/Library/CoreServices/Menu Extras/Displays.menu"
+      - "/System/Library/CoreServices/Menu Extras/User.menu"
+      - "/System/Library/CoreServices/Menu Extras/Displays.menu"
 
 
 
