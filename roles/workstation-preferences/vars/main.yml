@@ -99,18 +99,21 @@ defaults:
   - { domain: 'com.apple.TextEdit', key: 'RichText', type: int, value: 0 } # Set TextEdit to create new files as plain text by default
 
   # Menu Bar Items
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.Battery', type: bool, value: true } # Enable battery menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.clock', type: bool, value: true } # Enable clock menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.airplay', type: bool, value: true } # Enable displays menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.volume', type: bool, value: true } # Enable volume menubar item key
-  - domain: 'com.apple.systemuiserver'
-    key: 'menuExtras'
-    type: array
-    value:
-      - '/System/Library/CoreServices/Menu Extras/Battery.menu'  # Enable battery menubar item key
-      - '/System/Library/CoreServices/Menu Extras/Clock.menu'    # Enable clock menubar item key
-      - '/System/Library/CoreServices/Menu Extras/Displays.menu' # Enable displays menubar item key
-      - '/System/Library/CoreServices/Menu Extras/Volume.menu'   # Enable volume menubar item key
+  - { domain: 'com.apple.Siri', key: 'StatusMenuVisible', type: bool, key: true } # Enable the Siri menubar item in Siri domain
+  - { domain: 'com.apple.systemuiserver', key: 'StatusMenuVisible', type: bool, key: true } # Enable the Siri menubar item in SystemUIServer domain
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.airplay', type: bool, value: true } # Enable macOS Airplay menubar item
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.battery', type: bool, value: true } # Enable macOS battery menubar item
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.clock', type: bool, value: true } # Enable macOS clock menubar item
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.volume', type: bool, value: true } # Enable macOS volume menubar item
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/Volume.menu' ] } # Enable macOS volume menubar item in array
+  # - domain: 'com.apple.systemuiserver'
+  #   key: 'menuExtras'
+  #   type: array
+  #   value: 
+  #     - '/System/Library/CoreServices/Menu Extras/Displays.menu' # Enable Airplay menubar item key
+  #     - '/System/Library/CoreServices/Menu Extras/Battery.menu'  # Enable battery menubar item key
+  #     - '/System/Library/CoreServices/Menu Extras/Clock.menu'    # Enable clock menubar item key
+  #     - '/System/Library/CoreServices/Menu Extras/Volume.menu'   # Enable volume menubar item key
 
 # These defaults need to be set with escalated privileges, primarily anything that needs to set a key in a /Library/Preferences/ domain
 become_defaults:
