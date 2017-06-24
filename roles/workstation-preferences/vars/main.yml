@@ -4,7 +4,7 @@
 defaults:
 
   - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.volume', type: bool, value: false } # Disable volume menubar item key
-- { domain: 'com.apple.systemuiserver', key: 'menuExtras', state: absent } # Disable all macOS menubar items
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', state: absent } # Disable all macOS menubar items
 
 
 
