@@ -3,8 +3,8 @@
 # Default preferences for macOS
 defaults:
 
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.airport', type: bool, value: true } # Enable stock VPN menubar item
-  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/AirPort.menu' ] } # Enable stock VPN menubar item in array
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.airport', type: bool, value: false } # Disable VPN menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', state: absent } # Disable all stock menubar items
 
 
 
