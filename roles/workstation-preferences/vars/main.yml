@@ -3,8 +3,8 @@
 # Default preferences for macOS
 defaults:
 
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.scriptmenu', type: bool, value: true } # Enable macOS Script Menu menubar item
-  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/Script Menu.menu' ] } # Enable macOS Script Menu menubar item in array
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.scriptmenu', type: bool, value: false } # Disable Script Menu menubar item key
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', state: absent } # Disable all macOS menubar items
 
 
 
