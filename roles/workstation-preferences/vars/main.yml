@@ -3,8 +3,8 @@
 # Default preferences for macOS
 defaults:
 
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.TimeMachine', type: bool, value: false } # Disable Time Machine menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', state: absent } # Disable all macOS menubar items
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.universalaccess', type: bool, value: true } # Enable macOS Universal Access menubar item
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/UniversalAccess.menu' ] } # Enable macOS Universal Access menubar item in array
 
 
 
