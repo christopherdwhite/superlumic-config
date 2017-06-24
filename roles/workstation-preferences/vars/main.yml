@@ -3,8 +3,8 @@
 # Default preferences for macOS
 defaults:
 
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.volume', type: bool, value: false } # Disable volume menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', state: absent } # Disable all macOS menubar items
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.vpn', type: bool, value: true } # Enable stock VPN menubar item
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/VPN.menu' ] } # Enable stock VPN menubar item in array
 
 
 
