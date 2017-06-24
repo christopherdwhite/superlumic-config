@@ -4,7 +4,7 @@
 defaults:
 
   - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.dwellcontrol', type: bool, value: false } # Disable Dwell Control menubar item key
-- { domain: 'com.apple.systemuiserver', key: 'menuExtras', state: absent } # Disable all stock menubar items
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', state: absent } # Disable all stock menubar items
 
 
 
