@@ -3,7 +3,7 @@
 # Default preferences for macOS
 defaults:
 
-  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/Displays.menu' ] } # Enable macOS Airplay menubar item in array
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/Displays.menu', '/System/Library/CoreServices/Menu Extras/Clock.menu' ] } # Enable macOS Airplay and Clock menubar items # Enable Airplay and Clock menubar items in array
 
 
 
