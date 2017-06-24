@@ -3,8 +3,8 @@
 # Default preferences for macOS
 defaults:
 
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.battery', type: bool, value: false } # Disable user account menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', state: absent } # Disable all macOS menubar items
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.bluetooth', type: bool, value: true } # Enable macOS Bluetooth menubar item
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/Bluetooth.menu' ] } # Enable macOS Bluetooth menubar item in array
 
 
 
