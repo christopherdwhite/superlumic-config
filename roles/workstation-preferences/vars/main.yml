@@ -3,8 +3,7 @@
 # Default preferences for macOS
 defaults:
 
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.vpn', type: bool, value: false } # Disable VPN menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', state: absent } # Disable all stock menubar items
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/Displays.menu' ] } # Enable macOS Airplay menubar item in array
 
 
 
