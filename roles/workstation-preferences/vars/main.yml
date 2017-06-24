@@ -3,8 +3,8 @@
 # Default preferences for macOS
 defaults:
 
-  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.ink', type: bool, value: false } # Disable Ink menubar item key
-  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', state: absent } # Disable all stock menubar items
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.pppoe', type: bool, value: true } # Enable stock PPPoE menubar item
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/PPPoE.menu' ] } # Enable stock PPPoE menubar item in array
 
 
 
