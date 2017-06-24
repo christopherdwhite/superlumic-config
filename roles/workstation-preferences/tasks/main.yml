@@ -14,15 +14,15 @@
   notify: "restart macos preferences"
 
 # There are some settings, like those in /library/ that require escalated privileges
-- name: Write macOS defaults with escalated privileges
-  osx_defaults:
-    domain: "{{ item.domain }}"
-    key: "{{ item.key }}"
-    type: "{{ item.type | default(omit) }}"
-    array_add: "{{ item.array_add | default(false) }}"
-    value: "{{ item.value | default(omit) }}"
-    state: "{{ item.state | default(omit) }}"
-  with_items:
-    - "{{ become_defaults }}"
-  notify: "restart macos preferences"
-  become: true
+# - name: Write macOS defaults with escalated privileges
+#   osx_defaults:
+#     domain: "{{ item.domain }}"
+#     key: "{{ item.key }}"
+#     type: "{{ item.type | default(omit) }}"
+#     array_add: "{{ item.array_add | default(false) }}"
+#     value: "{{ item.value | default(omit) }}"
+#     state: "{{ item.state | default(omit) }}"
+#   with_items:
+#     - "{{ become_defaults }}"
+#   notify: "restart macos preferences"
+#   become: true
