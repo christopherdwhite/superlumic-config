@@ -3,8 +3,9 @@
 # Default preferences for macOS
 defaults:
 
-  - { domain: 'com.apple.Siri', key: 'StatusMenuVisible', type: bool, value: false } # Disable the Siri menubar item in Siri domain
-  - { domain: 'com.apple.systemuiserver', key: 'StatusMenuVisible', type: bool, value: false } # Disable the Siri menubar item in SystemUIServer domain
+  - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.airplay', type: bool, value: true } # Enable macOS Airplay menubar item
+  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/Displays.menu' ] } # Enable macOS Airplay menubar item in array
+
 
 
 
