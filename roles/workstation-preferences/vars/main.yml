@@ -3,7 +3,28 @@
 # Default preferences for macOS
 defaults:
 
-  - { domain: 'com.apple.systemuiserver', key: 'menuExtras', type: array, value: [ '/System/Library/CoreServices/Menu Extras/Displays.menu', '/System/Library/CoreServices/Menu Extras/Clock.menu' ] } # Enable macOS Airplay and Clock menubar items # Enable Airplay and Clock menubar items in array
+  - domain: 'com.apple.systemuiserver'
+    key: 'menuExtras'
+    type: array
+    value:
+      - '/System/Library/CoreServices/Menu Extras/Displays.menu' # Enable Airplay menubar item key
+      - '/System/Library/CoreServices/Menu Extras/AirPort.menu' # Enable AirPort menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Battery.menu' # Enable battery menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Bluetooth.menu' # Enable Bluetooth menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Clock.menu' # Enable clock menubar item key
+      - '/System/Library/CoreServices/Menu Extras/DwellControl.menu' # Enable Dwell Control menubar item key
+      - '/System/Library/CoreServices/Menu Extras/iChat.menu' # Enable iChat menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Ink.menu' # Enable Ink menubar item key
+      - '/System/Library/CoreServices/Menu Extras/PPP.menu' # Enable PPP menubar item key
+      - '/System/Library/CoreServices/Menu Extras/PPPoE.menu' # Enable PPPoE menubar item key
+      - '/System/Library/CoreServices/Menu Extras/RemoteDesktop.menu' # Enable Remote Desktop menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Eject.menu' # Enable Eject menubar item key
+      - '/System/Library/CoreServices/Menu Extras/TextInput.menu' # Enable input menubar item key
+      - '/System/Library/CoreServices/Menu Extras/TimeMachine.menu' # Enable Time Machine menubar item key
+      - '/System/Library/CoreServices/Menu Extras/UniversalAccess.menu' # Enable Universal Access menubar item key
+      - '/System/Library/CoreServices/Menu Extras/User.menu' # Enable accounts menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Volume.menu' # Enable volume menubar item key
+      - '/System/Library/CoreServices/Menu Extras/VPN.menu' # Enable VPN menubar item key
 
 
 
