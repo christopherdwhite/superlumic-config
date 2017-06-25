@@ -19,7 +19,12 @@
 #     name: "{{ item }}"
 #   with_items:
 #     - { name: "workstation-preferences" }
+#     - { name: "workstation-apps" }
 
 - name: Include workstation-preferences role
   include_role:
     name: workstation-preferences
+
+- name: Include workstation-apps role
+  include_role:
+    name: workstation-apps

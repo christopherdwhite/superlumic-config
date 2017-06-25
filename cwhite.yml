@@ -73,13 +73,6 @@
   #
   tasks:
 
-    # Install apps from Homebrew Cask
-    - name: install personal homebrew cask applications
-      homebrew_cask: name={{item}} state=present
-      with_items:
-        - atom
-        - coderunner
-
   ### Roles
   #
   # Playbook attribute: roles
