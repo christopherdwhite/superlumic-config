@@ -119,7 +119,7 @@ defaults:
       - '/System/Library/CoreServices/Menu Extras/Battery.menu' # Enable battery menubar item key
       - '/System/Library/CoreServices/Menu Extras/Bluetooth.menu' # Enable Bluetooth menubar item key
       - '/System/Library/CoreServices/Menu Extras/Clock.menu' # Enable clock menubar item key
-      - '/System/Library/CoreServices/Menu Extras/VPN.menu' # Enable VPN menubar item key
+      - '/System/Library/CoreServices/Menu Extras/Volume.menu' # Enable volume menubar item key
 
 # These defaults need to be set with escalated privileges, primarily anything that needs to set a key in a /Library/Preferences/ domain
 become_defaults:
