@@ -7,7 +7,8 @@ dev:
   ## IDEs & Text Editors
   - atom
   - coderunner
+  - sublime-text-dev
 
-  ## Utilities
+  ## Documentation
   - dash
 
