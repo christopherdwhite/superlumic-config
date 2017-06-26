@@ -7,3 +7,11 @@
     type: boolean
     value: false
   notify: "restart macos preferences"
+
+- name: Change Dock position to right
+  osx_defaults:
+    domain: "com.apple.dock"
+    key: "orientation"
+    type: string
+    value: "right"
+  notify: "restart macos preferences"
