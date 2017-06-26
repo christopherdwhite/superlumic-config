@@ -2,12 +2,12 @@
 
 # Homebrew Cask Apps to Install
 
-## General Development Apps
+# General Development Apps
+dev:
+  ## IDEs & Text Editors
+  - atom
+  - coderunner
 
-### IDEs & Text Editors
-- atom
-- coderunner
-
-### Utilities
-- dash
+  ## Utilities
+  - dash
 
