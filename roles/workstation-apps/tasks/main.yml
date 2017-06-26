@@ -1,7 +1,7 @@
 ---
 
     # Install apps from Homebrew Cask
-    - name: install personal homebrew cask applications
+    - name: Install Homebrew Cask Apps
       homebrew_cask: name={{item}} state=present
       with_items:
-        - "{{ casks_dev }}"
+        - "{{ casks }}"

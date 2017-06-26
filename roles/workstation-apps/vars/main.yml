@@ -1,2 +1,6 @@
 ---
 
+- name: Include Vars from casks.yml as Casks
+  include_vars:
+    file: cask.yml
+    name: casks
