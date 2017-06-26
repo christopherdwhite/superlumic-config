@@ -1,0 +1,16 @@
+---
+
+# Homebrew Cask Apps
+
+## General Development Apps
+casks_dev:
+  # IDEs & Text Editors
+  - atom
+  - coderunner
+
+  # Utilities
+  - dash
+
+# Mac App Store Apps
+
+## General Development Apps
