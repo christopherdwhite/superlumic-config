@@ -8,7 +8,7 @@
 
 # Tap Homebrew
 - homebrew_tap:
-    name: homebrew/versions
+    name: caskroom/versions
 
 # Install apps from Homebrew Cask
 - name: Install Homebrew Cask Apps
