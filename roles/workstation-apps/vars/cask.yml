@@ -1,8 +1,8 @@
 ---
 
-# Homebrew Cask Apps
+# Homebrew Cask Apps to Install
 
-## General Development Apps
+# General Development Apps
 casks_dev:
   # IDEs & Text Editors
   - atom
@@ -11,6 +11,3 @@ casks_dev:
   # Utilities
   - dash
 
-# Mac App Store Apps
-
-## General Development Apps
