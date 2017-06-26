@@ -20,4 +20,5 @@
     - "{{ casks.productivity }}"
     - "{{ casks.social }}"
     - "{{ casks.utilities }}"
+    - "{{ casks.web }}"
     - "{{ casks.write }}"
