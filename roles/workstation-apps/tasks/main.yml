@@ -1,7 +1,7 @@
 ---
 
 # Include Variable Files
-- name: Include vars from casks.yml as {{ Casks }}
+- name: Include vars from casks.yml as {{ casks }}
   include_vars:
     file: cask.yml
     name: casks
@@ -14,4 +14,10 @@
 - name: Install Homebrew Cask Apps
   homebrew_cask: name={{item}} state=present
   with_items:
+    - "{{ casks.cloud }}"
+    - "{{ casks.design }}"
     - "{{ casks.dev }}"
+    - "{{ casks.productivity }}"
+    - "{{ casks.social }}"
+    - "{{ casks.utilities }}"
+    - "{{ casks.write }}"

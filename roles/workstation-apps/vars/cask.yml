@@ -2,6 +2,16 @@
 
 # Homebrew Cask Apps to Install
 
+# Cloud
+cloud:
+  - dropbox
+  - droplr
+
+# Design
+design:
+  - sketch
+  - sketch-beta
+
 # General Development Apps
 dev:
   ## IDEs & Text Editors
@@ -12,3 +22,26 @@ dev:
   ## Documentation
   - dash
 
+  ## Git
+  - tower
+
+# Productivity
+productivity:
+  - 1password
+  - fantastical
+
+# Social
+social:
+  - franz
+  - gitter
+  - skype
+  - slack
+
+# Utilities
+utilities:
+  - alfred
+  - parallels-desktop
+
+# Write
+write:
+  - foldingtext

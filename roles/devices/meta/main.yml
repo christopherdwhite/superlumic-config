@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: Chris White
+  description: Ansible role to setup system for specific hardware components
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+    - name: Darwin
+      versions:
+        - all
+  categories:
+    - system
