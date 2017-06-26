@@ -1,7 +1,7 @@
 ---
 
 # Include Variable Files
-- name: Include Vars from casks.yml as Casks
+- name: Include vars from casks.yml as {{ Casks }}
   include_vars:
     file: cask.yml
     name: casks
@@ -15,11 +15,3 @@
   homebrew_cask: name={{item}} state=present
   with_items:
     - "{{ casks.dev }}"
-
-
-
-- name: Test
-  package:
-    name: an-old-hope-syntax
-    state: latest
-    use: apm
