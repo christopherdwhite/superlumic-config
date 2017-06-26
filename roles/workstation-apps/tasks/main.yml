@@ -15,3 +15,11 @@
   homebrew_cask: name={{item}} state=present
   with_items:
     - "{{ casks.dev }}"
+
+
+
+- name: Test
+  package:
+    name: an-old-hope-syntax
+    state: latest
+    use: apm
