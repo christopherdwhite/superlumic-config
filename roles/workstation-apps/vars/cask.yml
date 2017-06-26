@@ -47,7 +47,7 @@ utilities:
 
 # web
 web:
-  - chrome
+  - google-chrome
   - firefox
 
 # Write
