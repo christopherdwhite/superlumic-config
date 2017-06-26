@@ -15,7 +15,7 @@
   homebrew_cask: name={{item}} state=present
   with_items:
     - "{{ casks.cloud }}"
-    - "{{ casks.design }}"
+    # - "{{ casks.design }}"
     - "{{ casks.dev }}"
     - "{{ casks.productivity }}"
     - "{{ casks.social }}"
