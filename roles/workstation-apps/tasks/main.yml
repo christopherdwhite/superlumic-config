@@ -1,9 +1,14 @@
 ---
 
+# Include Variable Files
 - name: Include Vars from casks.yml as Casks
   include_vars:
     file: cask.yml
     name: casks
+
+# Tap Homebrew
+- homebrew_tap:
+    name: homebrew/versions
 
 # Install apps from Homebrew Cask
 - name: Install Homebrew Cask Apps
