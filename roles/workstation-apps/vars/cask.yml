@@ -43,6 +43,7 @@ social:
 # Utilities
 utilities:
   - alfred
+  - hyper
   - parallels-desktop
 
 # web
