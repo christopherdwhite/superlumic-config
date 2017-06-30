@@ -10,7 +10,7 @@
   register: null_test
   ignore_errors: yes
 
-- debug: msg="Atom:"
+- debug: msg="Atom:" "{{ return_value }}"
 # - debug: msg="Null:" "{{ null_test.stout }}"
 
 
