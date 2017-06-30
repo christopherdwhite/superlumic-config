@@ -2,10 +2,11 @@
 
 # Check if Atom is installed
 - name: Check if Atom and apm are installed
-  command: which atom apm some null
-  register: atom_status
+  changed_when: False
   check_mode: no
-  ignore_errors: yes
+  command: which atom apm
+  failed_when: return_value.rc
+  register: atom_status
 
 - debug: msg="{{ atom_status }}"
 
@@ -13,8 +14,6 @@
 #   command: which atom apm
 #   register: return_value
 
-    # failed_when: return_value.rc
-    # changed_when: False
     # environment:
     #   PATH: "{{ bin_dir }}:{{ ansible_env.PATH }}"
 
