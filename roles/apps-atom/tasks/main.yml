@@ -6,7 +6,7 @@
   ignore_errors: yes
 
 # Test that Atom is not installed
-- shell: which null
+- shell: which git
   register: null_test
   ignore_errors: yes
 
