@@ -10,7 +10,7 @@
   register: null_test
   ignore_errors: yes
 
-- debug: msg="Atom:" "{{ return_value }} / " "Null:" "{{ null_test }}"
+- debug: msg="Atom:" "{{ return_value.stout }} / " "Null:" "{{ null_test.stout }}"
 
 
 # - name: Install Atom if necessary
