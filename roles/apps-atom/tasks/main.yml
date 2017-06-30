@@ -10,7 +10,7 @@
   register: null_test
   ignore_errors: yes
 
-- debug: msg="Atom:\ {{ return_value.stdout }} / msg="Null:\ {{ null_test.stdout }}"
+- debug: msg="Atom:\ {{ return_value.stdout }} / Null:\ {{ null_test.stdout }}"
 
 
 # - name: Install Atom if necessary
