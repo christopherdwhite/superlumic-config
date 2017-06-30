@@ -1,36 +1,13 @@
 ---
 
 # Check if Atom is installed
-- name: Check if Atom and apm are installed
-  command: which atom apm
+- name: Ensure Atom is installed
+  command: which atom apm null
   register: atom_status
   failed_when: atom_status.rc
   changed_when: false
   check_mode: no
 
-- debug: msg="{{ atom_status }}"
-
-# - name: Install Atom if necessary
-#   command: which atom apm
-#   register: return_value
-
-    # environment:
-    #   PATH: "{{ bin_dir }}:{{ ansible_env.PATH }}"
-
-# - shell: echo "Atom Installed-- {{ return_value.stdout }}"
-#   when: return_value.stdout_lines
-# - debug: msg="{{ return_value_negative }}"
-
-# - debug: msg="Installed"
-#   when: return_value.stout != -1
-
-# - debug: msg="Not Installed"
-#   when: return_value.stout = -1
-
-   # - name: check contents for emptiness
-   #      debug: msg="Directory is empty"
-   #      when: contents.stdout == ""
-
-# # Ensure Atom is installed
+# Ensure Atom is installed
 # - name: Install Atom from Homebrew Cask if necessary
 #   homebrew_cask: name=atom state=present"
