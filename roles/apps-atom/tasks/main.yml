@@ -2,7 +2,7 @@
 
 # Check if Atom is installed
 - name: Check if Atom and apm are installed
-  command: which atom apm
+  command: which atom apm some null
   register: atom_status
   check_mode: no
   ignore_errors: yes
