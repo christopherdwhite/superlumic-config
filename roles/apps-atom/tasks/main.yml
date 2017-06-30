@@ -3,13 +3,14 @@
 # Check if Atom is installed
 - shell: which atom apm
   register: return_value
+  ignore_errors: yes
 
 # Test that Atom is not installed
 - shell: which null
   register: null_test
+  ignore_errors: yes
 
 - debug: msg="Atom:" "{{ return_value }} / " "Null:" "{{ null_test }}"
-
 
 
 # - name: Install Atom if necessary
