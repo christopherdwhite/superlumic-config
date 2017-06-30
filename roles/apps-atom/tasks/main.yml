@@ -14,7 +14,7 @@
   register: return_value
 
 - shell: echo "Atom Installed-- {{ return_value.stdout }}"
-  when: return_value.stdout
+  # when: return_value.stdout
 
 # # Ensure Atom is installed
 # - name: Install Atom from Homebrew Cask if necessary
