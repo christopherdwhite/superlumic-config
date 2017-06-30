@@ -1,26 +1,30 @@
 ---
 
+# Check if Atom is installed
+- shell: which atom apm
+  register: return_value
+
+# Test that Atom is not installed
+- shell: which null
+  register: null_test
+
+- debug: msg="Atom: {{ return_value }} / Null: {{ null_test }}"
+
+
+
+
 # - name: Install Atom if necessary
 #   command: which atom apm
 #   register: return_value
 
-  # check_mode: no
-  # failed_when: return_value.rc
-  # changed_when: False
-  # environment:
-  #   PATH: "{{ bin_dir }}:{{ ansible_env.PATH }}"
-
-- shell: which atom apm
-  register: return_value
+    # check_mode: no
+    # failed_when: return_value.rc
+    # changed_when: False
+    # environment:
+    #   PATH: "{{ bin_dir }}:{{ ansible_env.PATH }}"
 
 # - shell: echo "Atom Installed-- {{ return_value.stdout }}"
 #   when: return_value.stdout_lines
-
-- debug: msg="{{ return_value.stdout_lines }}"
-
-- shell: which null
-  register: null_file
-
 # - debug: msg="{{ return_value_negative }}"
 
 # - debug: msg="Installed"
