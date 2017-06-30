@@ -20,6 +20,7 @@
 #   with_items:
 #     - { name: "workstation-preferences" }
 #     - { name: "workstation-apps" }
+#     - { name: "apps-atom" }
 
 # - name: Include workstation-preferences role
 #   include_role:

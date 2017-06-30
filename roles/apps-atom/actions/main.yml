@@ -11,3 +11,4 @@
   #   PATH: "{{ bin_dir }}:{{ ansible_env.PATH }}"
 
 - command: echo {{ return_value }}
+ - something }{}
