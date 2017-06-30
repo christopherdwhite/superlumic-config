@@ -3,10 +3,11 @@
 # Check if Atom is installed
 - name: Check if Atom and apm are installed
   command: which atom apm
-  register: return_value
+  register: atom_status
   check_mode: no
   ignore_errors: yes
 
+- debug: msg="{{ atom_status }}"
 
 # - name: Install Atom if necessary
 #   command: which atom apm
