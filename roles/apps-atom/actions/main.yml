@@ -1,0 +1,13 @@
+---
+
+- name: Install Atom if necessary
+  command: which atom apm
+  register: return_value
+
+  # check_mode: no
+  # failed_when: return_value.rc
+  # changed_when: False
+  # environment:
+  #   PATH: "{{ bin_dir }}:{{ ansible_env.PATH }}"
+
+- command: echo {{ return_value }}
