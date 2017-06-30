@@ -11,7 +11,7 @@
   ignore_errors: yes
 
 - debug: msg="Atom:" "{{ return_value.stout }}"
-- debug: msg="Null:" "{{ null_test.stout }}"
+# - debug: msg="Null:" "{{ null_test.stout }}"
 
 
 # - name: Install Atom if necessary
