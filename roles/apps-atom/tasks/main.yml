@@ -18,6 +18,12 @@
 
 - debug: msg="{{ return_value.stdout_lines }}"
 
+- debug: msg="Installed"
+  when: return_value.stout != -1
+
+- debug: msg="Not Installed"
+  when: return_value.stout = -1
+
 # # Ensure Atom is installed
 # - name: Install Atom from Homebrew Cask if necessary
 #   homebrew_cask: name=atom state=present"
