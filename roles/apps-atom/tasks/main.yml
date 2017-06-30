@@ -1,23 +1,17 @@
 ---
 
 # Check if Atom is installed
-- shell: which atom apm
+- name: Check if Atom and apm are installed
+  command: which atom apm
   register: return_value
+  check_mode: no
   ignore_errors: yes
-
-# Test that Atom is not installed
-- shell: which null_test
-  # register: null_test
-  ignore_errors: yes
-
-- debug: msg="Atom:\ {{ return_value.stdout }} / Null:\ {{ null_test.stdout|default('Null not installed') }}"
 
 
 # - name: Install Atom if necessary
 #   command: which atom apm
 #   register: return_value
 
-    # check_mode: no
     # failed_when: return_value.rc
     # changed_when: False
     # environment:
