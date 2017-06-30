@@ -8,8 +8,7 @@
 - shell: which null
   register: null_test
 
-- debug: msg="Atom: {{ return_value }} / Null: {{ null_test }}"
-
+- debug: msg="Atom:" "{{ return_value }} / " "Null:" "{{ null_test }}"
 
 
 
