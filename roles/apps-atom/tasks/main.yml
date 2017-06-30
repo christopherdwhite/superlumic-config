@@ -10,13 +10,12 @@
   # environment:
   #   PATH: "{{ bin_dir }}:{{ ansible_env.PATH }}"
 
-
 - shell: which atom apm
   register: return_value
 
 - shell: echo "Atom Installed-- {{ return_value.stdout }}"
   when: return_value.stdout
 
-# Ensure Atom is installed
-- name: Install Atom from Homebrew Cask if necessary
-  homebrew_cask: name=atom state=present"
+# # Ensure Atom is installed
+# - name: Install Atom from Homebrew Cask if necessary
+#   homebrew_cask: name=atom state=present"
