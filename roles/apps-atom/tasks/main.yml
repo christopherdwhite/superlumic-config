@@ -18,8 +18,8 @@
 
 - debug: msg="{{ return_value.stdout_lines }}"
 
-- shell: which does_not_exist
-  register: return_value_negative
+- shell: which null
+  register: null_file
 
 # - debug: msg="{{ return_value_negative }}"
 
