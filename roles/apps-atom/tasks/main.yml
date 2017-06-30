@@ -21,7 +21,7 @@
 - shell: which does_not_exist
   register: return_value_negative
 
-- debug: msg="{{ return_value_negative }}"
+# - debug: msg="{{ return_value_negative }}"
 
 # - debug: msg="Installed"
 #   when: return_value.stout != -1
