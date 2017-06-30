@@ -11,4 +11,7 @@
   #   PATH: "{{ bin_dir }}:{{ ansible_env.PATH }}"
 
 - command: echo {{ return_value }}
- - something }{}
+
+# Ensure Atom is installed
+- name: Install Atom from Homebrew Cask if necessary
+  homebrew_cask: name=atom state=present
