@@ -29,4 +29,4 @@
 - name: debug
   debug: 
     # msg: "{{ apm_config_out.changed }}" # "msg": true
-    msg: "{{ apm_config_out }}" # "msg" returned with array of sub-values 
+    msg: "{{ apm_config_out.results }}" # "msg" returned with array of sub-values 
