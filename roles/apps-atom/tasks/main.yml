@@ -28,4 +28,4 @@
 
 - debug: var=item.stdout_lines
   with_items:
-    apm_config_output.results
+    {{ apm_config_output.results }}
