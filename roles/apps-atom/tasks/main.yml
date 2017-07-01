@@ -26,7 +26,7 @@
     - apm_config.config == true
     - apm_config.command == "set"
   with_items:
-    - {{ apm_config }}
+    - "{{ apm_config }}"
 # Get
 # Delete
 # List
