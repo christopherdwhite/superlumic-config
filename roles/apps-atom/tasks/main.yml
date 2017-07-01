@@ -18,6 +18,8 @@
   when: apm_clean == true
 
 # Run apm config
+# Note that while you can use each of the command options (set, get, delete, list and edit), get and list don't make sense in the context of an Ansible configuration.
+# Both can be executed but they will not return the values back to the Ansible terminal.
 - name: Run apm config loop
   command: "apm config {{ item.command }} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
   register: apm_config_out
@@ -25,8 +27,3 @@
     - item.config
   with_items:
     - "{{ apm_config }}"
-
-- name: debug
-  debug: 
-    msg: "{{ item.stdout_lines }}"
-  with_items: "{{ apm_config_out.results }}"
