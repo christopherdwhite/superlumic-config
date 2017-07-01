@@ -1,13 +1,13 @@
 ---
 
-# Check if Atom is installed
-- name: Ensure Atom is installed
-  command: which atom apm null
+# Install Atom from Homebrew Cask if necessary
+- name: Install Atom from Homebrew Cask if necessary
+  homebrew_cask: name=atom state=present"
+
+# Make sure Atom and apm are installed installed
+- name: Ensure Atom and apm (Atom Package Manager) are installed
+  command: which atom apm
   register: atom_status
   failed_when: atom_status.rc
   changed_when: false
   check_mode: no
-
-# Ensure Atom is installed
-# - name: Install Atom from Homebrew Cask if necessary
-#   homebrew_cask: name=atom state=present"
