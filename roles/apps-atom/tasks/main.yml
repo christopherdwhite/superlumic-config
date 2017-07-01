@@ -22,11 +22,11 @@
   command: "apm config {{ item.command }} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
   register: apm_config_out
   when: 
-    - item.config_out
+    - item.config
   with_items:
     - "{{ apm_config }}"
 
 - name: debug-echo output
   debug: 
-    msg: "{{ item }}"
-  with_items: "{{ apm_config_out.results.stdout }}"
+    msg: "{{ item.changed }}"
+  with_items: "{{ apm_config_out.results }}"
