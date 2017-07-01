@@ -27,5 +27,5 @@
   register: apm_config_out
 
 - name: debug-echo output
-  debug: msg="{{ item.stdout_lines }}"
+  debug: msg="{{ item.changed }}"
   with_items: "{{ apm_config_out.results }}"
