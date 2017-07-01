@@ -1,13 +1,41 @@
 ---
 
-### apm_defaults
+### apps-atom Variables
+# 
+# Overview: Configure the preferences and packages that Atom uses
+#
+# Description:
+#   Define your preferences for Atom below, default variables have been set but are set to be as neutral and nondestructive as possible
+# 
+###
+
+### apm_clean
 #
 # Playbook attribute: apm_clean
-# Default: false
 # Required: no
+# Type: boolean
+# Default: false
 # Description:
 #   Runs `apm clean`
 #   Command --help:
 #     Deletes all packages in the node_modules folder that are not referenced as a dependency in the package.json file.
 #
 apm_clean: true
+
+### apm_config
+#
+# Playbook attribute: apm_config
+# Required: no
+# Type: array
+# Default: false
+# Description:
+#   Runs `apm config set {{ apm_config_key }} {{ apm_config_value }}`
+#   Command --help:
+#     Usage: apm config set <key> <value>
+#            apm config get <key>
+#            apm config delete <key>
+#            apm config list
+#            apm config edit
+#
+apm_config: 
+  - { config: true, command: 'set', key: 'cache', value: '/some/path' }

@@ -4,7 +4,7 @@
 - name: Install Atom from Homebrew Cask if necessary
   homebrew_cask: name="atom" state=present
 
-# Make sure Atom and apm are installed installed, fail if not installed
+# Make sure Atom and apm are installed, fail if not installed
 - name: Ensure Atom and apm (Atom Package Manager) are installed
   command: which atom apm
   register: atom_status
@@ -16,3 +16,18 @@
 - name: apm clean
   command: apm clean
   when: apm_clean == true
+
+### Run apm config
+#
+# Set
+- name: Run `apm config set {{ item.key }} {{ item.value }}`
+  command: "apm config set {{ item.key }} {{ item.value }}"
+  when: 
+    - apm_config.config == true
+    - apm_config.command == "set"
+  with_items:
+    - {{ apm_config }}
+# Get
+# Delete
+# List
+# Edit
