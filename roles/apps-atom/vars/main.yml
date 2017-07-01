@@ -64,5 +64,5 @@ clean: false
 # Note:
 #   It appears that you can run this without specifying a package to presumably dedupe all but this has not been tested.
 #
-dedupe:
-  - { dedupe: true, packages: 'some package' }
+# dedupe:
+#   - { dedupe: true, packages: 'some packages' }
