@@ -15,9 +15,9 @@
 # apm clean: Delete packages in node_modules not in use
 - name: apm clean
   command: apm clean
-  when: apm_clean == true
+  when: apm_clean
 
-# Run apm config
+# apm config: set or delete Atom configuration variables
 - name: Run apm config loop
   command: "apm config {{ item.command}} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
   when: 
