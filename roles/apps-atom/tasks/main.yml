@@ -18,14 +18,14 @@
   when: apm_clean == true
 
 # Run apm config
-- name: Run apm config set loop
+- name: Run apm config loop
   command: "apm config {{ item.command }} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
-  register: apm_config_out
   when: 
     - item.config
   with_items:
     - "{{ apm_config }}"
+  register: apm_config_out
 
 - name: debug-echo output
-  debug: msg="{{ item.results.stdout_lines }}"
-  with_items: "{{ apm_config_out }}"
+  debug: msg="{{ item.stdout_lines }}"
+  with_items: "{{ apm_config_out.results }}"
