@@ -27,5 +27,6 @@
   register: apm_config_out
 
 - name: debug-echo output
-  debug: msg="{{ item.stdout_lines }}"
-  with_items: "{{ apm_config_out.['results'][0] }}"
+  - name: debug
+  debug: 
+    msg: "{{ apm_config_out['results.stdout_lines'] }}"
