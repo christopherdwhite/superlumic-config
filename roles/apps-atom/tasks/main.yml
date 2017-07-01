@@ -11,3 +11,8 @@
   failed_when: atom_status.rc
   changed_when: false
   check_mode: no
+
+# apm clean: Delete packages in node_modules not in use
+- name: apm clean
+  command: apm clean
+  when: {{ apm_clean }} == true

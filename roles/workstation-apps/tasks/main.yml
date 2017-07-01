@@ -12,7 +12,7 @@
 
 # Install apps from Homebrew Cask
 - name: Install Homebrew Cask Apps
-  homebrew_cask: name={{item}} state=present
+  homebrew_cask: name={{ item }} state=present
   with_items:
     - "{{ casks.cloud }}"
     # - "{{ casks.design }}"
