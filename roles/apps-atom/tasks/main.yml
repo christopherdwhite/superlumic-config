@@ -24,7 +24,7 @@
     - item.config
   with_items:
     - "{{ apm_config }}"
-  failed_when: "apm_config.command == 'edit'"
+  failed_when: item.command == 'edit'
   ignore_errors: yes
 
 # Error apm config
