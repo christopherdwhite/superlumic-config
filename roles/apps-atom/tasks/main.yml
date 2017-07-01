@@ -28,5 +28,5 @@
 
 - name: debug
   debug: 
-    msg: "{{ item.item.stdout_lines }}"
+    msg: "{{ item.1.stdout_lines }}"
   with_items: "{{ apm_config_out.results }}"
