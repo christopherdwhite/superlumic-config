@@ -18,12 +18,16 @@
   when: apm_clean == true
 
 # Run apm config
-# Note that while you can use each of the command options (set, get, delete, list and edit), get and list don't make sense in the context of an Ansible configuration.
-# Both can be executed but they will not return the values back to the Ansible terminal.
 - name: Run apm config loop
   command: "apm config {{ item.command }} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
-  register: apm_config_out
   when: 
     - item.config
   with_items:
     - "{{ apm_config }}"
+  failed_when: "{{ apm_config⌘and == 'edit' }}"
+  ignore_errors: yes
+
+# Error apm config
+- name: "Error Description: Cannot use apm config edit command"
+  debug: msg="You cannot use the apm config edit command in a playbook because it will try to take over the shell opening the file"
+  when: "{{ apm_config⌘and == 'edit' }}"
