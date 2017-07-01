@@ -24,6 +24,7 @@
   command: "apm config set {{ item.key }} {{ item.value }}"
   when: 
     - item.config
+    - item.command == "set"
   with_items:
     - "{{ apm_config }}"
 # Get

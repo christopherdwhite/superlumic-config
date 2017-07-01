@@ -38,4 +38,4 @@ apm_clean: true
 #            apm config edit
 #
 apm_config: 
-  - { config: true, command: 'set', key: 'cache', value: '/some/path' }
+  - { config: true, command: 'set', key: 'cache', value: '/Users/cwhite/.atom/.apm' }
