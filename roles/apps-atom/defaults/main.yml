@@ -1,4 +1,6 @@
 ---
 
+# defaults file for apps-atom role
+
 # Do not `apm clean` by default
-- apm_clean: false
+apm_clean: false
