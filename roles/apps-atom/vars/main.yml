@@ -40,5 +40,5 @@ apm_clean: false
 #
 apm_config: 
   - { config: true, command: 'set', key: 'cache', value: '/Users/cwhite/.atom/.apm' }
-  - { config: true, command: 'get', key: 'cache' }
-  - { config: true, command: 'list'}
+  # - { config: true, command: 'get', key: 'cache' }
+  # - { config: true, command: 'list'}
