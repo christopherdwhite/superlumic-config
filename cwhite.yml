@@ -28,6 +28,7 @@
 - name: superlumic  # Playbook name
   hosts: localhost  # Run on localhost
   connection: local # Run locally
+  gather_facts: false # Disable gather facts for faster execution if not needed
   # strategy: debug   # Enable debugger for failed tasks
   # remote_user: root # User to run tasks as
 
@@ -40,9 +41,6 @@
   #   Set configuration variables passed to templates & included playbooks
   #
   vars:
-
-    # Disable Gather Facts
-    - gather_facts: false
 
     # Computer Name (used by superlumic-computername module)
     - computername: cportable # (defaulted)
