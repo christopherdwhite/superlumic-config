@@ -22,9 +22,10 @@
   command: "apm config {{ item.command }} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
   when: 
     - item.config
+  failed_when: 
+    - item.command == 'edit'
   with_items:
     - "{{ apm_config }}"
-  failed_when: item.command == 'edit'
   ignore_errors: yes
 
 # Error apm config
