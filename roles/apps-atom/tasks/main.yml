@@ -24,10 +24,10 @@
     - item.config
   with_items:
     - "{{ apm_config }}"
-  failed_when: "{{ apm_config.command == 'edit' }}"
+  failed_when: apm_config.command == 'edit'
   ignore_errors: yes
 
 # Error apm config
 - name: "Error Description: Cannot use apm config edit command"
   debug: msg="You cannot use the apm config edit command in a playbook because it will try to take over the shell opening the file"
-  when: "{{ apm_config.command == 'edit' }}"
+  when: apm_config.command == 'edit'
