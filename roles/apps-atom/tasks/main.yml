@@ -27,6 +27,6 @@
     - "{{ apm_config }}"
 
 - debug: 
-    msg: "{{ item.stdout }}"
+    msg: "'{{ item.stdout }}'"
   with_items:
     - "{{ apm_config_output.results }}"
