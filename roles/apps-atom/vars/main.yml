@@ -38,12 +38,11 @@ apm_clean: false
 #            apm config list
 #            apm config edit
 # Note:
-#   While you can execute each of the command options only set and delete make sense in the context of ansible.
-#     Neither get nor list will print the command output to the Ansible Terminal
-#     And edit will not open the file for editing in your session
+#   While you can execute set, get, delete and list only set and delete make sense in the context of ansible.
+#     get and list will print their output to the shell so adding them is superflious.
+#     Trying to use edit will be skipped altogether to prevent vim (or whatever editor is set) from trying to hijack the shell.
 #
 apm_config: 
-  - { config: true, command: 'set', key: 'some key', value: '/Users/cwhite/.atom/.apm' }
-  - { config: true, command: 'delete', key: 'some key'}
-  - { config: true, command: 'edit'}
+  # - { config: true, command: 'set', key: 'some key', value: '/Users/cwhite/.atom/.apm' }
+  # - { config: true, command: 'delete', key: 'some key'}
 
