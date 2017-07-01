@@ -27,4 +27,4 @@
     - "{{ apm_config }}"
 
 - name: debug
-  debug: msg="{{ apm_config_out.results.msg }}"
+  debug: msg="{{ apm_config_out.results.stdout }}"
