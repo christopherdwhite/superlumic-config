@@ -42,7 +42,6 @@ apm_clean: false
 #     get and list will print their output to the shell so adding them is superflious.
 #     Trying to use edit will be skipped altogether to prevent vim (or whatever editor is set) from trying to hijack the shell.
 #
-apm_config: 
-  # - { config: true, command: 'set', key: 'some key', value: '/Users/cwhite/.atom/.apm' }
+apm_config: { config: true, command: 'set', key: 'some key', value: '/Users/cwhite/.atom/.apm' }
   # - { config: true, command: 'delete', key: 'some key'}
 
