@@ -23,7 +23,7 @@
 clean: false
 
 # config
-config: { config: false }
+config: { enable: false }
 
 # dedupe
-dedupe: { config: false }
+dedupe: { enable: false }

@@ -21,7 +21,7 @@
 - name: Run apm config items and preferences
   command: "apm config {{ item.command}} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
   when: 
-    - item.config
+    - item.enable
     - item.command != "edit"
   with_items:
     - "{{ config }}"
@@ -30,6 +30,6 @@
 - name: Run apm dedupe packages
   command: "apm dedupe {{ item.packages | default(omit) }}"
   when:
-    - item.dedupe
+    - item.enable
   with_items:
     - "{{ dedupe }}"
