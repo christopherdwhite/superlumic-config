@@ -29,4 +29,4 @@
 - name: debug
   debug: 
     msg: "{{ item }}"
-  with_items: "{{ apm_config_out.results }}"
+  with_items: "{{ apm_config_out.results.msg }}"
