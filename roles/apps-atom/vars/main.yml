@@ -1,0 +1,4 @@
+---
+
+# Run `apm clean`
+apm_defaults: true
