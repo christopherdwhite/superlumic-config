@@ -28,5 +28,5 @@
 
 - name: debug
   debug: 
-    # msg: "{{ apm_config_out.changed }}" # "msg": true
-    msg: "{{ apm_config_out.results.0.stdout_lines }}" # "msg" returned with array of sub-values 
+    msg: "{{ item.stdout_lines }}"
+  with_items: "{{ apm_config_out.results }}"
