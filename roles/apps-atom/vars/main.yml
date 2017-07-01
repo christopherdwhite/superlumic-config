@@ -53,7 +53,7 @@ clean: false
 # Type: boolean
 # Default: false
 # Description:
-#   Runs `apm dedupe {{ dedupe.package }}`
+#   Runs `apm dedupe {{ dedupe.packages }}`
 #   Command --help:
 #     Usage: apm dedupe [<package_name>...]
 #
@@ -61,5 +61,8 @@ clean: false
 #
 #     This command is experimental.
 #
+# Note:
+#   It appears that you can run this without specifying a package to presumably dedupe all but this has not been tested.
+#
 dedupe:
-  - { dedupe: true, package: 'some package' }
+  - { dedupe: true, packages: 'some package' }

@@ -28,7 +28,7 @@
 
 # apm dedupe: Dedupe node_module package
 - name: Run apm dedupe packages
-  command: "apm dedupe {{ item.package }}"
+  command: "apm dedupe {{ item.packages | default(omit) }}"
   when:
     - item.dedupe
   with_items:
