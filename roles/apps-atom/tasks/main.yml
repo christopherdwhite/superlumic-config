@@ -28,4 +28,4 @@
 
 - name: debug
   debug: 
-    msg: "{{ apm_config_out['results']['changed'] }}"
+    msg: "{{ apm_config_out['results'].changed }}"
