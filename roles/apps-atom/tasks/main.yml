@@ -28,6 +28,6 @@
 
 - debug: 
     msg: "{{ item.stdout }}"
-    verbosity: 0
+    verbosity: 3
   with_items:
     - "{{ apm_config_output.results }}"
