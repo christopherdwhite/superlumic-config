@@ -19,9 +19,9 @@
 
 # Run apm config
 - name: Run apm config loop
-  command: "apm config {{ item.command | reject('edit') }} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
+  command: "apm config {{ item.command}} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
   when: 
     - item.config
+    - item.config.command != 'edit'
   with_items:
     - "{{ apm_config }}"
-  ignore_errors: yes
