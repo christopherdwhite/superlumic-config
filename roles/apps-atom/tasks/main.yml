@@ -23,7 +23,7 @@
 - name: Run apm config set loop
   command: "apm config set {{ item.key }} {{ item.value }}"
   when: 
-    - apm_config.config
+    - item.config
   with_items:
     - "{{ apm_config }}"
 # Get
