@@ -30,13 +30,3 @@
   debug: 
     msg: "{{ item }}"
   with_items: "{{ apm_config_out.results }}"
-
-  - hosts: localhost
-  tasks:
-    - name: Register
-      command: "ls"
-      register: ls_out
-    - name: Debug
-      debug:
-        msg: "{{item}}"
-      with_items: "{{ls_out.stdout_lines}}"
