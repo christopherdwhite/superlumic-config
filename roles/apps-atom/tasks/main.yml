@@ -25,7 +25,6 @@
   register: apm_config_output
   when: 
     - item.config
-    - item.command == "set"
   with_items:
     - "{{ apm_config }}"
 
