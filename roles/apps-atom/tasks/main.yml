@@ -15,4 +15,4 @@
 # apm clean: Delete packages in node_modules not in use
 - name: apm clean
   command: apm clean
-  when: {{ apm_clean }} == true
+  when: apm_clean == true
