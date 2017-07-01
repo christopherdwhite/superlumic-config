@@ -9,9 +9,9 @@
 # 
 ###
 
-### apm_clean
+### clean
 #
-# Playbook attribute: apm_clean
+# Playbook attribute: clean
 # Required: no
 # Type: boolean
 # Default: false
@@ -21,16 +21,16 @@
 #     Deletes all packages in the node_modules folder that are not referenced as a dependency in the package.json file. 
 #       Note that this command is used for developing Atom packages and has been added for completeness, it's not something you normally use.
 #
-apm_clean: false
+clean: false
 
-### apm_config
+### config
 #
-# Playbook attribute: apm_config
+# Playbook attribute: config
 # Required: no
 # Type: array
 # Default: false
 # Description:
-#   Runs `apm config set {{ apm_config_key }} {{ apm_config_value }}`
+#   Runs `apm config {{ config.command }} {{ config.key }} {{ config.value }}`
 #   Command --help:
 #     Usage: apm config set <key> <value>
 #            apm config get <key>
@@ -42,6 +42,24 @@ apm_clean: false
 #     get and list will print their output to the shell so adding them is superflious.
 #     Trying to use edit will be skipped altogether to prevent vim (or whatever editor is set) from trying to hijack the shell.
 #
-# apm_config: 
+# config: 
 #   - { config: true, command: 'set', key: 'some key', value: '/Users/cwhite/.atom/.apm' }
 #   - { config: true, command: 'delete', key: 'some key'}
+
+### dedupe
+#
+# Playbook attribute: dedupe
+# Required: no
+# Type: boolean
+# Default: false
+# Description:
+#   Runs `apm dedupe {{ dedupe.package }}`
+#   Command --help:
+#     Usage: apm dedupe [<package_name>...]
+#
+#     Reduce duplication in the node_modules folder in the current directory.
+#
+#     This command is experimental.
+#
+dedupe:
+  - { dedupe: true, package: 'some package' }

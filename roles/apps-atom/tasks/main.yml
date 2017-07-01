@@ -15,13 +15,21 @@
 # apm clean: Delete packages in node_modules not in use
 - name: apm clean
   command: apm clean
-  when: apm_clean
+  when: clean
 
 # apm config: set or delete Atom configuration variables
-- name: Run apm config loop
+- name: Run apm config items and preferences
   command: "apm config {{ item.command}} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
   when: 
     - item.config
     - item.command != "edit"
   with_items:
-    - "{{ apm_config }}"
+    - "{{ config }}"
+
+# apm dedupe: Dedupe node_module package
+- name: Run apm dedupe packages
+  command: "apm dedupe {{ item.package }}"
+  when:
+    - item.dedupe
+  with_items:
+    - "{{ dedupe }}"
