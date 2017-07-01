@@ -26,6 +26,7 @@
   with_items:
     - "{{ apm_config }}"
 
-- name: debug
+- name: debug-echo output
   debug: 
-    msg: "{{ apm_config_out.results.changed] }}"
+    debug: msg="{{ item.stdout_lines }}
+  with_items: "{{ apm_config_out.results }}"
