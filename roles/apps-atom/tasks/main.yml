@@ -20,11 +20,11 @@
 # Run apm config
 - name: Run apm config set loop
   command: "apm config {{ item.command }} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
-  register: apm_config_output
+  register: apm_config_out
   when: 
     - item.config
   with_items:
     - "{{ apm_config }}"
 
 - name: debug
-  debug: msg="{{ apm_config_output.results.stdout }}"
+  debug: msg="{{ apm_config_out }}"
