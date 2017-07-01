@@ -20,11 +20,10 @@
 ### Run apm config
 #
 # Set
-- name: Run `apm config set {{ item.key }} {{ item.value }}`
+- name: "Run apm config set {{ item.key }} {{ item.value }}"
   command: "apm config set {{ item.key }} {{ item.value }}"
   when: 
     - apm_config.config == true
-    - apm_config.command == "set"
   with_items:
     - "{{ apm_config }}"
 # Get
