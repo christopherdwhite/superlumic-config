@@ -22,8 +22,11 @@
 # Set
 - name: Run apm config set loop
   command: "apm config {{ item.command }} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
+  register: apm_config_output
   when: 
     - item.config
     - item.command == "set"
   with_items:
     - "{{ apm_config }}"
+
+- debug: msg="{{ apm_config_output.stdout }}"
