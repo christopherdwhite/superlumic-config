@@ -41,6 +41,9 @@
   #
   vars:
 
+    # Disable Gather Facts
+    - gather_facts: false
+
     # Computer Name (used by superlumic-computername module)
     - computername: cportable # (defaulted)
 
