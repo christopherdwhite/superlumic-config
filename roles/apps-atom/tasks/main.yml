@@ -22,6 +22,6 @@
   command: "apm config {{ item.command}} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
   when: 
     - item.config
-    - item.config.command != 'edit'
+    - item.command != "edit"
   with_items:
     - "{{ apm_config }}"
