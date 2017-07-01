@@ -21,7 +21,7 @@
 #     Deletes all packages in the node_modules folder that are not referenced as a dependency in the package.json file. 
 #       Note that this command is used for developing Atom packages and has been added for completeness, it's not something you normally use.
 #
-apm_clean: true
+apm_clean: false
 
 ### apm_config
 #
