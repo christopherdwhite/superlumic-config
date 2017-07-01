@@ -26,10 +26,4 @@
   with_items:
     - "{{ apm_config }}"
 
-- debug: msg="item.results.stdout_lines"
-  with_items:
-    - "{{ apm_config_output }}"
-
-# - debug: var=item.results.stdout_lines
-#   with_items:
-#     - "{{ apm_config_output }}"
+- debug: msg="{{ apm_config_output.results.stdout_lines }}"
