@@ -28,4 +28,4 @@
 
 - name: debug-echo output
   debug: msg="{{ item.stdout_lines }}"
-  with_items: "{{ apm_config_out.results }}"
+  with_items: "{{ apm_config_out.results[0] }}"
