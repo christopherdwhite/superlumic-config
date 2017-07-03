@@ -47,10 +47,10 @@
 #        Prefix an option with `no-` to set it to false such as --no-color to disable colored output.
 # check: true, verbose: true, parckages-file: 'some file', production: true, compatible: true
 install:
-  - { package: 'aligner' }
+  - { package: 'aligner'}
   - { package: 'aligner-coffeescript' }
-  - { package: 'aligner-css' }
-  - { package: 'aligner-javascript' }
+  - { package: 'aligner-css', verbose: true }
+  - { package: 'aligner-javascript', verbose: false }
   - { package: 'aligner-php' }
   - { package: 'aligner-ruby' }
   - { package: 'aligner-python' }
