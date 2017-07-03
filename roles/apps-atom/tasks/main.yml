@@ -18,7 +18,7 @@
   when: clean
 
 # apm config: set or delete Atom configuration variables
-- name: Run apm config items and preferences
+- name: apm config items and preferences
   command: "apm config {{ item.command}} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
   when: 
     - item.enable
@@ -27,9 +27,17 @@
     - "{{ config }}"
 
 # apm dedupe: Dedupe node_module package
-- name: Run apm dedupe packages
+- name: apm dedupe packages
   command: "apm dedupe {{ item.packages | default(omit) }}"
   when:
     - item.enable
   with_items:
     - "{{ dedupe }}"
+
+# apm install: Install Atom packages
+- name: "apm install package: Install Atom packages"
+  command: "apm install {{ item.package }}"
+  with_items:
+    - "{{ install }}"
+
+# apm install: Install Atom packages file

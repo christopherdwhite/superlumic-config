@@ -11,7 +11,72 @@
 
 # Common Settings #
 
+### Install Packages
+#
+# Playbook attribute: install
+# Required: no
+# Type: array
+# Default: false
+# command aliases for reference: i
+# Description:
+#   Runs `apm uninstall {{ uninstall.packages }} {{ unistall.hard }} {{ uninstall.dev }}`
+#   Command --help:
+#     Usage: apm install [<package_name>...]
+#        apm install <package_name>@<package_version>
+#        apm install <git_remote>
+#        apm install <github_username>/<github_project>
+#        apm install --packages-file my-packages.txt
+#        apm i (with any of the previous argument usage)
+#
+#     Install the given Atom package to ~/.atom/packages/<package_name>.
+# 
+#     If no package name is given then all the dependencies in the package.json file are installed to the node_modules folder in the current working directory.
+# 
+#     A packages file can be specified that is a newline separated list of package names to install with optional versions using the `package-name@version` syntax.
+#
+#     Options:
+#       --check           Check that native build tools are installed                            [boolean]
+#       --verbose         Show verbose debug information                        [boolean] [default: false]
+#       --packages-file   A text file containing the packages to install                          [string]
+#       --production      Do not install dev dependencies                                        [boolean]
+#       -c, --compatible  Only install packages/themes compatible with this Atom version          [string]
+#       -h, --help        Print this usage message
+#       -s, --silent      Set the npm log level to silent                                        [boolean]
+#       -q, --quiet       Set the npm log level to warn                                          [boolean]
+#
+#        Prefix an option with `no-` to set it to false such as --no-color to disable colored output.
+# check: true, verbose: true, parckages-file: 'some file', production: true, compatible: true
+install:
+  - { package: 'aligner' }
+  - { package: 'aligner-coffeescript' }
+  - { package: 'aligner-css' }
+  - { package: 'aligner-javascript' }
+  - { package: 'aligner-php' }
+  - { package: 'aligner-ruby' }
+  - { package: 'aligner-python' }
+  - { package: 'aligner-scss' }
+  - { package: 'aligner-stylus' }
 
+### Uninstall Packages
+#
+# Playbook attribute: uninstall
+# Required: no
+# Type: array
+# Default: false
+# command aliases for reference: deinstall, delete, erase, remove and rm 
+# Description:
+#   Runs `apm uninstall {{ uninstall.packages }} {{ unistall.hard }} {{ uninstall.dev }}`
+#   Command --help:
+#     Usage: apm uninstall <package_name>...
+#
+#     Delete the installed package(s) from the ~/.atom/packages directory.
+#     
+#     Options:
+#       --hard      Uninstall from ~/.atom/packages and ~/.atom/dev/packages [boolean]
+#       -d, --dev   Uninstall from ~/.atom/dev/packages                      [boolean]
+# 
+# uninstall:
+#   - { enable: true, packages: "some package", hard: true, dev: false }
 
 # Additional Settings #
 
@@ -56,7 +121,7 @@
 #
 # Playbook attribute: dedupe
 # Required: no
-# Type: boolean
+# Type: array
 # Default: false
 # Description:
 #   Runs `apm dedupe {{ dedupe.packages }}`
