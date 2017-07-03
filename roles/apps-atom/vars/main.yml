@@ -54,12 +54,12 @@
 # - { package: 'some package'}
 # - { package: 'another package', check: true, verbose: true, }
 install:
-  
+
   # Install Aligner and related packages
   - { package: 'aligner'}
   - { package: 'aligner-coffeescript', check: true }
   - { package: 'aligner-css', verbose: true }
-  - { package: 'aligner-javascript'}
+  - { package: 'aligner-javascript', production: true }
   - { package: 'aligner-php' }
   - { package: 'aligner-ruby' }
   - { package: 'aligner-python' }
