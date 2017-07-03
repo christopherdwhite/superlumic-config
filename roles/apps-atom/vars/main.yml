@@ -52,17 +52,17 @@
 # 
 # Examples:
 # - { package: 'some package'}
-# - { package: 'another package', check: true, verbose: true, }
+# - { package: 'another package', check: true, verbose: true, production: true, compatible: true, silent: true, quiet: true }
 install:
 
   # Install Aligner and related packages
-  - { package: 'aligner'}
+  - { package: 'aligner' }
   - { package: 'aligner-coffeescript', check: true }
   - { package: 'aligner-css', verbose: true }
   - { package: 'aligner-javascript', production: true }
-  - { package: 'aligner-php' }
-  - { package: 'aligner-ruby' }
-  - { package: 'aligner-python' }
+  - { package: 'aligner-php', compatible: true }
+  - { package: 'aligner-ruby', silent: true }
+  - { package: 'aligner-python', quiet: true }
   - { package: 'aligner-scss' }
   - { package: 'aligner-stylus' }
 
