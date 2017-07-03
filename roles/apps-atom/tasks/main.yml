@@ -19,7 +19,7 @@
 
 # apm config: set or delete Atom configuration variables
 - name: apm config items and preferences
-  command: "apm config {{ item.command}} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
+  command: "apm config {{ item.command}} {{ (item.key == 'true') | ternary('--verbose',omit) }}"
   when: 
     - item.enable
     - item.command != "edit"
@@ -36,7 +36,7 @@
 
 # apm install: Install Atom packages
 - name: "apm install package: Install Atom packages"
-  command: "apm install {{ item.package }} {{ item.verbose | default(omit) | replace(\"true\", \"--verbose\" | replace(\"false\", omit))"
+  command: "apm install {{ item.package }} {{ item.verbose | default(omit) | replace('true', '--verbose' | replace('false', omit))"
   with_items:
     - "{{ install }}"
 
