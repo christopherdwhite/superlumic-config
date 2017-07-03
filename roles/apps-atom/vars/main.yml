@@ -48,8 +48,8 @@
 # check: true, verbose: true, parckages-file: 'some file', production: true, compatible: true
 install:
   - { package: 'aligner', verbose: true }
-  - { package: 'aligner-coffeescript' }
-  - { package: 'aligner-css', verbose: false }
+  - { package: 'aligner-coffeescript', verbose: false}
+  - { package: 'aligner-css' }
   - { package: 'aligner-javascript', verbose: false }
   - { package: 'aligner-php' }
   - { package: 'aligner-ruby' }
