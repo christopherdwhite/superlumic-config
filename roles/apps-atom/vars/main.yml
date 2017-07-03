@@ -49,7 +49,7 @@
 install:
   - { package: 'aligner', verbose: true }
   - { package: 'aligner-coffeescript' }
-  - { package: 'aligner-css', verbose: true }
+  - { package: 'aligner-css', verbose: false }
   - { package: 'aligner-javascript', verbose: false }
   - { package: 'aligner-php' }
   - { package: 'aligner-ruby' }
