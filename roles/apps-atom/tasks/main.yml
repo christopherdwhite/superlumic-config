@@ -36,7 +36,7 @@
 
 # apm install: Install Atom packages
 - name: "apm install package: Install Atom packages"
-  command: "apm install {{ item.package }} {{ (item.key == 'true') | ternary('--verbose',omit) }}"
+  command: "apm install {{ item.package }} {{ (item.verbose == 'true') | ternary('--verbose',omit) }}"
   with_items:
     - "{{ install }}"
 
