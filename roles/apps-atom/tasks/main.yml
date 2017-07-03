@@ -13,12 +13,12 @@
   check_mode: no
 
 # apm clean: Delete packages in node_modules not in use
-- name: apm clean
+- name: "apm clean : delete unused packages in node_modules"
   command: apm clean
   when: clean
 
 # apm config: set or delete Atom configuration variables
-- name: apm config items and preferences
+- name: "apm config : configure items and preferences"
   command: "apm config {{ item.command }}"
   when: 
     - item.enable
@@ -26,19 +26,18 @@
   with_items:
     - "{{ config }}"
 
-# apm dedupe: Dedupe node_module package
-- name: apm dedupe packages
+# apm dedupe : Dedupe node_module packages
+- name: "apm dedupe : deduplicate node_module packages"
   command: "apm dedupe {{ item.packages | default(omit) }}"
   when:
     - item.enable
   with_items:
     - "{{ dedupe }}"
 
-### {{ (item.verbose == 'true') | ternary('--verbose', omit) }}
-
-# apm install: Install Atom packages
-- name: "apm install package: Install Atom packages"
-  command: "apm install {{ item.package }} {{ (item.verbose | default(false)) | ternary('--verbose', '') }}"
+# apm install : Install Atom packages
+- name: "apm install package: install Atom packages"
+  command: "apm install {{ item.package }} |
+    {{ (item.verbose | default(false)) | ternary('--verbose', '') }}"
   with_items:
     - "{{ install }}"
 

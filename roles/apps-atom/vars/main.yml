@@ -46,11 +46,20 @@
 #
 #        Prefix an option with `no-` to set it to false such as --no-color to disable colored output.
 # check: true, verbose: true, parckages-file: 'some file', production: true, compatible: true
+#
+# Note:
+#   You can specify each of the options above in your arrays but some of them don't make sense in the context of ansible unless you're logging output since setting something like --verbose won't be written to the shell when Ansible is run
+# 
+# Examples:
+# - { package: 'some package'}
+# - { package: 'another package', check: true, verbose: true, }
 install:
-  - { package: 'aligner', verbose: true }
-  - { package: 'aligner-coffeescript', verbose: false}
-  - { package: 'aligner-css' }
-  - { package: 'aligner-javascript', verbose: false }
+  
+  # Install Aligner and related packages
+  - { package: 'aligner'}
+  - { package: 'aligner-coffeescript', check: true }
+  - { package: 'aligner-css', verbose: true }
+  - { package: 'aligner-javascript'}
   - { package: 'aligner-php' }
   - { package: 'aligner-ruby' }
   - { package: 'aligner-python' }
