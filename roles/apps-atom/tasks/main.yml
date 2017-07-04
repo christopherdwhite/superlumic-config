@@ -41,10 +41,15 @@
 # - debug: msg="{{ defined( {{ item.file }} | ternary('defined', 'not defined') }}"
   
 - debug:
-    msg: >+
+    msg: >
       {% if item.file is defined %}
-        --package-file {{ item.file }}
+      --package-file {{ item.file }}
       {% endif %}
+  with_items:
+    - "{{ install }}"
+
+- debug:
+    msg: "{% '--package-file' if item.file is defined %}"
   with_items:
     - "{{ install }}"
 
