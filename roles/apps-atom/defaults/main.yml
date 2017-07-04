@@ -10,16 +10,6 @@
 # 
 ###
 
-### clean
-#
-# Playbook attribute: clean
-# Required: no
-# Required Default: yes
-#
-# See vars for details & description
-#
-# clean: false
-
 ### config
 #
 # Playbook attribute: config
@@ -29,13 +19,3 @@
 # See vars for details & description
 #
 config: false
-
-### dedupe
-#
-# Playbook attribute: dedupe
-# Required: no
-# Required Default: yes
-#
-# See vars for details & description
-#
-# dedupe: false
