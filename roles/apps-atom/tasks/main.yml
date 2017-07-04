@@ -49,7 +49,7 @@
     - "{{ install }}"
 
 - debug:
-    msg: "{% '--package-file' if item.file is defined %}"
+    msg: "{% '--package-file {{ item.file }}' if item.file is defined %}"
   with_items:
     - "{{ install }}"
 
