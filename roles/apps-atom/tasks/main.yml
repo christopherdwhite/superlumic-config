@@ -40,7 +40,9 @@
 # DEBUG
 # - debug: msg="{{ defined( {{ item.file }} | ternary('defined', 'not defined') }}"
   
-- debug: msg="Something {% for n in range(1,10) %}{{n}} " "{% endfor %}"
+- debug: msg= >
+  Test String 
+  Line 2
   with_items:
     - "{{ install }}"
 
