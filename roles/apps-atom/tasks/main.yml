@@ -14,7 +14,7 @@
 
 - name: "apm clean : delete unused packages in node_modules"
   command: apm clean
-  when: clean
+  when: clean | default(false)
 
 - name: "apm config : configure items and preferences"
   command: "apm config {{ item.command }}"
