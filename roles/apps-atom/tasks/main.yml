@@ -34,8 +34,9 @@
   with_items:
     - "{{ dedupe }}"
   
-- debug: 
-    msg: >-
+# apm install : Install Atom packages
+- name: "apm install package: install Atom packages"
+  command: >-
       {% if item.package is defined and item.file is defined %}
       failed: package and file are mutually execlusive, only use one
       {% elif item.package is defined %}
@@ -52,24 +53,8 @@
       {{ (item.quiet      | default(false)) | ternary('--quiet', '')        }} 
   ignore_errors: true
   register: install_result
-  failed_when: "'failed' in install_result.results.msg"
+  # failed_when: "'failed' in install_result.results.msg"
   with_items:
     - "{{ install }}"
 
 - debug: msg="{{ install_result }}"
-
-# apm install : Install Atom packages
-# - name: "apm install package: install Atom packages"
-#   command: >
-#     apm install {{ item.package | default(omit) }} 
-#     {{ (item.check      | default(false)) | ternary('--check', '')        }} 
-#     {{ (item.verbose    | default(false)) | ternary('--verbose', '')      }}
-#     {{ (item.file       | default(false)) | ternary('--package-file', '') }}
-#     {{ (item.production | default(false)) | ternary('--production', '')   }} 
-#     {{ (item.compatible | default(false)) | ternary('--compatible', '')   }} 
-#     {{ (item.silent     | default(false)) | ternary('--silent', '')       }} 
-#     {{ (item.quiet      | default(false)) | ternary('--quiet', '')        }} 
-#   with_items:
-#     - "{{ install }}"
-
-# apm install: Install Atom packages file
