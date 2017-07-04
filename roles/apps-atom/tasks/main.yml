@@ -42,7 +42,7 @@
   
 - debug:
     msg: >
-      {% if item.install %}
+      {% if {{ item.install }} %}
         String {{ item.install }}
       {% endif %} 
   with_items:
