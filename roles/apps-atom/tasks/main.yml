@@ -19,7 +19,7 @@
 - name: "apm config : configure items and preferences"
   command: "apm config {{ item.command }}"
   when: 
-    - item.config
+    - config
     - item.command != "edit"
   with_items:
     - "{{ config }}"
