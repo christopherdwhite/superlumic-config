@@ -66,21 +66,21 @@ install:
   - { package: 'aligner-javascript', file: 'string' }
 
   # Autocomplete+
-  - { package: 'autocomplete-plus' }
+  - { package: 'autocomplete-plus', check: true }
 
   # Linter
-  - { package: 'linter' }
-  - { package: 'linter-ui-default' }
+  - { package: 'linter', verbose: true}
+  - { package: 'linter-ui-default', production: true}
 
   # Languages
-  - { package: 'language-javascript-jsx' }
+  - { package: 'language-javascript-jsx', compatible: true}
 
   # Misc Packages
-  - { package: 'busy-signal' }
-  - { package: 'dash' }
-  - { package: 'docblockr' }
+  - { package: 'busy-signal', silent: true }
+  - { package: 'dash', quiet: true }
+  - { package: 'docblockr', check: true, production: true, compatible: true }
   - { package: 'intentions' }
-  - { package: 'project-manager' }
+  - { package: 'project-manager', check: false}
   - { package: 'script' }
   - { package: 'todo-show' }
 

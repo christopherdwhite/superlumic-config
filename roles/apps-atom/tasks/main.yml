@@ -35,7 +35,7 @@
     - "{{ dedupe }}"
   
 - debug: 
-    msg: >
+    msg: >-
       {% if item.package is defined and item.file is defined %}
       failed: package and file are mutually execlusive, only use one
       {% elif item.package is defined %}
@@ -52,6 +52,7 @@
       {{ (item.quiet      | default(false)) | ternary('--quiet', '')        }} 
   ignore_errors: true
   register: install_result
+  # failed_when: "'failed' in install_result"
   with_items:
     - "{{ install }}"
 
