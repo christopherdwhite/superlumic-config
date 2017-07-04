@@ -12,51 +12,31 @@
   changed_when: false
   check_mode: no
 
-# apm clean: Delete packages in node_modules not in use
 - name: "apm clean : delete unused packages in node_modules"
   command: apm clean
   when: clean
 
-# apm config: set or delete Atom configuration variables
 - name: "apm config : configure items and preferences"
   command: "apm config {{ item.command }}"
   when: 
-    - item.enable
+    - item.command
     - item.command != "edit"
   with_items:
     - "{{ config }}"
 
-# apm dedupe : Dedupe node_module packages
 - name: "apm dedupe : deduplicate node_module packages"
-  command: "apm dedupe {{ item.packages | default(omit) }}"
-  when:
-    - item.enable
-  with_items:
-    - "{{ dedupe }}"
-  
-# apm install : Install Atom packages
-- name: "apm install package: install Atom packages"
-  command: >-
-      {% if item.package is defined and item.file is defined %}
-      failed: package and file are mutually execlusive, only use one
-      {% elif item.package is defined %}
-      apm install {{ item.package }}
-      {% elif item.file is defined %}
-      apm install --package-file {{ role_path }}/{{ item.file }}
-      {% endif %}
+  command: "apm dedupe {{ item }}"
+  when: item
+  with_items: "{{ dedupe }}"
 
-      {{ (item.check      | default(false)) | ternary('--check', '')        }} 
-      {{ (item.verbose    | default(false)) | ternary('--verbose', '')      }}
-      {{ (item.production | default(false)) | ternary('--production', '')   }} 
-      {{ (item.compatible | default(false)) | ternary('--compatible', '')   }} 
-      {{ (item.silent     | default(false)) | ternary('--silent', '')       }} 
-      {{ (item.quiet      | default(false)) | ternary('--quiet', '')        }} 
-  ignore_errors: true
-  register: install_result
-  # failed_when: "'failed' in install_result.results.msg"
-  with_items:
-    - "{{ install }}"
+# - name: "apm install package : install Atom packages"
+#   command: "apm install {{ item }}"
+#   ignore_errors: true
+#   register: packages_status
+#   with_items: "{{ packages }}"
 
-- debug: msg="{{ install_result }}"
-
-# TODO: Create a second task that takes a simple list for cleaner configuration but won't support options. Basic install vs install_with_options maybe
+# - name: "apm install package.txt : install Atom packages from file"
+#   command: "apm install --package-file {{ role_path }}{{ item }}"
+#   ignore_errors: true
+#   register: package_files_status
+#   with_items: "{{ package files }}"

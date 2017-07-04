@@ -195,8 +195,8 @@ install:
 #     Trying to use edit will be skipped altogether to prevent vim (or whatever editor is set) from trying to hijack the shell.
 #
 # config: 
-#   - { config: true, command: 'set', key: 'some key', value: '/Users/cwhite/.atom/.apm' }
-#   - { config: true, command: 'delete', key: 'some key'}
+#   - { command: 'set', key: 'some key', value: '/Users/cwhite/.atom/.apm' }
+#   - { command: 'delete', key: 'some key'}
 
 ### dedupe
 #
@@ -216,5 +216,6 @@ install:
 # Note:
 #   It appears that you can run this without specifying a package to presumably dedupe all but this has not been tested.
 #
-# dedupe:
-#   - { enable: true, packages: 'some packages' }
+dedupe:
+  -
+  - 'some package'
