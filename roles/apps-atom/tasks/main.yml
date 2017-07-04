@@ -43,9 +43,15 @@
       {% elif item.file is defined %}
       apm install --package-file {{ item.file }}
       {% endif %}
+      {{ (item.check      | default(false)) | ternary('--check', '')        }} 
+      {{ (item.verbose    | default(false)) | ternary('--verbose', '')      }}
+      {{ (item.file       | default(false)) | ternary('--package-file', '') }}
+      {{ (item.production | default(false)) | ternary('--production', '')   }} 
+      {{ (item.compatible | default(false)) | ternary('--compatible', '')   }} 
+      {{ (item.silent     | default(false)) | ternary('--silent', '')       }} 
+      {{ (item.quiet      | default(false)) | ternary('--quiet', '')        }} 
   ignore_errors: true
   register: install_result
-  failed_when: "'failed' in {{ install_result.stderr }}"
   with_items:
     - "{{ install }}"
 
