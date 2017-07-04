@@ -47,7 +47,6 @@
 
       {{ (item.check      | default(false)) | ternary('--check', '')        }} 
       {{ (item.verbose    | default(false)) | ternary('--verbose', '')      }}
-      {{ (item.file       | default(false)) | ternary('--package-file', '') }}
       {{ (item.production | default(false)) | ternary('--production', '')   }} 
       {{ (item.compatible | default(false)) | ternary('--compatible', '')   }} 
       {{ (item.silent     | default(false)) | ternary('--silent', '')       }} 
