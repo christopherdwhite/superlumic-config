@@ -56,6 +56,8 @@
   with_items:
     - "{{ install }}"
 
+- debug: msg="{{ install_result }}"
+
 # apm install : Install Atom packages
 # - name: "apm install package: install Atom packages"
 #   command: >
