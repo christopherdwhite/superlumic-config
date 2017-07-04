@@ -14,14 +14,14 @@
 
 - name: "apm clean : delete unused packages in node_modules"
   command: apm clean
-  when: clean | default(false)
+  when: clean
 
 - name: "apm config : configure items and preferences"
   command: "apm config {{ item.command }}"
   when: 
-    - item.command | default(false)
+    - config
     - item.command != "edit"
-  with_items: "{{ config | default([]) }}"
+  with_items: "{{ config }}"
 
 - name: "apm dedupe : deduplicate node_module packages"
   command: "apm dedupe {{ item }}"
