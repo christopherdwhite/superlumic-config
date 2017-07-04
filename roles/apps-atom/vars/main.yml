@@ -157,7 +157,7 @@ install:
 #   - { enable: true, packages: "some package", hard: true, dev: false }
 
 
-# Additional Settings
+# Less Common Settings
 # =============================================================================
 
 
@@ -165,6 +165,7 @@ install:
 #
 # Playbook attribute: clean
 # Required: no
+# Required Default: yes
 # Type: boolean
 # Default: false
 # Description:
@@ -175,12 +176,17 @@ install:
 # Note: This command is used for developing Atom packages and has been added for completeness, it's not something you normally use.
 #
 # Syntax:
+#
+# ---
 # clean: true
+# ---
+#
 
 ### config
 #
 # Playbook attribute: config
 # Required: no
+# Required Default: yes
 # Type: array
 # Default: false
 # Description:
@@ -198,16 +204,20 @@ install:
 #   2. Trying to use edit will be skipped altogether to prevent vim (or whatever editor is set) from trying to hijack the shell.
 #
 # Syntax:
-config: 
-  - { command: 'set', key: 'some key', value: '/Users/cwhite/.atom/.apm' }
-  - { command: 'delete', key: 'some key'}
-  - { command: 'edit'}
+#
+# ---
+# config: 
+#   - { command: 'set', key: 'some key', value: 'some value' }
+#   - { command: 'delete', key: 'some key'}
+# ---
+#
 
 ### dedupe
 #
 # Playbook attribute: dedupe
 # Required: no
-# Type: array
+# Required Default: yes
+# Type: list
 # Default: false
 # Description:
 #   Runs `apm dedupe {{ dedupe.packages }}`
@@ -221,6 +231,10 @@ config:
 # Note:
 #   It appears that you can run this without specifying a package to presumably dedupe all but this has not been tested.
 #
+# Syntax:
+# ---
 # dedupe:
 #   -
 #   - 'some package'
+# ---
+#

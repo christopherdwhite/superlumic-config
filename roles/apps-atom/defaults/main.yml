@@ -13,13 +13,29 @@
 ### clean
 #
 # Playbook attribute: clean
-# Default: false
 # Required: no
-# Description:
-#   Runs `apm clean`
-#   Command --help:
-#     Deletes all packages in the node_modules folder that are not referenced as a dependency in the package.json file.
+# Required Default: yes
+#
+# See vars for details & description
 #
 clean: false
 
+### config
+#
+# Playbook attribute: config
+# Required: no
+# Required Default: yes
+#
+# See vars for details & description
+#
 config: false
+
+### dedupe
+#
+# Playbook attribute: dedupe
+# Required: no
+# Required Default: yes
+#
+# See vars for details & description
+#
+dedupe: false
