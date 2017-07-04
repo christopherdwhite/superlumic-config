@@ -42,8 +42,9 @@
       {% elif item.package is defined %}
       apm install {{ item.package }}
       {% elif item.file is defined %}
-      apm install --package-file {{ item.file }}
+      apm install --package-file {{ role_path }}/{{ item.file }}
       {% endif %}
+
       {{ (item.check      | default(false)) | ternary('--check', '')        }} 
       {{ (item.verbose    | default(false)) | ternary('--verbose', '')      }}
       {{ (item.file       | default(false)) | ternary('--package-file', '') }}
@@ -57,4 +58,6 @@
   with_items:
     - "{{ install }}"
 
-# - debug: msg="{{ install_result }}"
+- debug: msg="{{ install_result }}"
+
+# TODO: Create a second task that takes a simple list for cleaner configuration but won't support options. Basic install vs install_with_options maybe
