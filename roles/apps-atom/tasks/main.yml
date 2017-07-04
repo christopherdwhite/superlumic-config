@@ -42,7 +42,7 @@
   
 - debug:
     msg: >
-      Some string {{ item.install }}
+      Some string {{ item.file }}
   with_items:
     - "{{ install }}"
 
