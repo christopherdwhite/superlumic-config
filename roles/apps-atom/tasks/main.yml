@@ -35,9 +35,14 @@
     - "{{ dedupe }}"
 
 # {{ (item.file | defined( {{ item.file }} ) ) | ternary('--package-file {{ item.file }}', '') }}
+# {% extends layout_template if layout_template is defined else 'master.html' %}
 
 # DEBUG
-- debug: msg="{{ defined( {{ item.file }} | ternary('defined', 'not defined') }}"
+# - debug: msg="{{ defined( {{ item.file }} | ternary('defined', 'not defined') }}"
+  
+  - debug: msg="{% '--package-file' if item.file is defined else '' %}"
+    
+
   with_items:
     - "{{ install }}"
 
