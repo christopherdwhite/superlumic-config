@@ -59,76 +59,76 @@ install:
   # Install Packages File
   - { file: 'files/packages.txt' }
 
-  # # Install Aligner and related packages
-  # - { package: 'aligner' }
-  # - { package: 'aligner-css' }
-  # - { package: 'aligner-javascript' }
+  # Install Aligner and related packages
+  - { package: 'aligner' }
+  - { package: 'aligner-css' }
+  - { package: 'aligner-javascript', file: 'string' }
 
-  # # Autocomplete+
-  # - { package: 'autocomplete-plus' }
+  # Autocomplete+
+  - { package: 'autocomplete-plus' }
 
-  # # Linter
-  # - { package: 'linter' }
-  # - { package: 'linter-ui-default' }
+  # Linter
+  - { package: 'linter' }
+  - { package: 'linter-ui-default' }
 
-  # # Languages
-  # - { package: 'language-javascript-jsx' }
+  # Languages
+  - { package: 'language-javascript-jsx' }
 
-  # # Misc Packages
-  # - { package: 'busy-signal' }
-  # - { package: 'dash' }
-  # - { package: 'docblockr' }
-  # - { package: 'intentions' }
-  # - { package: 'project-manager' }
-  # - { package: 'script' }
-  # - { package: 'todo-show' }
+  # Misc Packages
+  - { package: 'busy-signal' }
+  - { package: 'dash' }
+  - { package: 'docblockr' }
+  - { package: 'intentions' }
+  - { package: 'project-manager' }
+  - { package: 'script' }
+  - { package: 'todo-show' }
 
-  # # Syntax Themes
-  # - { package: 'an-old-hope-syntax' }
-  # - { package: 'br4ckets-light' }
+  # Syntax Themes
+  - { package: 'an-old-hope-syntax' }
+  - { package: 'br4ckets-light' }
 
-  # # UI Themes
+  # UI Themes
 
-  # # Git Packages
-  # # TODO: Move to Git role
-  # - { package: 'git-plus' }
-  # - { package: 'git-time-machine' }
-  # - { package: 'tree-view-git-status' }
+  # Git Packages
+  # TODO: Move to Git role
+  - { package: 'git-plus' }
+  - { package: 'git-time-machine' }
+  - { package: 'tree-view-git-status' }
 
-  # # Ansible Packages
-  # # TODO: Move to Ansible role
-  # - { package: 'ansible-galaxy-plus' }
-  # - { package: 'ansible-snippets' }
-  # - { package: 'autocomplete-ansible' }
-  # - { package: 'language-ansible' }
-  # - { package: 'linter-ansible-linting' }
+  # Ansible Packages
+  # TODO: Move to Ansible role
+  - { package: 'ansible-galaxy-plus' }
+  - { package: 'ansible-snippets' }
+  - { package: 'autocomplete-ansible' }
+  - { package: 'language-ansible' }
+  - { package: 'linter-ansible-linting' }
 
-  # # Front-End Packages
-  # # TODO: Move to Front-End role
-  # - { package: 'aligner-coffeescript' }
-  # - { package: 'aligner-scss' }
-  # - { package: 'aligner-stylus' }
-  # - { package: 'javascript-snippets' }
-  # - { package: 'linter-tidy' }
+  # Front-End Packages
+  # TODO: Move to Front-End role
+  - { package: 'aligner-coffeescript' }
+  - { package: 'aligner-scss' }
+  - { package: 'aligner-stylus' }
+  - { package: 'javascript-snippets' }
+  - { package: 'linter-tidy' }
 
-  # # MySQL Packages
-  # # TODO: Move to MySQL role
-  # - { package: 'atom-mysql-snippets' }
-  # - { package: 'language-sql-mysql' }
+  # MySQL Packages
+  # TODO: Move to MySQL role
+  - { package: 'atom-mysql-snippets' }
+  - { package: 'language-sql-mysql' }
 
-  # # PHP Packages
-  # # TODO: Move to PHP role
-  # - { package: 'aligner-php' }
-  # - { package: 'linter-php' }
-  # - { package: 'php-debug' }
+  # PHP Packages
+  # TODO: Move to PHP role
+  - { package: 'aligner-php' }
+  - { package: 'linter-php' }
+  - { package: 'php-debug' }
 
-  # # Ruby Packages
-  # # TODO: Move to Ruby role
-  # - { package: 'aligner-ruby' }
+  # Ruby Packages
+  # TODO: Move to Ruby role
+  - { package: 'aligner-ruby' }
 
-  # # Python Packages
-  # # TODO: Move to Python Role
-  # - { package: 'aligner-python' }
+  # Python Packages
+  # TODO: Move to Python Role
+  - { package: 'aligner-python' }
 
 ### Uninstall Packages
 #

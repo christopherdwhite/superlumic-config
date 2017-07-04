@@ -36,7 +36,7 @@
   
 - debug: 
     msg: >
-      apm install 
+      apm install
       {% if item.package is defined %}
       {{ item.packagee }}
       {% elif item.file is defined %}
