@@ -12,6 +12,9 @@
 # Core Configuration
 # =============================================================================
 
+### Install Beta
+# Todo: Add option to install Atom Beta or Atom and Atom Beta
+
 ### Install Packages
 #
 # Playbook attribute: install
@@ -49,8 +52,8 @@
 # check: true, verbose: true, parckages-file: 'some file', production: true, compatible: true
 #
 # Note:
-#   You can specify each of the options above in your arrays but some of them don't make sense in the context of ansible unless you're logging output since setting something like --verbose won't be written to the shell when Ansible is run.
-#   'package' and 'file' are mutually exclusive, do not put them in the same array item
+#   1. You can specify each of the options above in your arrays but some of them don't make sense in the context of ansible unless you're logging output since setting something like --verbose won't be written to the shell when Ansible is run.
+#   2. 'package' and 'file' are mutually exclusive, putting both in the same dictionary item will throw an error and will not install.
 # 
 # Examples:
 # - { package: 'some package'}
@@ -130,6 +133,12 @@ install:
   # Python Packages
   # TODO: Move to Python Role
   - { package: 'aligner-python' }
+
+  # Test Packages
+  # TODO: Delete
+  - { package: 'git@github.com:gepoch/linter-write-good.git' }
+  - { package: 'brunoczim/atom-php-getters-setters-improved' }
+  - { package: 'touchbar@0.3.9'}
 
 ### Uninstall Packages
 #
