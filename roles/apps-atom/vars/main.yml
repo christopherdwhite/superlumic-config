@@ -191,14 +191,17 @@ install:
 #            apm config delete <key>
 #            apm config list
 #            apm config edit
-# Note:
-#   While you can execute set, get, delete and list only set and delete make sense in the context of ansible.
-#     get and list will print their output to the shell so adding them is superflious.
-#     Trying to use edit will be skipped altogether to prevent vim (or whatever editor is set) from trying to hijack the shell.
 #
-# config: 
-#   - { command: 'set', key: 'some key', value: '/Users/cwhite/.atom/.apm' }
-#   - { command: 'delete', key: 'some key'}
+# Notes:
+#   1. While you can execute set, get, delete and list only set and delete make sense in the context of ansible.
+#        get and list will not print their output to the shell so adding them is superflious.
+#   2. Trying to use edit will be skipped altogether to prevent vim (or whatever editor is set) from trying to hijack the shell.
+#
+# Syntax:
+config: 
+  - { command: 'set', key: 'some key', value: '/Users/cwhite/.atom/.apm' }
+  - { command: 'delete', key: 'some key'}
+  - { command: 'edit'}
 
 ### dedupe
 #
