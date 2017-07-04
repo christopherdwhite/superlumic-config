@@ -37,7 +37,7 @@
 # {{ (item.file | defined( {{ item.file }} ) ) | ternary('--package-file {{ item.file }}', '') }}
 
 # DEBUG
-- debug: msg="defined( {{ item.file }} | ternary('defined', 'not defined')"
+- debug: msg="{{ defined( {{ item.file }} | ternary('defined', 'not defined') }}"
   with_items:
     - "{{ install }}"
 
