@@ -18,10 +18,10 @@
 
 - name: "apm config : configure items and preferences"
   command: "apm config {{ item.command }} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
+  when: 
+    - item
+    - item.command != "edit"
   with_items: "{{ config }}"
-  # when: 
-  #   - item
-  #   - item.command != "edit"
 
 - name: "apm dedupe : deduplicate node_module packages"
   command: "apm dedupe {{ item }}"
