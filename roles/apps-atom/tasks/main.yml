@@ -34,8 +34,10 @@
   with_items:
     - "{{ dedupe }}"
 
+# {{ (item.file | defined( {{ item.file }} ) ) | ternary('--package-file {{ item.file }}', '') }}
+
 # DEBUG
-- debug: msg="{{ (item.file | default('none')) | ternary('--package-file {{ item.file }}', '') }}"
+- debug: msg="defined( {{ item.file }} | ternary('defined', 'not defined')"
   with_items:
     - "{{ install }}"
 
