@@ -97,7 +97,6 @@ install:
 
   # Ansible Packages
   # TODO: Move to Ansible role
-  - { package: 'ansible-galexy' }
   - { package: 'ansible-galaxy-plus' }
   - { package: 'ansible-snippets' }
   - { package: 'autocomplete-ansible' }
