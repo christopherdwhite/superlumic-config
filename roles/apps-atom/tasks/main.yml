@@ -19,7 +19,7 @@
 - name: "apm config : configure items and preferences"
   command: "apm config {{ item.command }} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
   when: 
-    - item is defined
+    - item
     - item.command != "edit"
   with_items: "{{ config }}"
 

@@ -18,7 +18,7 @@
 #
 # See vars for details & description
 #
-clean: false
+# clean: false
 
 ### config
 #
@@ -38,4 +38,4 @@ config: false
 #
 # See vars for details & description
 #
-dedupe: false
+# dedupe: false
