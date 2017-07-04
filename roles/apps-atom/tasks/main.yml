@@ -37,13 +37,13 @@
 # apm install : Install Atom packages
 - name: "apm install package: install Atom packages"
   command: >
-    "apm install {{ item.package }}
+    apm install {{ item.package }}
     {{ (item.check | default(false)) | ternary('--check', '') }}
     {{ (item.verbose | default(false)) | ternary('--verbose', '') }}
     {{ (item.production | default(false)) | ternary('--production', '') }}
     {{ (item.compatible | default(false)) | ternary('--compatible', '') }}
     {{ (item.silent | default(false)) | ternary('--silent', '') }}
-    {{ (item.quiet | default(false)) | ternary('--quiet', '') }}"
+    {{ (item.quiet | default(false)) | ternary('--quiet', '') }}
   with_items:
     - "{{ install }}"
 
