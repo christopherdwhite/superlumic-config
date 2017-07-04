@@ -57,4 +57,4 @@
   with_items:
     - "{{ install }}"
 
-- debug: msg="{{ install_result }}"
+# - debug: msg="{{ install_result }}"
