@@ -41,8 +41,6 @@
 # - debug: msg="{{ defined( {{ item.file }} | ternary('defined', 'not defined') }}"
   
   - debug: msg="{% '--package-file' if item.file is defined else '' %}"
-    
-
   with_items:
     - "{{ install }}"
 
