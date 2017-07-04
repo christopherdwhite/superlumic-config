@@ -25,8 +25,6 @@
 
 - name: "apm dedupe : deduplicate node_module packages"
   command: "apm dedupe {{ item }}"
-  when: 
-    - item
   with_items: "{{ dedupe }}"
 
 # - name: "apm install package : install Atom packages"
