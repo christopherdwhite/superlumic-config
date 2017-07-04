@@ -40,7 +40,8 @@
 # DEBUG
 # - debug: msg="{{ defined( {{ item.file }} | ternary('defined', 'not defined') }}"
   
-- debug: msg= >
+- debug:
+  msg: >
     Test String 
     Line 2
   with_items:
