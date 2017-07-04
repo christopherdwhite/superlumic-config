@@ -42,7 +42,7 @@
   
 - debug:
     msg: >
-      {% if item.file %}
+      {% if item.null %}
         Some string {{ item.file }}
       {% endif %}
   with_items:
