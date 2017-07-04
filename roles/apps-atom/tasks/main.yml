@@ -17,11 +17,11 @@
   when: clean
 
 - name: "apm config : configure items and preferences"
-  command: "apm config {{ item.command }}"
-  when: 
-    - item
-    - item.command != "edit"
+  command: "apm config {{ item.command }} {{ item.key | default(omit) }} {{ item.value | default(omit) }}"
   with_items: "{{ config }}"
+  # when: 
+  #   - item
+  #   - item.command != "edit"
 
 - name: "apm dedupe : deduplicate node_module packages"
   command: "apm dedupe {{ item }}"
