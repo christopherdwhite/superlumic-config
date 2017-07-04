@@ -41,7 +41,7 @@
       {{ item.packagee }}
       {% elif item.file is defined %}
       --package-file {{ item.file }}
-      {{% endif %}}
+      {% endif %}
   ignore_errors: true
   register: install_result
   with_items:
