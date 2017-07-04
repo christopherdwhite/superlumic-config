@@ -42,9 +42,7 @@
   
 - debug:
     msg: >
-      {% if: {{ item.install }} %}
-        String {{ item.install }}
-      {% endif %} 
+      Some string {{ item.install }}
   with_items:
     - "{{ install }}"
 
