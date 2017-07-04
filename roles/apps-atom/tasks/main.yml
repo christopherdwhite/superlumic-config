@@ -52,7 +52,7 @@
       {{ (item.quiet      | default(false)) | ternary('--quiet', '')        }} 
   ignore_errors: true
   register: install_result
-  # failed_when: "'failed' in install_result"
+  failed_when: "'failed' in install_result.results.msg"
   with_items:
     - "{{ install }}"
 
