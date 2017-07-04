@@ -234,6 +234,6 @@ install:
 # Syntax:
 # ---
 dedupe:
-  - some package
+  - 'some package'
 # ---
 #
