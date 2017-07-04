@@ -33,28 +33,8 @@
     - item.enable
   with_items:
     - "{{ dedupe }}"
-
-# {{ (item.file | defined( {{ item.file }} ) ) | ternary('--package-file {{ item.file }}', '') }}
-# {% extends layout_template if layout_template is defined else 'master.html' %}
-
-# DEBUG
-# - debug: msg="{{ defined( {{ item.file }} | ternary('defined', 'not defined') }}"
   
-- debug:
-    msg: >
-      {% if item.file is defined %}
-      --package-file {{ item.file }}
-      {% endif %}
-  with_items:
-    - "{{ install }}"
-
-- debug:
-    msg: "{% if item.file is defined %} --package-file {{ item.file }} {% endif %}"
-  with_items:
-    - "{{ install }}"
-
-- debug:
-    msg: "{% '--package-file' ~ item.file ~ if {{ item.file }} is defined %}"
+- debug: msg="{% if item.file is defined %} --package-file {{ item.file }} {% endif %}"
   with_items:
     - "{{ install }}"
 
