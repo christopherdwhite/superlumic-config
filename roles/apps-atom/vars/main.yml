@@ -55,6 +55,10 @@
 # - { package: 'some package'}
 # - { package: 'another package', check: true, verbose: true, production: true, compatible: true, silent: true, quiet: true }
 install:
+
+  # Install Packages File
+  # - { file:  }
+
   # Install Aligner and related packages
   - { package: 'aligner' }
   - { package: 'aligner-css' }
