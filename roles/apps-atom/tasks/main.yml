@@ -41,15 +41,9 @@
       {{ item.packagee }}
       {% elif item.file is defined %}
       --package-file {{ item.file }}
+      {{% endif %}}
   ignore_errors: true
   register: install_result
-  with_items:
-    - "{{ install }}"
-
-- debug: 
-    msg: >
-      apm install {{ item.package }} 
-      {% if item.file is defined %} --package-file {{ item.file }} {% endif %}
   with_items:
     - "{{ install }}"
 
