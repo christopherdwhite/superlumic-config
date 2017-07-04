@@ -60,7 +60,7 @@ install:
   - { package: 'aligner-javascript' }
 
   # Autocomplete+
-  - { package: 'autocomplete+' }
+  - { package: 'autocomplete-plus' }
 
   # Linter
   - { package: 'linter' }
