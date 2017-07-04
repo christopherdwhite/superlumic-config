@@ -42,8 +42,8 @@
   
 - debug:
     msg: >
-      {% if item.null is defined %}
-        Some string {{ item.file }}
+      {% if item.file is defined %}
+        --package-file {{ item.file }}
       {% endif %}
   with_items:
     - "{{ install }}"
