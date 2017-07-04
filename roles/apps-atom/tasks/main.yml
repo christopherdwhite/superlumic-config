@@ -21,7 +21,7 @@
   when: 
     - item.command | default(false)
     - item.command != "edit"
-  with_items: "{{ config }}"
+  with_items: "{{ config | default([]) }}"
 
 - name: "apm dedupe : deduplicate node_module packages"
   command: "apm dedupe {{ item }}"
