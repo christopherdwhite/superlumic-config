@@ -41,7 +41,7 @@
 # - debug: msg="{{ defined( {{ item.file }} | ternary('defined', 'not defined') }}"
   
 - debug:
-    msg: >-
+    msg: >+
       {% if item.file is defined %}
         --package-file {{ item.file }}
       {% endif %}
