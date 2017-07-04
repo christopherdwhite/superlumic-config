@@ -38,7 +38,7 @@
     msg: >
       apm install
       {% if item.package is defined %}
-      {{ item.packagee }}
+      {{ item.package }}
       {% elif item.file is defined %}
       --package-file {{ item.file }}
       {% endif %}
