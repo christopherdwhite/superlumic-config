@@ -34,7 +34,10 @@
   with_items:
     - "{{ dedupe }}"
   
-- debug: msg="{% if item.file is defined %} --package-file {{ item.file }} {% endif %}"
+- debug: 
+    msg: >
+      apm install {{ item.package | default(omit) }} 
+      {% if item.file is defined %} --package-file {{ item.file }} {% endif %}
   with_items:
     - "{{ install }}"
 
