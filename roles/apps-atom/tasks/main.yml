@@ -45,7 +45,7 @@
       {% endif %}
   ignore_errors: true
   register: install_result
-  failed_when: "'failed' in install_result.stderr"
+  failed_when: "'failed' in {{ install_result.stderr }}"
   with_items:
     - "{{ install }}"
 
