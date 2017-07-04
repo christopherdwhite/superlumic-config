@@ -206,7 +206,7 @@ install:
 # Syntax:
 #
 # ---
-config: 
+# config: 
 #   - { command: 'set', key: 'some key', value: 'some value' }
 #   - { command: 'delete', key: 'some key'}
 # ---
@@ -233,7 +233,7 @@ config:
 #
 # Syntax:
 # ---
-dedupe:
+# dedupe:
 #   -
 #   - 'some package'
 # ---
