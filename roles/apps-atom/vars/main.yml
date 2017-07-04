@@ -196,9 +196,9 @@ install:
 #     get and list will print their output to the shell so adding them is superflious.
 #     Trying to use edit will be skipped altogether to prevent vim (or whatever editor is set) from trying to hijack the shell.
 #
-# config: 
-#   - { command: 'set', key: 'some key', value: '/Users/cwhite/.atom/.apm' }
-#   - { command: 'delete', key: 'some key'}
+config: 
+  - { command: 'set', key: 'some key', value: '/Users/cwhite/.atom/.apm' }
+  - { command: 'delete', key: 'some key'}
 
 ### dedupe
 #
