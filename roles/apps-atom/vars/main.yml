@@ -49,7 +49,8 @@
 # check: true, verbose: true, parckages-file: 'some file', production: true, compatible: true
 #
 # Note:
-#   You can specify each of the options above in your arrays but some of them don't make sense in the context of ansible unless you're logging output since setting something like --verbose won't be written to the shell when Ansible is run
+#   You can specify each of the options above in your arrays but some of them don't make sense in the context of ansible unless you're logging output since setting something like --verbose won't be written to the shell when Ansible is run.
+#   'package' and 'file' are mutually exclusive, do not put them in the same array item
 # 
 # Examples:
 # - { package: 'some package'}
