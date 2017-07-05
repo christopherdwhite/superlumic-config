@@ -64,11 +64,10 @@
 # - some package'}
 # - another package', check: true, verbose: true, production: true, compatible: true, silent: true, quiet: true }
 
-
 packages:
 
   # Install Aligner and related packages
-  - aligner
+  - aligner testing a long string
   - aligner-css
   - aligner-javascript
 
