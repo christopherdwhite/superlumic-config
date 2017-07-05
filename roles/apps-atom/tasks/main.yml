@@ -32,9 +32,13 @@
 
 - name: "apm install : install packages"
   command: "apm install {{ item }}"
+  ignore_errors: true
+  register: packages_status
   when:
     - item is defined
   with_items: "{{ packages }}"
+
+- debug: msg="{{ packages_status }}"
 
 # - name: "apm install package : install Atom packages"
 #   command: "apm install {{ item }}"
