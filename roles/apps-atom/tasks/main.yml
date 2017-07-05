@@ -45,8 +45,7 @@
   with_items: "{{ package_files }}"
 
 - name: "apm install {{ package_files }}"
-  debug:
-    msg: "apm install --package-file '/tmp/{{ item }}'"
+  command: "apm install --package-file '/tmp/{{ item }}'"
   ignore_errors: true
   register: package_files_status
   when: 
