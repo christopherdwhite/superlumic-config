@@ -15,11 +15,6 @@
 ### Install Beta
 # Todo: Add option to install Atom Beta or Atom and Atom Beta
 
-
-
-  # Install Packages File
-  # - { file: 'files/packages.txt' }
-
 ### Install Packages
 #
 # Playbook attribute: install
@@ -63,92 +58,106 @@
 # Syntax:
 # 
 # ---
-packages:
-  - aligner
-  - aligner-css --check -- verbose --production --compatible
-  - aligner-javascript --silent
-  - aligner-php --quiet
-  - aligner-scss@1.3.0
-  - adrianlee44/atom-aligner-ruby
-  - https://github.com/adrianlee44/atom-aligner-stylus
+# packages:
+#   - aligner
+#   - aligner-css --check -- verbose --production --compatible
+#   - aligner-javascript --silent
+#   - aligner-php --quiet
+#   - aligner-scss@1.3.0
+#   - adrianlee44/atom-aligner-ruby
+#   - https://github.com/adrianlee44/atom-aligner-stylus
 # ---
 # 
 
-# packages:
+packages:
 
-  # # Install Aligner and related packages
-  # - aligner
-  # - aligner-css
-  # - aligner-javascript
+  # Install Aligner and related packages
+  - aligner
+  - aligner-css
+  - aligner-javascript
 
-  # # Autocomplete+
-  # - autocomplete-plus
+  # Autocomplete+
+  - autocomplete-plus
 
-  # # Linter
-  # - linter
-  # - linter-ui-default
+  # Linter
+  - linter
+  - linter-ui-default
 
-  # # Languages
-  # - language-javascript-jsx
+  # Languages
+  - language-javascript-jsx
 
-  # # Misc Packages
-  # - atom-ide-ui
-  # - busy-signal
-  # - dash
-  # - docblockr
-  # - intentions
-  # - project-manager
-  # - script
-  # - todo-show
+  # Misc Packages
+  - atom-ide-ui
+  - busy-signal
+  - dash
+  - docblockr
+  - intentions
+  - project-manager
+  - script
+  - todo-show
 
-  # # Syntax Themes
-  # - an-old-hope-syntax
-  # - br4ckets-light
+  # Syntax Themes
+  - an-old-hope-syntax
+  - br4ckets-light
 
-  # # UI Themes
+  # UI Themes
 
-  # # Git Packages
-  # # TODO: Move to Git role
-  # - git-plus
-  # - git-time-machine
-  # - tree-view-git-status
+  # Git Packages
+  # TODO: Move to Git role
+  - git-plus
+  - git-time-machine
+  - tree-view-git-status
 
-  # # Ansible Packages
-  # # TODO: Move to Ansible role
-  # - ansible-galaxy-plus
-  # - ansible-snippets
-  # - autocomplete-ansible
-  # - language-ansible
-  # - linter-ansible-linting
+  # Ansible Packages
+  # TODO: Move to Ansible role
+  - ansible-galaxy-plus
+  - ansible-snippets
+  - autocomplete-ansible
+  - language-ansible
+  - linter-ansible-linting
 
-  # # Front-End Packages
-  # # TODO: Move to Front-End role
-  # - aligner-coffeescript
-  # - aligner-scss
-  # - aligner-stylus
-  # - javascript-snippets
-  # - linter-tidy
+  # Front-End Packages
+  # TODO: Move to Front-End role
+  - aligner-coffeescript
+  - aligner-scss
+  - aligner-stylus
+  - javascript-snippets
+  - linter-tidy
 
-  # # MySQL Packages
-  # # TODO: Move to MySQL role
-  # - atom-mysql-snippets
-  # - language-sql-mysql
+  # MySQL Packages
+  # TODO: Move to MySQL role
+  - atom-mysql-snippets
+  - language-sql-mysql
 
-  # # PHP Packages
-  # # TODO: Move to PHP role
-  # - aligner-php
-  # - linter-php
-  # - php-debug
+  # PHP Packages
+  # TODO: Move to PHP role
+  - aligner-php
+  - linter-php
+  - php-debug
 
-  # # Ruby Packages
-  # # TODO: Move to Ruby role
-  # - aligner-ruby
+  # Ruby Packages
+  # TODO: Move to Ruby role
+  - aligner-ruby
 
-  # # Python Packages
-  # # TODO: Move to Python Role
-  # - aligner-python
+  # Python Packages
+  # TODO: Move to Python Role
+  - aligner-python
 
 ### Install Packages from File
+#
+# Playbook attribute: install
+# Description: 
+#   This task uses the same install command as the install packages but allows you to pass a plaintext file delineated by new lines.
+#     Plaintext files should be placed within the files folder in the role and should only include the filename. The path is taken care of by the task
+#
+# Examples:
+# ---
+# package-files:
+#   - packages.txt
+# ---
+#  
+package_files:
+  - packages.txt
 
 ### Uninstall Packages
 #

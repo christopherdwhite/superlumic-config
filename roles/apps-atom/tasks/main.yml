@@ -30,24 +30,21 @@
     - item is defined
   with_items: "{{ dedupe }}"
 
-- name: "apm install : install packages"
-  command: "apm install {{ item }}"
-  ignore_errors: true
-  register: packages_status
-  when:
-    - item is defined
-  with_items: "{{ packages }}"
-
-- debug: msg="{{ packages_status }}"
-
-# - name: "apm install package : install Atom packages"
+# - name: "apm install : install packages"
 #   command: "apm install {{ item }}"
 #   ignore_errors: true
 #   register: packages_status
+#   when:
+#     - item is defined
 #   with_items: "{{ packages }}"
 
-# - name: "apm install package.txt : install Atom packages from file"
-#   command: "apm install --package-file {{ role_path }}{{ item }}"
-#   ignore_errors: true
-#   register: package_files_status
-#   with_items: "{{ package files }}"
+- name: "apm install {{ package_files }}"
+  debug:
+    msg: "apm install --package-file {{ role_path }}/files/{{ item }}"
+  ignore_errors: true
+  register: package_files_status
+  when: 
+    - item is defined
+  with_items: "{{ package_files }}"
+
+# - debug: msg="{{ packages_status }}"
