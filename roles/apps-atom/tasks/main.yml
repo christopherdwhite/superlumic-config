@@ -30,6 +30,13 @@
     - item is defined
   with_items: "{{ dedupe }}"
 
+- name: "apm install : install packages"
+  debug:
+    msg: "apm install {{ item }}"
+  when:
+    - item is defined
+  with_items: "{{ packages }}"
+
 # - name: "apm install package : install Atom packages"
 #   command: "apm install {{ item }}"
 #   ignore_errors: true

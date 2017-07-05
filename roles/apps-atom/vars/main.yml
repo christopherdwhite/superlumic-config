@@ -15,6 +15,11 @@
 ### Install Beta
 # Todo: Add option to install Atom Beta or Atom and Atom Beta
 
+
+
+  # Install Packages File
+  # - { file: 'files/packages.txt' }
+
 ### Install Packages
 #
 # Playbook attribute: install
@@ -56,84 +61,83 @@
 #   2. 'package' and 'file' are mutually exclusive, putting both in the same dictionary item will throw an error and will not install.
 # 
 # Examples:
-# - { package: 'some package'}
-# - { package: 'another package', check: true, verbose: true, production: true, compatible: true, silent: true, quiet: true }
-install:
+# - some package'}
+# - another package', check: true, verbose: true, production: true, compatible: true, silent: true, quiet: true }
 
-  # Install Packages File
-  - { file: 'files/packages.txt' }
 
-  # # Install Aligner and related packages
-  # - { package: 'aligner' }
-  # - { package: 'aligner-css' }
-  # - { package: 'aligner-javascript' }
+packages:
 
-  # # Autocomplete+
-  # - { package: 'autocomplete-plus' }
+  # Install Aligner and related packages
+  - aligner
+  - aligner-css
+  - aligner-javascript
 
-  # # Linter
-  # - { package: 'linter' }
-  # - { package: 'linter-ui-default' }
+  # Autocomplete+
+  - autocomplete-plus
 
-  # # Languages
-  # - { package: 'language-javascript-jsx' }
+  # Linter
+  - linter
+  - linter-ui-default
 
-  # # Misc Packages
-  # - { package: 'atom-ide-ui' }
-  # - { package: 'busy-signal' }
-  # - { package: 'dash' }
-  # - { package: 'docblockr' }
-  # - { package: 'intentions' }
-  # - { package: 'project-manager' }
-  # - { package: 'script' }
-  # - { package: 'todo-show' }
+  # Languages
+  - language-javascript-jsx
 
-  # # Syntax Themes
-  # - { package: 'an-old-hope-syntax' }
-  # - { package: 'br4ckets-light' }
+  # Misc Packages
+  - atom-ide-ui
+  - busy-signal
+  - dash
+  - docblockr
+  - intentions
+  - project-manager
+  - script
+  - todo-show
 
-  # # UI Themes
+  # Syntax Themes
+  - an-old-hope-syntax
+  - br4ckets-light
 
-  # # Git Packages
-  # # TODO: Move to Git role
-  # - { package: 'git-plus' }
-  # - { package: 'git-time-machine' }
-  # - { package: 'tree-view-git-status' }
+  # UI Themes
 
-  # # Ansible Packages
-  # # TODO: Move to Ansible role
-  # - { package: 'ansible-galaxy-plus' }
-  # - { package: 'ansible-snippets' }
-  # - { package: 'autocomplete-ansible' }
-  # - { package: 'language-ansible' }
-  # - { package: 'linter-ansible-linting' }
+  # Git Packages
+  # TODO: Move to Git role
+  - git-plus
+  - git-time-machine
+  - tree-view-git-status
 
-  # # Front-End Packages
-  # # TODO: Move to Front-End role
-  # - { package: 'aligner-coffeescript' }
-  # - { package: 'aligner-scss' }
-  # - { package: 'aligner-stylus' }
-  # - { package: 'javascript-snippets' }
-  # - { package: 'linter-tidy' }
+  # Ansible Packages
+  # TODO: Move to Ansible role
+  - ansible-galaxy-plus
+  - ansible-snippets
+  - autocomplete-ansible
+  - language-ansible
+  - linter-ansible-linting
 
-  # # MySQL Packages
-  # # TODO: Move to MySQL role
-  # - { package: 'atom-mysql-snippets' }
-  # - { package: 'language-sql-mysql' }
+  # Front-End Packages
+  # TODO: Move to Front-End role
+  - aligner-coffeescript
+  - aligner-scss
+  - aligner-stylus
+  - javascript-snippets
+  - linter-tidy
 
-  # # PHP Packages
-  # # TODO: Move to PHP role
-  # - { package: 'aligner-php' }
-  # - { package: 'linter-php' }
-  # - { package: 'php-debug' }
+  # MySQL Packages
+  # TODO: Move to MySQL role
+  - atom-mysql-snippets
+  - language-sql-mysql
 
-  # # Ruby Packages
-  # # TODO: Move to Ruby role
-  # - { package: 'aligner-ruby' }
+  # PHP Packages
+  # TODO: Move to PHP role
+  - aligner-php
+  - linter-php
+  - php-debug
 
-  # # Python Packages
-  # # TODO: Move to Python Role
-  # - { package: 'aligner-python' }
+  # Ruby Packages
+  # TODO: Move to Ruby role
+  - aligner-ruby
+
+  # Python Packages
+  # TODO: Move to Python Role
+  - aligner-python
 
 ### Uninstall Packages
 #
@@ -165,7 +169,6 @@ install:
 #
 # Playbook attribute: clean
 # Required: no
-# Required Default: yes
 # Type: boolean
 # Default: false
 # Description:
@@ -186,7 +189,6 @@ install:
 #
 # Playbook attribute: config
 # Required: no
-# Required Default: yes
 # Type: array
 # Default: false
 # Description:
@@ -216,7 +218,6 @@ install:
 #
 # Playbook attribute: dedupe
 # Required: no
-# Required Default: yes
 # Type: list
 # Default: false
 # Description:
