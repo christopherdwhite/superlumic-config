@@ -31,8 +31,7 @@
   with_items: "{{ dedupe }}"
 
 - name: "apm install : install packages"
-  debug:
-    msg: "apm install {{ item }}"
+  command: "apm install {{ item }}"
   when:
     - item is defined
   with_items: "{{ packages }}"
