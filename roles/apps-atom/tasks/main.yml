@@ -45,7 +45,7 @@
   with_items: "{{ package_files }}"
 
 - name: "apm install {{ package_files }}"
-  command: "apm install --packages-file '/tmp/{{ item }}''"
+  command: "apm install --packages-file '/tmp/{{ item }}'"
   ignore_errors: true
   register: package_files_status
   when: 
