@@ -13,7 +13,14 @@
 # =============================================================================
 
 ### Install Beta
-# Todo: Add option to install Atom Beta or Atom and Atom Beta
+# 
+# Requered: no
+# Type: boolean
+# Default: false
+# Description:
+#   Install Atom Beta from Homebrew Cask?
+#
+beta: true
 
 ### Install Packages
 #

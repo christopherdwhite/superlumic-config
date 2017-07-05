@@ -9,3 +9,6 @@
 #     For example: the role will not automatically run `apm clean`, removing packages from your node_modules folder that aren't referenced as a dependency, a potentially destructive change.
 # 
 ###
+
+# Atom Beta
+beta: false

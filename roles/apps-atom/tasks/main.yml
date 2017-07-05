@@ -4,6 +4,11 @@
 - name: Install Atom from Homebrew Cask if necessary
   homebrew_cask: name="atom" state=present
 
+# Install Atom Beta from Homebrew Cask if necessary
+- name: Install Atom Beta from Homebrew Cask if boolean is true
+  homebrew_cask: name="atom-beta" state=present
+  when: beta
+
 # Make sure Atom and apm are installed, fail if not installed
 - name: Ensure Atom and apm (Atom Package Manager) are installed
   command: which atom apm
