@@ -56,3 +56,11 @@
   when: 
     - item is defined
   with_items: "{{ package_files }}"
+
+- name: "apm uninstall packages"
+  debug: msg="apm uninstall {{ item }}"
+  ignore_errors: true
+  register: packages_uninstall_status
+  when:
+    - item is defined
+  with_items: "{{ uninstall }}"

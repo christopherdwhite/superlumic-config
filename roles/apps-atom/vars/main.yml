@@ -150,6 +150,10 @@ packages:
   # TODO: Move to Python Role
   - aligner-python
 
+  # Testing Packages
+  # TODO: Delete me
+  - aligner-luo
+
 ### Install Packages from File
 #
 # Playbook attribute: install
@@ -170,7 +174,7 @@ package_files:
 #
 # Playbook attribute: uninstall
 # Required: no
-# Type: array
+# Type: list
 # Default: false
 # command aliases for reference: deinstall, delete, erase, remove and rm 
 # Description:
@@ -183,9 +187,15 @@ package_files:
 #     Options:
 #       --hard      Uninstall from ~/.atom/packages and ~/.atom/dev/packages [boolean]
 #       -d, --dev   Uninstall from ~/.atom/dev/packages                      [boolean]
-# 
+#
+# Syntax:
+# ---
 # uninstall:
-#   - { enable: true, packages: "some package", hard: true, dev: false }
+#   - aligner-luo
+# ---
+#
+uninstall:
+  - alginer-luo
 
 
 # Less Common Settings
@@ -260,6 +270,7 @@ package_files:
 #   It appears that you can run this without specifying a package to presumably dedupe all but this has not been tested.
 #
 # Syntax:
+#
 # ---
 # dedupe:
 #   -
