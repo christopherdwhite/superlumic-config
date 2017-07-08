@@ -107,3 +107,6 @@ packages:
   # Python Packages
   # TODO: Move to Python Role
   - aligner-python
+
+package_files:
+  - packages.txt
