@@ -40,7 +40,7 @@
   # Description:
   #   Set configuration variables passed to templates & included playbooks
   #
-  vars:
+  # vars:
 
     # Computer Name (used by superlumic-computername module)
     # - computername: cportable # (defaulted)
@@ -55,7 +55,7 @@
   # Description:
   #   Specifies a list of YAML files to load variables from.
   #
-  vars_files:
+  # vars_files:
 
   ### Tasks
   #
@@ -64,7 +64,7 @@
   # Description:
   #   A list of tasks to perform in this playbook.
   #
-  tasks:
+  # tasks:
 
   ### Roles
   #
