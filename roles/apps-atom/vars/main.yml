@@ -161,7 +161,8 @@ packages:
 #   This task uses the same install command as the install packages but allows you to pass a plaintext file delineated by new lines.
 #     Plaintext files should be placed within the files folder in the role and should only include the filename. The path is taken care of by the task
 #
-# Examples:
+# Syntax:
+#
 # ---
 # package-files:
 #   - packages.txt
@@ -189,6 +190,7 @@ package_files:
 #       -d, --dev   Uninstall from ~/.atom/dev/packages                      [boolean]
 #
 # Syntax:
+#
 # ---
 # uninstall:
 #   - aligner-luo
