@@ -1,19 +1,19 @@
 ---
 
 ### apps-atom Variables
-# 
+#
 # Overview: Configure the preferences and packages that Atom uses
 #
 # Description:
 #   Define your preferences for Atom below, default variables have been set but are set to be as neutral and nondestructive as possible
-# 
+#
 ###
 
 # Core Configuration
 # =============================================================================
 
 ### Install Beta
-# 
+#
 # Requered: no
 # Type: boolean
 # Default: false
@@ -26,56 +26,14 @@ beta: true
 #
 # Playbook attribute: install
 # Required: no
-# Type: array
+# Type: list
 # Default: false
-# command aliases for reference: `i`
 # Description:
+#   Installs listed packages
+#
+# Command:
 #   Runs `apm install {{ packages }}`
-#   Command --help:
-#     Usage: apm install [<package_name>...]
-#        apm install <package_name>@<package_version>
-#        apm install <git_remote>
-#        apm install <github_username>/<github_project>
-#        apm install --packages-file my-packages.txt
-#        apm i (with any of the previous argument usage)
 #
-#     Install the given Atom package to ~/.atom/packages/<package_name>.
-# 
-#     If no package name is given then all the dependencies in the package.json file are installed to the node_modules folder in the current working directory.
-# 
-#     A packages file can be specified that is a newline separated list of package names to install with optional versions using the `package-name@version` syntax.
-#
-#     Options:
-#       --check           Check that native build tools are installed                            [boolean]
-#       --verbose         Show verbose debug information                        [boolean] [default: false]
-#       --packages-file   A text file containing the packages to install                          [string]
-#       --production      Do not install dev dependencies                                        [boolean]
-#       -c, --compatible  Only install packages/themes compatible with this Atom version          [string]
-#       -h, --help        Print this usage message
-#       -s, --silent      Set the npm log level to silent                                        [boolean]
-#       -q, --quiet       Set the npm log level to warn                                          [boolean]
-#
-#        Prefix an option with `no-` to set it to false such as --no-color to disable colored output.
-# check: true, verbose: true, parckages-file: 'some file', production: true, compatible: true
-#
-# Note:
-#   1. You can specify each of the options above in your arrays but some of them don't make sense in the context of ansible unless you're logging output since setting something like --verbose won't be written to the shell when Ansible is run.
-#   2. The exception to this is --package-file, to use that use as a seperate variable below
-# 
-# Syntax:
-# 
-# ---
-# packages:
-#   - aligner
-#   - aligner-css --check -- verbose --production --compatible
-#   - aligner-javascript --silent
-#   - aligner-php --quiet
-#   - aligner-scss@1.3.0
-#   - adrianlee44/atom-aligner-ruby
-#   - https://github.com/adrianlee44/atom-aligner-stylus
-# ---
-# 
-
 packages:
 
   # Install Aligner and related packages
@@ -157,7 +115,7 @@ packages:
 ### Install Packages from File
 #
 # Playbook attribute: install
-# Description: 
+# Description:
 #   This task uses the same install command as the install packages but allows you to pass a plaintext file delineated by new lines.
 #     Plaintext files should be placed within the files folder in the role and should only include the filename. The path is taken care of by the task
 #
@@ -167,7 +125,7 @@ packages:
 # package-files:
 #   - packages.txt
 # ---
-#  
+#
 package_files:
   - packages.txt
 
@@ -177,14 +135,14 @@ package_files:
 # Required: no
 # Type: list
 # Default: false
-# command aliases for reference: deinstall, delete, erase, remove and rm 
+# command aliases for reference: deinstall, delete, erase, remove and rm
 # Description:
 #   Runs `apm uninstall {{ uninstall.packages }} {{ unistall.hard }} {{ uninstall.dev }}`
 #   Command --help:
 #     Usage: apm uninstall <package_name>...
 #
 #     Delete the installed package(s) from the ~/.atom/packages directory.
-#     
+#
 #     Options:
 #       --hard      Uninstall from ~/.atom/packages and ~/.atom/dev/packages [boolean]
 #       -d, --dev   Uninstall from ~/.atom/dev/packages                      [boolean]
@@ -213,8 +171,8 @@ uninstall:
 # Description:
 #   Runs `apm clean`
 #   Command --help:
-#     Deletes all packages in the node_modules folder that are not referenced as a dependency in the package.json file. 
-#       
+#     Deletes all packages in the node_modules folder that are not referenced as a dependency in the package.json file.
+#
 # Note: This command is used for developing Atom packages and has been added for completeness, it's not something you normally use.
 #
 # Syntax:
@@ -247,7 +205,7 @@ uninstall:
 # Syntax:
 #
 # ---
-# config: 
+# config:
 #   - { command: 'set', key: 'some key', value: 'some value' }
 #   - { command: 'delete', key: 'some key'}
 # ---
