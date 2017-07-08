@@ -1,3 +1,0 @@
-hey-pane
-file-icons
-atom-beautify

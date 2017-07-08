@@ -1,13 +1,13 @@
 ---
 
 ### Superlumic Playbook
-# 
+#
 # Overview: Superlumic configuration for setting up my production system quickly and making sure everything remains in compliance
 # Applies to: Workstation
 #
 # Description:
-#   Ensures that my development systems are easy to setup and are martained to my specification. 
-# 
+#   Ensures that my development systems are easy to setup and are martained to my specification.
+#
 #   This configuration includes the following elements:
 #     - Set computer name
 #     - Set git settings
@@ -17,53 +17,45 @@
 #     - Run profile-all role
 #
 # Notes:
-#   - I have tagged lines as (defaulted) below where the role has default settings that will be used if you do not set them. 
+#   - I have tagged lines as (defaulted) below where the role has default settings that will be used if you do not set them.
 #       Unless you want defaults make sure they are set.
 #
 # Credit: I borrowed a lot of the style, documentation and organization from the amazing gist below but note that it is an old and sometimes out of date playbook with some problems.
 #   https://gist.github.com/marktheunissen/2979474
-# 
+#
 ###
 
-- name: superlumic  # Playbook name
-  hosts: localhost  # Run on localhost
-  connection: local # Run locally
+- name: superlumic    # Playbook name
+  hosts: localhost    # Run on localhost
+  connection: local   # Run locally
   gather_facts: false # Disable gather facts for faster execution if not needed
-  # strategy: debug   # Enable debugger for failed tasks
-  # remote_user: root # User to run tasks as
+  # strategy: debug     # Enable debugger for failed tasks
+  # remote_user: root   # User to run tasks as
 
   ### Variables
   #
-  # Playbook attribute: vars
   # Default: none
   # Required: no
+  #
   # Description:
   #   Set configuration variables passed to templates & included playbooks
   #
   vars:
 
     # Computer Name (used by superlumic-computername module)
-    - computername: cportable # (defaulted)
+    # - computername: cportable # (defaulted)
 
     # Git Settings (used by superlumic-homebrew)
-    - git_user_name: Chris White                  # (defaulted)
-    - git_user_email: chris@christopherdwhite.com # (defaulted)
-
-
+    # - git_user_name: Chris White                  # (defaulted)
+    # - git_user_email: chris@christopherdwhite.com # (defaulted)
 
   ### Variable Files
-  # 
-  # Playbook attribute: vars_files
+  #
   # Required: no
   # Description:
   #   Specifies a list of YAML files to load variables from.
   #
-  # vars_files:
-  #
-  #   # List of macOS preferences (used by ...)
-  #   - vars/macOS_defaults.yml
-
-
+  vars_files:
 
   ### Tasks
   #
@@ -80,20 +72,18 @@
   # Required: yes
   # Description:
   #   The roles each of my Ansible managed clients may be setup for
-  #    
+  #
   roles:
 
-    ### Common
-    # 
-    # Role: Workstation
+    ### Role: Common
+    #
     # Description:
     #   This role should includes anything that should be the same across each and every system.
     #
     - common
 
-    ### Primary Role
-    # 
-    # Role: Workstation
+    ### Role: Workstation
+    #
     # Description:
     #   This is my primary working computer role with everything I want on my day-to-day
     #     This role uses dependencies to organize and modularize into sub-roles by focus or actions
@@ -101,30 +91,16 @@
     - workstation
 
     ### Contextual Profiles
-    # 
+    #
     # Description:
     #   These are profiles that will change my workstation depending on what I'm working on
     #     For example, if I'm working on a PHP project I may want different dev packages in Atom or Sublime
     #
 
     ### Task Specific Roles
-    # 
+    #
     # Description
     #   These are task specefic roles applied to servers, virtual machines or other clients designed for or as part of that specific task
     #     This might include an Apache, PHP and MySQL server for doing PHP-centric web-development
-    # 
-    - roles-parallels-vm # Sets natural scrolling to off since nesting inverts it
-
-
-
-  ### Todo
-  # 
-  # - Add Killall Handlers
-  # - Determine if there's a native control for changing computer name
-  # - Store computer name as environment variable, if var doesn't exist (in other words, the first time it's run, prompt for computer name)
-  # - Add Homebrew Casks
-  # - Add Mac App Store role and apps
-  # - Add more profiles
-  # - Setup Handlers
-  # - Figure out where to put a system variable with a default configuration path and set in configuration
-  # - Set environment variables for roles?
+    #
+    - roles-parallels-vm # Sets natural scrolling to off since nesting inverts it on mouse wheel

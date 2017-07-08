@@ -1,7 +1,7 @@
 ---
 
 ### Include Roles
-# 
+#
 # Task attribute: include_role
 # Description:
 #   Rather than having one very long role for my day-to-day workstation setup I wanted to organize and modularize the configuration into sub-roles.
@@ -22,13 +22,13 @@
 #     - { name: "workstation-apps" }
 #     - { name: "apps-atom" }
 
-# - name: Include workstation-preferences role
-#   include_role:
-#     name: workstation-preferences
+- name: Include workstation-preferences role
+  include_role:
+    name: workstation-preferences
 
-# - name: Include workstation-apps role
-#   include_role:
-#     name: workstation-apps
+- name: Include workstation-apps role
+  include_role:
+    name: workstation-apps
 
 - name: Include apps-atom role
   include_role:
