@@ -22,6 +22,14 @@
 #
 beta: true
 
+
+
+package_files:
+  - files/packages.txt
+
+
+
+
 ### Install Packages
 #
 # Playbook attribute: install
@@ -126,6 +134,3 @@ packages:
   # Python Packages
   # TODO: Move to Python Role
   - aligner-python
-
-package_files:
-  - files/packages.txt
