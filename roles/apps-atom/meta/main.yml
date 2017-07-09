@@ -11,5 +11,5 @@ galaxy_info:
   categories:
     - system
 dependencies:
-  - roderik.superlumic-homebrew
+  # - roderik.superlumic-homebrew
   - christopherdwhite.ansible-atom

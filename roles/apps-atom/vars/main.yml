@@ -42,95 +42,95 @@ package_files:
 # Command:
 #   Runs `apm install {{ packages }}`
 #
-packages:
-
-  # Install Aligner and related packages
-  - aligner
-  - aligner-css
-  - aligner-javascript
-
-  # Atom Beautify
-  - atom-beautify
-
-  # Autocomplete+
-  - autocomplete-plus
-
-  # Linter
-  - linter
-  - linter-ui-default
-
-  # Languages
-  - language-javascript-jsx
-
-  # Documentation & Research
-  - ask-stack
-  - dash
-
-  # Misc Packages
-  - atom-ide-ui
-  - busy-signal
-  - intentions
-  - project-manager
-  - script
-  - wakatime
-  - autocomplete-paths
-  - open-recent
-  - expose
-  - minimap
-  - pigments
-  - file-icons
-  - highlight-selected
-
-  # Format
-  - docblockr
-  - editorconfig
-  - todo-show
-
-  # Syntax Themes
-  - an-old-hope-syntax
-  - br4ckets-light
-
-  # UI Themes
-
-  # Git Packages
-  # TODO: Move to Git role
-  - git-plus
-  - git-time-machine
-  - tree-view-git-status
-  - git-blame
-
-  # Ansible Packages
-  # TODO: Move to Ansible role
-  - ansible-galaxy-plus
-  - ansible-snippets
-  - autocomplete-ansible
-  - language-ansible
-  - linter-ansible-linting
-
-  # Front-End Packages
-  # TODO: Move to Front-End role
-  - aligner-coffeescript
-  - aligner-scss
-  - aligner-stylus
-  - emmet
-  - javascript-snippets
-  - linter-tidy
-
-  # MySQL Packages
-  # TODO: Move to MySQL role
-  - atom-mysql-snippets
-  - language-sql-mysql
-
-  # PHP Packages
-  # TODO: Move to PHP role
-  - aligner-php
-  - linter-php
-  - php-debug
-
-  # Ruby Packages
-  # TODO: Move to Ruby role
-  - aligner-ruby
-
-  # Python Packages
-  # TODO: Move to Python Role
-  - aligner-python
+# packages:
+#
+#   # Install Aligner and related packages
+#   - aligner
+#   - aligner-css
+#   - aligner-javascript
+#
+#   # Atom Beautify
+#   - atom-beautify
+#
+#   # Autocomplete+
+#   - autocomplete-plus
+#
+#   # Linter
+#   - linter
+#   - linter-ui-default
+#
+#   # Languages
+#   - language-javascript-jsx
+#
+#   # Documentation & Research
+#   - ask-stack
+#   - dash
+#
+#   # Misc Packages
+#   - atom-ide-ui
+#   - busy-signal
+#   - intentions
+#   - project-manager
+#   - script
+#   - wakatime
+#   - autocomplete-paths
+#   - open-recent
+#   - expose
+#   - minimap
+#   - pigments
+#   - file-icons
+#   - highlight-selected
+#
+#   # Format
+#   - docblockr
+#   - editorconfig
+#   - todo-show
+#
+#   # Syntax Themes
+#   - an-old-hope-syntax
+#   - br4ckets-light
+#
+#   # UI Themes
+#
+#   # Git Packages
+#   # TODO: Move to Git role
+#   - git-plus
+#   - git-time-machine
+#   - tree-view-git-status
+#   - git-blame
+#
+#   # Ansible Packages
+#   # TODO: Move to Ansible role
+#   - ansible-galaxy-plus
+#   - ansible-snippets
+#   - autocomplete-ansible
+#   - language-ansible
+#   - linter-ansible-linting
+#
+#   # Front-End Packages
+#   # TODO: Move to Front-End role
+#   - aligner-coffeescript
+#   - aligner-scss
+#   - aligner-stylus
+#   - emmet
+#   - javascript-snippets
+#   - linter-tidy
+#
+#   # MySQL Packages
+#   # TODO: Move to MySQL role
+#   - atom-mysql-snippets
+#   - language-sql-mysql
+#
+#   # PHP Packages
+#   # TODO: Move to PHP role
+#   - aligner-php
+#   - linter-php
+#   - php-debug
+#
+#   # Ruby Packages
+#   # TODO: Move to Ruby role
+#   - aligner-ruby
+#
+#   # Python Packages
+#   # TODO: Move to Python Role
+#   - aligner-python
