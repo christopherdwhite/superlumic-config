@@ -41,6 +41,9 @@ packages:
   - aligner-css
   - aligner-javascript
 
+  # Atom Beautify
+  - atom-beautify
+
   # Autocomplete+
   - autocomplete-plus
 
@@ -51,14 +54,28 @@ packages:
   # Languages
   - language-javascript-jsx
 
+  # Documentation & Research
+  - ask-stack
+  - dash
+
   # Misc Packages
   - atom-ide-ui
   - busy-signal
-  - dash
-  - docblockr
   - intentions
   - project-manager
   - script
+  - wakatime
+  - autocomplete-paths
+  - open-recent
+  - expose
+  - minimap
+  - pigments
+  - file-icons
+  - highlight-selected
+
+  # Format
+  - docblockr
+  - editorconfig
   - todo-show
 
   # Syntax Themes
@@ -72,6 +89,7 @@ packages:
   - git-plus
   - git-time-machine
   - tree-view-git-status
+  - git-blame
 
   # Ansible Packages
   # TODO: Move to Ansible role
@@ -86,6 +104,7 @@ packages:
   - aligner-coffeescript
   - aligner-scss
   - aligner-stylus
+  - emmet
   - javascript-snippets
   - linter-tidy
 
@@ -109,4 +128,4 @@ packages:
   - aligner-python
 
 package_files:
-  - packages.txt
+  - files/packages.txt
