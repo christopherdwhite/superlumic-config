@@ -25,7 +25,7 @@ beta: true
 
 
 package_files:
-  - files/packages.txt
+  - packages.txt
 
 
 
