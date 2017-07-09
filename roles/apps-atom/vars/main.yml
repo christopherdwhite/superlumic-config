@@ -22,13 +22,8 @@
 #
 beta: true
 
-
-
 package_files:
-  - packages.txt
-
-
-
+  - files/packages.txt
 
 ### Install Packages
 #
