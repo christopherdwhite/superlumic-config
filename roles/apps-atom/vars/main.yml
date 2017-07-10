@@ -22,6 +22,8 @@
 #
 beta: true
 
+message: "Role Path for apps-atom:\ {{ role_path }}"
+
 package_files:
   - files/packages.txt
 
