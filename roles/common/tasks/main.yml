@@ -3,5 +3,5 @@
 # Print message to shell
 - name: Print message
   debug:
-    msg: "{{ message }}"
+    edmsg: "{{ message }}"
   when: message is defined
