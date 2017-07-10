@@ -1,7 +1,2 @@
 ---
 
-# Print message to shell
-- name: Print message
-  debug:
-    edmsg: "{{ message }}"
-  when: message is defined
