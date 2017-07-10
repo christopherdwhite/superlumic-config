@@ -137,4 +137,4 @@ beta: true
 # Command:
 #   apm upgrade
 #
-# upgrade_all_packages: true
+upgrade_all_packages: true
