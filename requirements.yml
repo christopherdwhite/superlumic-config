@@ -4,7 +4,7 @@
   name: roderik.superlumic-homebrew
 
 - src: https://github.com/christopherdwhite/ansible-role-atom.git
-  name: christopherdwhite.ansible-atom
+  name: christopherdwhite.ansible-role-atom
 
 # - src: https://github.com/superlumic/ansible-role-computername.git
 #   name: roderik.superlumic-computername
