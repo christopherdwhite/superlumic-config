@@ -22,9 +22,6 @@
 #
 beta: true
 
-package_files:
-  - 'packages.txt'
-
 ### Install Packages
 #
 # Playbook attribute: install
@@ -37,95 +34,107 @@ package_files:
 # Command:
 #   Runs `apm install {{ packages }}`
 #
-packages:
+# packages:
 
-  # Install Aligner and related packages
-  - aligner
-  - aligner-css
-  - aligner-javascript
+#   # Install Aligner and related packages
+#   - aligner
+#   - aligner-css
+#   - aligner-javascript
 
-  # Atom Beautify
-  - atom-beautify
+#   # Atom Beautify
+#   - atom-beautify
 
-  # Autocomplete+
-  - autocomplete-plus
+#   # Autocomplete+
+#   - autocomplete-plus
 
-  # Linter
-  - linter
-  - linter-ui-default
+#   # Linter
+#   - linter
+#   - linter-ui-default
 
-  # Languages
-  - language-javascript-jsx
+#   # Languages
+#   - language-javascript-jsx
 
-  # Documentation & Research
-  - ask-stack
-  - dash
+#   # Documentation & Research
+#   - ask-stack
+#   - dash
 
-  # Misc Packages
-  - atom-ide-ui
-  - busy-signal
-  - intentions
-  - project-manager
-  - script
-  - wakatime
-  - autocomplete-paths
-  - open-recent
-  - expose
-  - minimap
-  - pigments
-  - file-icons
-  - highlight-selected
+#   # Misc Packages
+#   - atom-ide-ui
+#   - busy-signal
+#   - intentions
+#   - project-manager
+#   - script
+#   - wakatime
+#   - autocomplete-paths
+#   - open-recent
+#   - expose
+#   - minimap
+#   - pigments
+#   - file-icons
+#   - highlight-selected
+#   - hey-pane
 
-  # Format
-  - docblockr
-  - editorconfig
-  - todo-show
+#   # Format
+#   - docblockr
+#   - editorconfig
+#   - todo-show
 
-  # Syntax Themes
-  - an-old-hope-syntax
-  - br4ckets-light
+#   # Syntax Themes
+#   - an-old-hope-syntax
+#   - br4ckets-light
 
-  # UI Themes
+#   # UI Themes
 
-  # Git Packages
-  # TODO: Move to Git role
-  - git-plus
-  - git-time-machine
-  - tree-view-git-status
-  - git-blame
+#   # Git Packages
+#   # TODO: Move to Git role
+#   - git-plus
+#   - git-time-machine
+#   - tree-view-git-status
+#   - git-blame
 
-  # Ansible Packages
-  # TODO: Move to Ansible role
-  - ansible-galaxy-plus
-  - ansible-snippets
-  - autocomplete-ansible
-  - language-ansible
-  - linter-ansible-linting
+#   # Ansible Packages
+#   # TODO: Move to Ansible role
+#   - ansible-galaxy-plus
+#   - ansible-snippets
+#   - autocomplete-ansible
+#   - language-ansible
+#   - linter-ansible-linting
 
-  # Front-End Packages
-  # TODO: Move to Front-End role
-  - aligner-coffeescript
-  - aligner-scss
-  - aligner-stylus
-  - emmet
-  - javascript-snippets
-  - linter-tidy
+#   # Front-End Packages
+#   # TODO: Move to Front-End role
+#   - aligner-coffeescript
+#   - aligner-scss
+#   - aligner-stylus
+#   - emmet
+#   - javascript-snippets
+#   - linter-tidy
 
-  # MySQL Packages
-  # TODO: Move to MySQL role
-  - atom-mysql-snippets
-  - language-sql-mysql
+#   # MySQL Packages
+#   # TODO: Move to MySQL role
+#   - atom-mysql-snippets
+#   - language-sql-mysql
 
-  # PHP Packages
-  # TODO: Move to PHP role
-  - aligner-php
-  - linter-php
-  - php-debug
+#   # PHP Packages
+#   # TODO: Move to PHP role
+#   - aligner-php
+#   - linter-php
+#   - php-debug
 
-  # Ruby Packages
-  # TODO: Move to Ruby role
-  - aligner-ruby
+#   # Ruby Packages
+#   # TODO: Move to Ruby role
+#   - aligner-ruby
 
-  # Python Packages
-  # TODO: Move to Python Role
-  - aligner-python
+#   # Python Packages
+#   # TODO: Move to Python Role
+#   - aligner-python
+
+### upgrade all packages
+#
+# Required: no
+# Type: boolean
+# Default: false
+#
+# Command:
+#   apm upgrade
+#
+upgrade_all_packages: true
