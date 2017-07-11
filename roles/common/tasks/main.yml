@@ -1,2 +1,24 @@
 ---
 
+- name: ensure apm installed
+  command: which apm
+
+# ensure apm (atom package manager) is installed
+# - name: ensure apm installed
+#   command: which apm
+#   register: apm_installed_status
+#   failed_when: apm_installed_status.rc
+#   changed_when: false
+#   check_mode: no
+
+# - name: install homebrew
+#   shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#   args:
+#     creates: /usr/local/bin/brew
+
+#   - command: /bin/false
+#     register: result
+#     ignore_errors: True
+
+#   - command: /bin/something
+#     when: result|failed
