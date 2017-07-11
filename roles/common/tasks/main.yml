@@ -2,6 +2,11 @@
 
 - name: ensure apm installed
   command: which apm
+  ignore_errors: true
+
+- name: ensure git installed
+  command: which git
+  ignore_errors: true
 
 # ensure apm (atom package manager) is installed
 # - name: ensure apm installed
