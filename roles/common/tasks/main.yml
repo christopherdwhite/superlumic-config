@@ -48,7 +48,6 @@
   command: echo $PATH
   environment:
     PATH: "{{ ansible_env.PATH }}"
-  become: true
   become_user: cwhite
   register: env_path_out
   changed_when: False
