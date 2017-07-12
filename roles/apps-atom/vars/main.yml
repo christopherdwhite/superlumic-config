@@ -20,7 +20,7 @@
 # Description:
 #   Install Atom Beta from Homebrew Cask?
 #
-beta: false
+beta: true
 
 ### Install Packages
 #

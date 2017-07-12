@@ -22,13 +22,13 @@
 #     - { name: "workstation-apps" }
 #     - { name: "apps-atom" }
 
-# - name: Include workstation-preferences role
-#   include_role:
-#     name: workstation-preferences
-#
-# - name: Include workstation-apps role
-#   include_role:
-#     name: workstation-apps
+- name: Include workstation-preferences role
+  include_role:
+    name: workstation-preferences
+
+- name: Include workstation-apps role
+  include_role:
+    name: workstation-apps
 
 - name: Include apps-atom role
   include_role:
