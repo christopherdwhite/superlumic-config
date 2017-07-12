@@ -47,7 +47,7 @@
 - name: echo env path
   command: echo $PATH
   environment:
-    PATH: "{{ ansible_env.PATH }}"
+    PATH: /usr/local/bin:{{ ansible_env.PATH }}
   become_user: cwhite
   register: env_path_out
   changed_when: False
