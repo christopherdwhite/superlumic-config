@@ -1,62 +1,34 @@
 ---
 
-- name: ensure apm installed
-  command: which apm
-  ignore_errors: true
-  register: apm_status
+- name: which ansible
+  command: which ansible
+  register: which_out
 
-- name: display apm output
-  debug: "msg={{ apm_status.stdout }}"
+- name: display which ansible
+  debug: "msg={{ which_out.stdout }}"
 
-- name: ensure git installed
-  command: which git
-  ignore_errors: true
-  register: git_status
-
-- name: display git output
-  debug: "msg={{ git_status.stdout }}"
-
-- name: ensure apm installed with env
-  command: which apm
-  ignore_errors: true
-  register: apm_env_status
-  environment:
-    PATH: "{{ ansible_env.PATH }}"
-
-- name: display apm output
-  debug: "msg={{ apm_env_status.stdout }}"
-
-- name: ensure git installed with env
-  command: which git
-  ignore_errors: true
-  register: git_env_status
-  environment:
-    PATH: "{{ ansible_env.PATH }}"
-
-- name: display apm output
-  debug: "msg={{ apm_env_status.stdout }}"
-
-- name: echo path
-  command: echo $PATH
-  register: path_out
-  changed_when: False
-
-- name: display path output
-  debug: "msg={{ path_out.stdout }}"
-
-- name: echo env path
-  command: echo $PATH
+- name: which ansible env out
+  command: which ansible
+  register: which_env_out
   environment:
     PATH: /usr/local/bin:{{ ansible_env.PATH }}
-  become_user: cwhite
-  register: env_path_out
-  changed_when: False
 
-- name: display fixed output
-  debug: "msg={{ env_path_out.stdout }}"
+- name: display which
+  debug: "msg={{ which_env_out.stdout }}"
 
-- name: display ansible path
-  debug: msg="{{ ansible_env.PATH }}"
+# - name: echo env path
+#   command: echo $PATH
+#   environment:
+#     PATH: /usr/local/bin:{{ ansible_env.PATH }}
+#   become_user: cwhite
+#   register: env_path_out
+#   changed_when: False
+
+# - name: display fixed output
+#   debug: "msg={{ env_path_out.stdout }}"
+
+# - name: display ansible path
+#   debug: msg="{{ ansible_env.PATH }}"
 
 # ensure apm (atom package manager) is installed
 # - name: ensure apm installed
@@ -71,9 +43,9 @@
 #   args:
 #     creates: /usr/local/bin/brew
 
-#   - command: /bin/false
-#     register: result
-#     ignore_errors: True
+# - command: /bin/false
+#   register: result
+#   ignore_errors: True
 
-#   - command: /bin/something
-#     when: result|failed
+# - command: /bin/something
+#   when: result|failed
