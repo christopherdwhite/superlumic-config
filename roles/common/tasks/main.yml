@@ -12,7 +12,7 @@
 
 # print local $path
 - name: print local $path
-  debug: msg="{{ local_path.sdout }}"
+  debug: msg="{{ local_path.stdout }}"
 
 # check if homebrew is installed
 - name: check if homebrew is installed
