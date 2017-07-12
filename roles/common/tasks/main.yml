@@ -3,6 +3,10 @@
 - name: which ansible
   command: which ansible
   register: which_ansible_out
+  failed_when: which_ansible_out.rc
+
+- name: display which ansible
+  debug: "msg={{ which_ansible_out.rc }}"
 
 - name: display which ansible
   debug: "msg={{ which_ansible_out.stdout }}"
@@ -10,6 +14,10 @@
 - name: which brew
   command: which brew
   register: which_brew_out
+  failed_when: which_brew_out.rc
+
+- name: display which brew
+  debug: "msg={{ which_brew_out.rc }}"
 
 - name: display which brew
   debug: "msg={{ which_brew_out.stdout }}"
