@@ -1,55 +1,24 @@
 ---
 
-- name: which brew
+# print ansible path
+- name: print ansible path
+  debug: msg="{{ ansible_env.PATH }}"
+
+# print local path
+- name: print local path
+  command: echo $PATH
+
+# check if homebrew is installed
+- name: check if homebrew is installed
   command: which brew
   register: which_brew_out
   failed_when: which_brew_out.rc
-  changed_when: false
   ignore_errors: true
+  # changed_when: false
 
-- debug: msg="Not installed"
+# install homebrew if necessary
+- name: install homebrew
+  shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  args:
+    creates: /usr/local/bin/brew
   when: which_brew_out|failed
-
-- name: which git
-  command: which git
-  register: which_git_out
-  failed_when: which_git_out.rc
-  changed_when: false
-  ignore_errors: true
-
-- debug: msg="Not installed"
-  when: which_git_out|failed
-
-# - name: echo env path
-#   command: echo $PATH
-#   environment:
-#     PATH: /usr/local/bin:{{ ansible_env.PATH }}
-#   become_user: cwhite
-#   register: env_path_out
-#   changed_when: False
-
-# - name: display fixed output
-#   debug: "msg={{ env_path_out.stdout }}"
-
-# - name: display ansible path
-#   debug: msg="{{ ansible_env.PATH }}"
-
-# ensure apm (atom package manager) is installed
-# - name: ensure apm installed
-#   command: which apm
-#   register: apm_installed_status
-#   failed_when: apm_installed_status.rc
-#   changed_when: false
-#   check_mode: no
-
-# - name: install homebrew
-#   shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#   args:
-#     creates: /usr/local/bin/brew
-
-# - command: /bin/false
-#   register: result
-#   ignore_errors: True
-
-# - command: /bin/something
-#   when: result|failed
