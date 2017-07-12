@@ -4,6 +4,8 @@
   command: which ansible
   register: which_ansible_out
   failed_when: which_ansible_out.rc
+  changed_when: false
+  ignore_errors: true
 
 - name: display which ansible
   debug: "msg={{ which_ansible_out.rc }}"
@@ -15,6 +17,8 @@
   command: which brew
   register: which_brew_out
   failed_when: which_brew_out.rc
+  changed_when: false
+  ignore_errors: true
 
 - name: display which brew
   debug: "msg={{ which_brew_out.rc }}"
