@@ -1,18 +1,5 @@
 ---
 
-- name: which ansible
-  command: which ansible
-  register: which_ansible_out
-  failed_when: which_ansible_out.rc
-  changed_when: false
-  ignore_errors: true
-
-- name: display which ansible
-  debug: "msg={{ which_ansible_out.rc }}"
-
-- name: display which ansible
-  debug: "msg={{ which_ansible_out.stdout }}"
-
 - name: which brew
   command: which apm || git
   register: which_brew_out
@@ -20,11 +7,8 @@
   changed_when: false
   ignore_errors: true
 
-- name: display which brew
-  debug: "msg={{ which_brew_out.rc }}"
-
-- name: display which brew
-  debug: "msg={{ which_brew_out.stdout }}"
+- debug: msg="Not installed"
+  when: which_brew_out|failed
 
 # - name: echo env path
 #   command: echo $PATH
