@@ -1,7 +1,7 @@
 ---
 
 - name: display ansible path
-  debug: msg="PATH:\ {{ ansible_env }}"
+  debug: msg="PATH:\ {{ ansible_env.PATH }}"
 
 # ensure apm (atom package manager) is installed
 # - name: ensure apm installed
