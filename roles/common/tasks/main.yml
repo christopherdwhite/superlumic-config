@@ -14,7 +14,7 @@
   debug: "msg={{ which_ansible_out.stdout }}"
 
 - name: which brew
-  command: which brew || which git
+  command: which ansible || which git
   register: which_brew_out
   failed_when: which_brew_out.rc
   changed_when: false
