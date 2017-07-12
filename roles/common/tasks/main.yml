@@ -50,7 +50,6 @@
     PATH: "{{ ansible_env.PATH }}"
   become: true
   become_user: cwhite
-  become_method: sudo
   register: env_path_out
   changed_when: False
 
