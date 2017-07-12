@@ -2,19 +2,17 @@
 
 - name: which ansible
   command: which ansible
-  register: which_out
+  register: which_ansible_out
 
 - name: display which ansible
-  debug: "msg={{ which_out.stdout }}"
+  debug: "msg={{ which_ansible_out.stdout }}"
 
-- name: which ansible env out
-  command: which ansible
-  register: which_env_out
-  environment:
-    PATH: /usr/local/bin:{{ ansible_env.PATH }}
+- name: which brew
+  command: which brew
+  register: which_brew_out
 
-- name: display which
-  debug: "msg={{ which_env_out.stdout }}"
+- name: display which brew
+  debug: "msg={{ which_brew_out.stdout }}"
 
 # - name: echo env path
 #   command: echo $PATH
