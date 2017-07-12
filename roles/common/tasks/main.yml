@@ -1,12 +1,18 @@
 ---
 
-# print ansible path
-- name: print ansible path
+# print ansible $path
+- name: print ansible $path
   debug: msg="{{ ansible_env.PATH }}"
 
-# print local path
-- name: print local path
+# register local $path var
+- name: echo local $path
   command: echo $PATH
+  register: local_path
+  no_log: true
+
+# print local $path
+- name: print local $path
+  debug: msg="{{ local_path.sdout }}"
 
 # check if homebrew is installed
 - name: check if homebrew is installed
@@ -15,7 +21,6 @@
   failed_when: which_brew_out.rc
   ignore_errors: true
   no_log: true
-  # changed_when: false
 
 # install homebrew if necessary
 - name: install homebrew
