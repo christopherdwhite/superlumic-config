@@ -5,24 +5,36 @@
   ignore_errors: true
   register: apm_status
 
+- name: display apm output
+  debug: "msg={{ apm_status.stdout }}"
+
 - name: ensure git installed
   command: which git
   ignore_errors: true
   register: git_status
 
-- name: ensure apm installed
+- name: display git output
+  debug: "msg={{ git_status.stdout }}"
+
+- name: ensure apm installed with env
   command: which apm
   ignore_errors: true
-  register: apm_status
+  register: apm_env_status
   environment:
     PATH: "{{ ansible_env.PATH }}"
 
-- name: ensure git installed
+- name: display apm output
+  debug: "msg={{ apm_env_status.stdout }}"
+
+- name: ensure git installed with env
   command: which git
   ignore_errors: true
-  register: git_status
+  register: git_env_status
   environment:
     PATH: "{{ ansible_env.PATH }}"
+
+- name: display apm output
+  debug: "msg={{ apm_env_status.stdout }}"
 
 # ensure apm (atom package manager) is installed
 # - name: ensure apm installed
