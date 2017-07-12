@@ -1,7 +1,7 @@
 ---
 
 - name: which brew
-  command: which apm || git
+  command: which brew
   register: which_brew_out
   failed_when: which_brew_out.rc
   changed_when: false
@@ -9,6 +9,16 @@
 
 - debug: msg="Not installed"
   when: which_brew_out|failed
+
+- name: which git
+  command: which git
+  register: which_git_out
+  failed_when: which_git_out.rc
+  changed_when: false
+  ignore_errors: true
+
+- debug: msg="Not installed"
+  when: which_git_out|failed
 
 # - name: echo env path
 #   command: echo $PATH
