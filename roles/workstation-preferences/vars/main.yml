@@ -56,8 +56,8 @@ defaults:
   - { domain: 'NSGlobalDomain', key: 'AppleEnableSwipeNavigateWithScrolls', type: bool, value: true } # Enable swipe between pages (two finger horizontal swipe)
   - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadFourFingerHorizSwipeGesture', type: bool, value: true } # Enable four finger swipe between full screen apps or spaces on Mac trackpad
   - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadFourFingerHorizSwipeGesture', type: bool, value: true } # Enable four finger swipe between full screen apps or spaces on Bluetooth trackpad
-  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadThreeFingerHorizSwipeGesture', type: bool, value: true } # Enable three finger swipe between full screen apps or spaces on Mac trackpad
-  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadThreeFingerHorizSwipeGesture', type: bool, value: true } # Enable three finger swipe between full screen apps or spaces on Bluetooth trackpad
+  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadThreeFingerHorizSwipeGesture', type: int, value: 2 } # Enable three finger swipe between full screen apps or spaces on Mac trackpad
+  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadThreeFingerHorizSwipeGesture', type: int, value: 2 } # Enable three finger swipe between full screen apps or spaces on Bluetooth trackpad
   - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadTwoFingerFromRightEdgeSwipeGesture', type: int, value: 3 } # Enable open and close Notification Center with two finger swipe from the side of Mac trackpad
   - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadTwoFingerFromRightEdgeSwipeGesture', type: int, value: 3 } # Enable open and close Notification Center with two finger swipe from the side of Bluetooth trackpad
   - { domain: 'com.apple.dock', key: 'showMissionControlGestureEnabled', type: bool, value: true } # Enable toggle Mission Control with three finger swipe up

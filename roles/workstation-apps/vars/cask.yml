@@ -8,13 +8,13 @@ cloud:
   - droplr
 
 # Design
-# design:
 
 # General Development Apps
 dev:
   ## IDEs & Text Editors
   - atom
   - atom-beta
+  - bbedit
   - coderunner
   - sublime-text-dev
 
