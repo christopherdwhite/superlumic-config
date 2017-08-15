@@ -6,14 +6,14 @@ defaults:
   - { domain: 'NSGlobalDomain', key: 'ApplePressAndHoldEnabled', type: bool, value: true } # Character accents popup on, key repeate off
   - { domain: 'NSGlobalDomain', key: 'InitialKeyRepeat', type: int, value: 25 } # Set my prefered delay for key repeat
   - { domain: 'NSGlobalDomain', key: 'KeyRepeat', type: int, value: 2 } # Set key repeat to fast
- 
+
   # UI
   - { domain: 'NSGlobalDomain', key: 'AppleInterfaceStyle', state: absent } # Set Menubar and Dock to Light UI
   - { domain: 'NSGlobalDomain', key: 'NSNavPanelExpandedStateForSaveMode', type: bool, value: true } # Expand save dialog by default
   - { domain: 'NSGlobalDomain', key: 'NSNavPanelExpandedStateForSaveMode2', type: bool, value: true } # Expand save dialog by default second key
   - { domain: 'NSGlobalDomain', key: 'PMPrintingExpandedStateForPrint', type: bool, value: true } # Expand printing preferences
   - { domain: 'NSGlobalDomain', key: 'PMPrintingExpandedStateForPrint2', type: bool, value: true } # Expand printing preferences
-  - { domain: 'com.apple.finder', key: 'CreateDesktop', type: bool, value: false } # Disable icons on Desktop
+  - { domain: 'com.apple.finder', key: 'CreateDesktop', type: string, value: false } # Disable icons on Desktop
 
   # UI Speed
   - { domain: 'com.apple.dock', key: 'expose-animation-duration', type: float, value: 0.1 } # Set Mission Control animations to be faster than default in macOS versions earlier than Sierra
@@ -41,8 +41,8 @@ defaults:
   - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadThreeFingerTapGesture', type: bool, value: true } # Enable look up and data detectors for Mac trackpad
   - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadThreeFingerTapGesture', type: bool, value: true } # Enable look up and data detectors for Bluetooth trackpad
   - { domain: 'NSGlobalDomain', key: 'ContextMenuGesture', type: bool, value: true } # Enable two finger tap as secondary/right mouse click
-  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadRightClick', type: bool, value: true } # Enable two finger tap as secondary/right mouse click on Mac trackpad 
-  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadRightClick', type: bool, value: true } # Enable two finger tap as secondary/right mouse click on Bluetooth trackpad 
+  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadRightClick', type: bool, value: true } # Enable two finger tap as secondary/right mouse click on Mac trackpad
+  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadRightClick', type: bool, value: true } # Enable two finger tap as secondary/right mouse click on Bluetooth trackpad
   - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'Clicking', type: bool, value: true } # Enable tap to click on Mac trackpad
   - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'Clicking', type: bool, value: true } # Enable tap to click on Bluetooth trackpad
   - { domain: 'NSGlobalDomain', key: 'com.apple.trackpad.scaling', type: float, value: 0.6875 } # Set trackpad speed to default
@@ -61,7 +61,7 @@ defaults:
   - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadTwoFingerFromRightEdgeSwipeGesture', type: int, value: 3 } # Enable open and close Notification Center with two finger swipe from the side of Mac trackpad
   - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadTwoFingerFromRightEdgeSwipeGesture', type: int, value: 3 } # Enable open and close Notification Center with two finger swipe from the side of Bluetooth trackpad
   - { domain: 'com.apple.dock', key: 'showMissionControlGestureEnabled', type: bool, value: true } # Enable toggle Mission Control with three finger swipe up
-  - { domain: 'com.apple.dock', key: 'showAppExposeGestureEnabled', type: bool, value: true } # Enable toggle Mission Control with three finger swipe down on Mac trackpad 
+  - { domain: 'com.apple.dock', key: 'showAppExposeGestureEnabled', type: bool, value: true } # Enable toggle Mission Control with three finger swipe down on Mac trackpad
   - { domain: 'com.apple.dock', key: 'showLaunchpadGestureEnabled', type: bool, value: true } # Enable show Launchpad with four finger pinch
   - { domain: 'com.apple.dock', key: 'showDesktopGestureEnabled', type: bool, value: true } # Enable show Launchpad with five finger pinch
 
@@ -76,17 +76,18 @@ defaults:
 
   # Software Update
   # I'm uncertain that this still does anything:
-  - { domain: 'com.apple.SoftwareUpdate', key: 'ScheduleFrequency', type: int, value: 1 } # Schedule Apple Software Update checking for new upddates every day. 
-  
+  - { domain: 'com.apple.SoftwareUpdate', key: 'ScheduleFrequency', type: int, value: 1 } # Schedule Apple Software Update checking for new upddates every day.
+
   # Time Machine
   - { domain: 'com.apple.TimeMachine', key: 'DoNotOfferNewDisksForBackup', type: bool, value: true } # Do not ask to use external disks with TimeMachine
-  
+
   # Finder
   - { domain: 'com.apple.finder', key: 'FXPreferredViewStyle', type: string, value: Nlsv } # Set default Finder view style as list view
   - { domain: 'com.apple.finder', key: 'FXEnableExtensionChangeWarning', type: bool, value: false } # Don't warn me when changing file extensions
   - { domain: 'com.apple.finder', key: 'NewWindowTarget', type: string, value: PfHm } # Set new finder window opens in user home
   - { domain: 'com.apple.finder', key: 'NewWindowTargetPath', type: string, value: 'file://${HOME}' } # This gets overridden in Sierra, set it anyway
   - { domain: 'com.apple.finder', key: 'FXDefaultSearchScope', type: string, value: SCcf } # Set Finder's default search scope to current folder's contents
+  - { domain: 'com.apple.finder', key: 'AppleShowAllFiles', type: bool, value: true } # Show hidden files
   - { domain: 'com.apple.finder', key: 'AppleShowAllExtensions', type: bool, value: true } # Show all file extensions
   - { domain: 'com.apple.finder', key: 'ShowPathbar', type: bool, value: true } # Enable path bar in Finder
   - { domain: 'com.apple.finder', key: 'ShowStatusBar', type: bool, value: true } # Enable status bar in Finder
