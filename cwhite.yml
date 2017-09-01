@@ -57,11 +57,6 @@
   #
   # vars_files:
 
-  ### Vars Prompt (to be moved to SSH or user role)
-  vars_prompt:
-    - name: "ssh_passphrase"
-      prompt: "Enter SSH Key Passphrase"
-
   ### Tasks
   #
   # Playbook attribute: tasks
@@ -75,7 +70,7 @@
         name: cwhite
         generate_ssh_key: yes
         ssh_key_bits: 4096
-        ssh_key_passphrase: "{{ssh_passphrase}}"
+    #   ssh_key_passphrase: "{{ssh_passphrase}}" # Non-interactive, review this later
     # - name: Set authorized key took from file
     #   authorized_key:
     #     user: cwhite
