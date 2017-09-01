@@ -30,6 +30,10 @@
   include_role:
     name: workstation-apps
 
+- name: Include workstations-source role
+  include_role:
+    name: workstation-source
+
 - name: Include apps-atom role
   include_role:
     name: apps-atom

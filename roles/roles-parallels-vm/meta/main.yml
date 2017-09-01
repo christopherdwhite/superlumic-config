@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  author: Roderik van der Veer
+  author: Chris White
   description: Sets natural scrolling to off since nesting inverts it
   license: MIT
   min_ansible_version: 1.2
