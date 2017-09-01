@@ -12,6 +12,7 @@
   with_items:
     - "{{ defaults }}"
   notify: "restart macos preferences"
+  ignore_errors: true
 
 # There are some settings, like those in /library/ that require escalated privileges
 - name: Write macOS defaults with escalated privileges
@@ -26,3 +27,4 @@
     - "{{ become_defaults }}"
   notify: "restart macos preferences"
   become: true
+  ignore_errors: true
