@@ -40,14 +40,14 @@
   # Description:
   #   Set configuration variables passed to templates & included playbooks
   #
-  # vars:
+  vars:
 
     # Computer Name (used by superlumic-computername module)
-    # - computername: cportable # (defaulted)
+    - computername: cportable # (defaulted)
 
     # Git Settings (used by superlumic-homebrew)
-    # - git_user_name: Chris White                  # (defaulted)
-    # - git_user_email: chris@christopherdwhite.com # (defaulted)
+    - git_user_name: Chris White                  # (defaulted)
+    - git_user_email: chris@christopherdwhite.com # (defaulted)
 
   ### Variable Files
   #
@@ -57,6 +57,11 @@
   #
   # vars_files:
 
+  ### Vars Prompt (to be moved to SSH or user role)
+  vars_prompt:
+    - name: "ssh_passphrase"
+      prompt: "Enter SSH Key Passphrase"
+
   ### Tasks
   #
   # Playbook attribute: tasks
@@ -64,7 +69,27 @@
   # Description:
   #   A list of tasks to perform in this playbook.
   #
-  # tasks:
+  tasks:
+    # Setup SSH (to be moved to SSH or user role)
+    - user:
+        name: cwhite
+        generate_ssh_key: yes
+        ssh_key_bits: 4096
+        ssh_key_passphrase: {{ssh_passphrase}}
+    # - name: Set authorized key took from file
+    #   authorized_key:
+    #     user: cwhite
+    #     state: present
+    #     key: "{{ lookup('file', '~/.ssh/id_rsa') }}"
+
+    # - name: create user ssh directory
+    #   # become: yes
+    #   file:
+    #     path: "{{item}}"
+    #     state: directory
+    #     mode: 0777
+    #   with_items:
+    #     - ~/.ssh
 
   ### Roles
   #
