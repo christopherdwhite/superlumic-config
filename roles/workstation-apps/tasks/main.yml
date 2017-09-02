@@ -22,3 +22,4 @@
     - "{{ casks.utilities }}"
     - "{{ casks.web }}"
     - "{{ casks.write }}"
+    # - "{{ casks.test }}"

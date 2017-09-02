@@ -18,6 +18,9 @@ dev:
   - coderunner
   - sublime-text-dev
 
+  ## Diff
+  - kaleidoscope
+
   ## Documentation
   - dash
 
@@ -27,6 +30,7 @@ dev:
   ## Testing
   - firefoxdeveloperedition
   - google-chrome-canary
+  - opera-developer
   - safari-technology-preview
 
 # Productivity
@@ -43,17 +47,35 @@ social:
 
 # Utilities
 utilities:
+  - a-better-finder-rename
   - alfred
+  - appcleaner
+  - bartender
+  - data-rescue
+  - default-folder-x
   - duet
+  - hazel
+  - houdahspot
   - hyper
+  - istat-menus
+  - keyboard-maestro
   - parallels-desktop
   - textexpander
 
 # web
 web:
-  - google-chrome
   - firefox
+  - google-chrome
+  - opera
 
 # Write
 write:
   - foldingtext
+
+# TestLab
+test:
+  - brackets
+  - coda
+  - lighttable
+  - opera-neon
+  - visual-studio-code
