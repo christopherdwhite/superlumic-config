@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Chris White
+  description: Configuration setup for tools specific to client
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+    - name: Darwin
+      versions:
+        - all
+  categories:
+    - system
+dependencies:
+  - workstation-apps

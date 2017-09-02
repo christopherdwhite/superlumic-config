@@ -1,0 +1,5 @@
+---
+
+- name: Include clients-wnw role
+  include_role:
+    name: clients-wnw
