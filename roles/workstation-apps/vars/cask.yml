@@ -47,6 +47,7 @@ utilities:
   - duet
   - hyper
   - parallels-desktop
+  - textexpander
 
 # web
 web:
