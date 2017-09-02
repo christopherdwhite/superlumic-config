@@ -14,7 +14,7 @@
 # I'm going to list them as seperate tasks but I'll leave this ready to uncommont when the bug is fixed.
 # https://github.com/ansible/ansible/issues/21285
 #
-# - name: Include workstation-preferences role
+# - name: Include clients roles
 #   include_role:
 #     name: "{{ item }}"
 #   with_items:
