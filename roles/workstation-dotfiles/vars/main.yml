@@ -5,4 +5,3 @@ dotfiles:
 
   # Hyper
   - { src: '.hyper.js', dest: '~/.hyper.js' }
-  - { src: 'ssh_config', dest: '~/test' }
