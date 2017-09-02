@@ -1,0 +1,6 @@
+---
+
+# Dotfile Symlink Details
+dotfiles:
+  # Hyper
+  - { src: 'files/.hyper.js', dest: '~/.hyper.js' }
