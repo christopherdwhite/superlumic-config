@@ -4,4 +4,4 @@
 dotfiles:
 
   # Hyper
-  - { src: '.hyper.js', dest: '~/.hyper.js' }
+  - { src: '~/Source/csystems/dotfiles/.hyper.js', dest: '~/.hyper.js' }

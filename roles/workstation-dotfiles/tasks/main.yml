@@ -1,5 +1,7 @@
 ---
 
+# TODO: Add Git clone
+
 # Symlink Playbook files into position
 - name: Symlink dotfiles into position
   file:
