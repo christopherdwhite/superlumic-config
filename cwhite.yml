@@ -110,6 +110,14 @@
     #
     - workstation
 
+    ### Role: Clients
+    #
+    # Description:
+    #   These are configuration roles that will setup things I need only for a specefic client
+    #     This role uses dependencies to organize and modularize into sub-roles by client
+    #
+    - clients
+
     ### Contextual Profiles
     #
     # Description:
