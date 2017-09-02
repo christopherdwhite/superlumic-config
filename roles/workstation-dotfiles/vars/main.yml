@@ -2,5 +2,7 @@
 
 # Dotfile Symlink Details
 dotfiles:
+
   # Hyper
   - { src: 'files/.hyper.js', dest: '~/.hyper.js' }
+  - { src: 'files/ssh_config', dest: '~/test' }
