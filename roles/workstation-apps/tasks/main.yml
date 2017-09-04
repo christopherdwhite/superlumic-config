@@ -16,7 +16,7 @@
 
 # Install formulas from Homebrew
 - homebrew:
-    name: {{ item }}
+    name: "{{ item }}"
     state: present
   with_items:
     - "{{ homebrew.bash }}"
