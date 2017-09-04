@@ -24,7 +24,7 @@
 # Install apps from Homebrew Cask
 - name: Install Homebrew Cask Apps
   homebrew_cask:
-    name: {{ item }}
+    name: "{{ item }}"
     state: present
   with_items:
     - "{{ casks.cloud }}"
