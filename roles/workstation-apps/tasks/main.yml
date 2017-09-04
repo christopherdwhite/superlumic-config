@@ -3,8 +3,12 @@
 # Include Variable Files
 - name: Include vars from casks.yml as {{ casks }}
   include_vars:
-    file: cask.yml
-    name: casks
+    file: "{{ item.file }}"
+    name: "{{ item.name }}"
+  with_items:
+    - { file: 'cask.yml', name: 'casks' } # homebrew casks variable file
+    - { file: 'homebrew.yml', name: 'homebrew' } # homebrew variable file
+    # - { file: 'app-store.yml', name: 'appstore' } 
 
 # Tap Homebrew
 - homebrew_tap:
