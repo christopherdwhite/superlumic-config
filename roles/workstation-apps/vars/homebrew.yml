@@ -1,0 +1,12 @@
+---
+
+# Homebrew Packages to Install
+
+## Bash command line tools
+bash:
+  - brew-cask-completion # hombrew cask tab completion for Bash
+  - vitorgalvao/tiny-scripts/cask-repair # homebrew cask update script
+
+## ZSH command line tools
+# zsh:
+#   - zsh-completions # Hombrew Cask tab completion for ZSH
