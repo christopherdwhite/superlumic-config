@@ -2,7 +2,7 @@
 
 # TODO: Add Git clone
 
-# Symlink Playbook files into position
+# Symlink dotfiles into position
 - name: Symlink dotfiles into position
   file:
     src: "{{ item.src }}"

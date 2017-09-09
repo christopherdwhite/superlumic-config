@@ -37,6 +37,7 @@ dev:
 productivity:
   - 1password-beta
   - fantastical
+  - thingsmacsandboxhelper
 
 # Social
 social:
@@ -54,6 +55,7 @@ utilities:
   - data-rescue
   - default-folder-x
   - duet
+  - forklift
   - hazel
   - houdahspot
   - hyper

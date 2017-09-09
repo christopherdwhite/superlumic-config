@@ -18,27 +18,28 @@
 #   include_role:
 #     name: "{{ item }}"
 #   with_items:
-#     - { name: "workstation-preferences" }
 #     - { name: "workstation-source" }
+#     - { name: "workstation-dotfiles" }
 #     - { name: "workstation-apps" }
 #     - { name: "apps-atom" }
-
-- name: Include workstation-preferences role
-  include_role:
-    name: workstation-preferences
+#     - { name: "workstation-preferences" }
 
 - name: Include workstations-source role
   include_role:
     name: workstation-source
 
-- name: Include workstation-apps role
-  include_role:
-    name: workstation-apps
-
 - name: Include workstation-dotfiles role
   include_role:
     name: workstation-dotfiles
 
+- name: Include workstation-apps role
+  include_role:
+    name: workstation-apps
+
 - name: Include apps-atom role
   include_role:
     name: apps-atom
+
+- name: Include workstation-preferences role
+  include_role:
+    name: workstation-preferences
