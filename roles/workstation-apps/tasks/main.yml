@@ -8,6 +8,7 @@
   with_items:
     - { file: 'cask.yml', name: 'casks' } # homebrew casks variable file
     - { file: 'homebrew.yml', name: 'homebrew' } # homebrew variable file
+    - { file: 'library.yml', name: 'library' } # homebrew variable file
     # - { file: 'app-store.yml', name: 'appstore' }
 
 # Homebrew Taps
