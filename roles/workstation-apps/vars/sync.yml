@@ -1,0 +1,34 @@
+---
+
+# Application files and folders that need symlinked from iCloud Drive
+applications:
+
+- app:
+    name: 'alfred'
+    symlinks:
+    - src: '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/clipboard.alfdb'
+      dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb'
+    - src: '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/urlhistory.alfdb'
+      dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/urlhistory.alfdb'
+
+
+
+#
+#
+# # Symlink application data from iCloud
+# library:
+#
+#   # Alfred
+#   - { src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/Databases/clipboard.alfdb', dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb', force: yes }
+#   # - src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/Databases/clipboard.alfdb'
+#   #   dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb'
+#   #   force: yes
+#   # - src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/Databases/urlhistory.alfdb'
+#   #   dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/urlhistory.alfdb'
+#   #   force: yes
+#   # - src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/license.plist'
+#   #   dest: '/Users/cwhite/Library/Application Support/Alfred 3/license.plist'
+#   #   force: yes
+#   # - src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/usage.data'
+#   #   dest: '/Users/cwhite/Library/Application Support/Alfred 3/usage.data'
+#   #   force: yes

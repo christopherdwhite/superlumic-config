@@ -8,8 +8,9 @@
   with_items:
     - { file: 'cask.yml', name: 'casks' } # homebrew casks variable file
     - { file: 'homebrew.yml', name: 'homebrew' } # homebrew variable file
-    - { file: 'library.yml', name: 'library' } # homebrew variable file
     # - { file: 'app-store.yml', name: 'appstore' }
+    - { file: 'sync.yml', name: 'sync' } # application sync variable file
+
 
 
 
@@ -23,8 +24,11 @@
     mode: "{{ item.mode | default(omit) }}"
     owner: "{{ item.owner | default(omit) }}"
     state: link
-  with_items: 
-    - "{{ library }}"
+  with_items:
+    - "{{ sync.applications.app.symlinks }}"
+
+
+
 
 # Homebrew Taps
 - homebrew_tap:
