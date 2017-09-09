@@ -23,9 +23,8 @@
     mode: "{{ item.mode | default(omit) }}"
     owner: "{{ item.owner | default(omit) }}"
     state: link
-  with_items: "{{ library.file }}"
-
-
+  with_items: 
+    - "{{ library }}"
 
 # Homebrew Taps
 - homebrew_tap:

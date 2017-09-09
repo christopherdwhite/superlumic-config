@@ -4,10 +4,9 @@
 library:
 
   # Alfred
-  - file:
-      src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/Databases/clipboard.alfdb'
-      dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb'
-      force: yes
+  - src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/Databases/clipboard.alfdb'
+    dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb'
+    force: yes
   # - src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/Databases/urlhistory.alfdb'
   #   dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/urlhistory.alfdb'
   #   force: yes
