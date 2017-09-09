@@ -1,15 +1,11 @@
 ---
 
 # Application files and folders that need symlinked from iCloud Drive
-applications:
-
-- app:
-    name: 'alfred'
-    symlinks:
-    - src: '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/clipboard.alfdb'
-      dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb'
-    - src: '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/urlhistory.alfdb'
-      dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/urlhistory.alfdb'
+symlinks:
+- src: '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/clipboard.alfdb'
+  dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb'
+- src: '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/urlhistory.alfdb'
+  dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/urlhistory.alfdb'
 
 
 

@@ -25,7 +25,7 @@
     owner: "{{ item.owner | default(omit) }}"
     state: link
   with_items:
-    - "{{ sync.applications.app.symlinks }}"
+    - "{{ sync.symlinks }}"
 
 
 
