@@ -38,24 +38,24 @@ defaults:
   - { domain: 'com.apple.dock', key: 'minimize-to-application', type: bool, value: true } # Minimize app windows to application icon
 
   # MultiTouch Trackpad Behavior
-  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadThreeFingerTapGesture', type: bool, value: true } # Enable look up and data detectors for Mac trackpad
-  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadThreeFingerTapGesture', type: bool, value: true } # Enable look up and data detectors for Bluetooth trackpad
+  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadThreeFingerTapGesture', type: int, value: 2 } # Enable look up and data detectors for Mac trackpad
+  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadThreeFingerTapGesture', type: int, value: 2 } # Enable look up and data detectors for Bluetooth trackpad
   - { domain: 'NSGlobalDomain', key: 'ContextMenuGesture', type: bool, value: true } # Enable two finger tap as secondary/right mouse click
   - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadRightClick', type: bool, value: true } # Enable two finger tap as secondary/right mouse click on Mac trackpad
   - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadRightClick', type: bool, value: true } # Enable two finger tap as secondary/right mouse click on Bluetooth trackpad
-  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'Clicking', type: bool, value: true } # Enable tap to click on Mac trackpad
-  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'Clicking', type: bool, value: true } # Enable tap to click on Bluetooth trackpad
+  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'Clicking', type: int, value: 1 } # Enable tap to click on Mac trackpad
+  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'Clicking', type: int, value: 1 } # Enable tap to click on Bluetooth trackpad
   - { domain: 'NSGlobalDomain', key: 'com.apple.trackpad.scaling', type: float, value: 0.6875 } # Set trackpad speed to default
   - { domain: 'NSGlobalDomain', key: 'com.apple.swipescrolldirection', type: bool, value: true } # Enable natural scrolling
-  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadPinch', type: bool, value: true } # Enable pinch to zoom on Mac trackpad
-  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadPinch', type: bool, value: true } # Enable pinch to zoom on Bluetooth trackpad
-  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadTwoFingerDoubleTapGesture', type: bool, value: true } # Enable two finger tap smart zoom on Mac trackpad
-  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadTwoFingerDoubleTapGesture', type: bool, value: true } # Enable two finger tap smart zoom on Bluetooth trackpad
-  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadRotate', type: bool, value: true } # Enable canvas rotating with Mac trackpad
-  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadRotate', type: bool, value: true } # Enable canvas rotating with Bluetooth trackpad
+  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadPinch', type: int, value: 1 } # Enable pinch to zoom on Mac trackpad
+  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadPinch', type: int, value: 1 } # Enable pinch to zoom on Bluetooth trackpad
+  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadTwoFingerDoubleTapGesture', type: int, value: 1 } # Enable two finger tap smart zoom on Mac trackpad
+  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadTwoFingerDoubleTapGesture', type: int, value: 1 } # Enable two finger tap smart zoom on Bluetooth trackpad
+  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadRotate', type: int, value: 1 } # Enable canvas rotating with Mac trackpad
+  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadRotate', type: int, value: 1 } # Enable canvas rotating with Bluetooth trackpad
   - { domain: 'NSGlobalDomain', key: 'AppleEnableSwipeNavigateWithScrolls', type: bool, value: true } # Enable swipe between pages (two finger horizontal swipe)
-  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadFourFingerHorizSwipeGesture', type: bool, value: true } # Enable four finger swipe between full screen apps or spaces on Mac trackpad
-  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadFourFingerHorizSwipeGesture', type: bool, value: true } # Enable four finger swipe between full screen apps or spaces on Bluetooth trackpad
+  - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadFourFingerHorizSwipeGesture', type: int, value: 2 } # Enable four finger swipe between full screen apps or spaces on Mac trackpad
+  - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadFourFingerHorizSwipeGesture', type: int, value: 2 } # Enable four finger swipe between full screen apps or spaces on Bluetooth trackpad
   - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadThreeFingerHorizSwipeGesture', type: int, value: 2 } # Enable three finger swipe between full screen apps or spaces on Mac trackpad
   - { domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad', key: 'TrackpadThreeFingerHorizSwipeGesture', type: int, value: 2 } # Enable three finger swipe between full screen apps or spaces on Bluetooth trackpad
   - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadTwoFingerFromRightEdgeSwipeGesture', type: int, value: 3 } # Enable open and close Notification Center with two finger swipe from the side of Mac trackpad
