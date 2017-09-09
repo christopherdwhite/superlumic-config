@@ -4,10 +4,10 @@
 defaults:
 
   # Language & Region
-  - domain: 'NSGlobalDomain’
-  key: 'AppleFirstWeekday'
-  type: array
-  value:
+  - domain: 'NSGlobalDomain'
+    key: 'AppleFirstWeekday'
+    type: array
+    value:
     - 'gregorian = 2' # Set Monday to first day of the week
 
 
