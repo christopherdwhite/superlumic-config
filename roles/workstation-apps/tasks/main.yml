@@ -10,6 +10,7 @@
     - { file: 'homebrew.yml', name: 'homebrew' } # homebrew variable file
     # - { file: 'app-store.yml', name: 'appstore' }
     - { file: 'sync.yml', name: 'sync' } # application sync variable file
+    - { file: 'preferences.yml', name: 'preferences' } # application sync variable file
 
 # Homebrew Taps
 - homebrew_tap:
@@ -50,3 +51,16 @@
     state: link
   with_items:
     - "{{ sync.symlinks }}"
+
+# Set app preferences
+- name: Write app defaults
+  osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type | default(omit) }}"
+    array_add: "{{ item.array_add | default(false) }}"
+    value: "{{ item.value | default(omit) }}"
+    state: "{{ item.state | default(omit) }}"
+  with_items:
+    - "{{ preferences.defaults }}"
+  ignore_errors: true

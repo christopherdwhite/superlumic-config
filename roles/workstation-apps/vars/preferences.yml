@@ -1,0 +1,7 @@
+---
+
+# Set app preferences
+defaults:
+
+  # Alfred
+  - { domain: 'com.runningwithcrayons.Alfred-Preferences-3', key: 'syncfolder', type: string, value: '~/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred' } # Set sync folder
