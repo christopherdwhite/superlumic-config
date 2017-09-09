@@ -11,25 +11,6 @@
     # - { file: 'app-store.yml', name: 'appstore' }
     - { file: 'sync.yml', name: 'sync' } # application sync variable file
 
-
-
-
-# Symlink application data from iCloud
-- name: Symlink application data from iCloud
-  file:
-    src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
-    force: "{{ item.force | default(omit) }}"
-    group: "{{ item.group | default(omit) }}"
-    mode: "{{ item.mode | default(omit) }}"
-    owner: "{{ item.owner | default(omit) }}"
-    state: link
-  with_items:
-    - "{{ sync.symlinks }}"
-
-
-
-
 # Homebrew Taps
 - homebrew_tap:
     name: caskroom/versions
@@ -56,3 +37,16 @@
     - "{{ casks.web }}"
     - "{{ casks.write }}"
     # - "{{ casks.test }}"
+
+# Symlink application data from iCloud
+- name: Symlink application data from iCloud
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    force: "{{ item.force | default(omit) }}"
+    group: "{{ item.group | default(omit) }}"
+    mode: "{{ item.mode | default(omit) }}"
+    owner: "{{ item.owner | default(omit) }}"
+    state: link
+  with_items:
+    - "{{ sync.symlinks }}"

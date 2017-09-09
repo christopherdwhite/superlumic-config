@@ -12,4 +12,5 @@
     mode: "{{ item.mode | default(omit) }}"
     owner: "{{ item.owner | default(omit) }}"
     state: link
-  with_items: "{{ dotfiles }}"
+  with_items:
+    - "{{ dotfiles }}"
