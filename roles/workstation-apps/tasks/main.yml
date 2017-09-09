@@ -38,7 +38,7 @@
     - "{{ casks.write }}"
     # - "{{ casks.test }}"
 
-# Symlink application data from iCloud
+# Symlink application data to or from iCloud
 - name: Symlink application data from iCloud
   file:
     src: "{{ item.src }}"
