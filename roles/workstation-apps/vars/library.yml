@@ -4,15 +4,19 @@
 library:
 
   # Alfred
-  - src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/Databases/clipboard.alfdb'
+  -
+    src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/Databases/clipboard.alfdb'
     dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb'
     force: yes
-  - src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/Databases/urlhistory.alfdb'
+  -
+    src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/Databases/urlhistory.alfdb'
     dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/urlhistory.alfdb'
     force: yes
-  - src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/license.plist'
+  -
+    src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/license.plist'
     dest: '/Users/cwhite/Library/Application Support/Alfred 3/license.plist'
     force: yes
-  - src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/usage.data'
+  -
+    src: '~/Library/Mobile Documents/com~apple~CloudDocs/Applications Sync/Alfred/Application Support/usage.data'
     dest: '/Users/cwhite/Library/Application Support/Alfred 3/usage.data'
     force: yes
