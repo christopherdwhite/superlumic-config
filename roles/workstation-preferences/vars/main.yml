@@ -137,4 +137,4 @@ become_defaults:
 dictionaries:
 
   # Language & Region
-  - { domain: 'NSGlobalDomain', key: 'AppleFirstWeekday', dict_string: 'gregorian = 1' }
+  - { domain: 'NSGlobalDomain', key: 'AppleFirstWeekday', dict_string: 'gregorian 1' }
