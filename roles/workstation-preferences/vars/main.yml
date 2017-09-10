@@ -54,12 +54,12 @@ defaults:
 
   ### Keyboard: Dictation
 
-  - { domain: 'com.apple.HIToolbox', key: 'AppleDictationAutoEnable', type: bool, value: true } # Enable dictation
+  - { domain: 'com.apple.HIToolbox', key: 'AppleDictationAutoEnable', type: int, value: 1 } # Enable dictation
   - { domain: 'com.apple.SpeechRecognitionCore', key: 'AllowAudioDucking', type: bool, value: false } # Related to enable dictation
   - { domain: 'com.apple.assistant.support', key: 'Dictation Enabled', type: bool, value: false } # Enable dictation
   - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs', key: 'DictationIMMasterDictationEnabled', type: bool, value: true } # Related to enable dictation
   - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs', key: 'DictationIMPresentedOfflineUpgradeSuggestion', type: bool, value: true } # Related to enable dictation
-  - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs', key: 'KeywordOptional', type: float, value: -1 } # Related to enable dictation
+  - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs', key: 'KeywordOptional', type: float, value: '-1' } # Related to enable dictation
 
   ## Trackpad
 
@@ -181,8 +181,8 @@ defaults:
 
   ### Apple App: Photos
 
-  - { domain: 'com.apple.CloudPhotosConfiguration', key: 'com.apple.photo.icloud.cloudphoto', type: bool, value: true } # Enable iCloud Photo Library
-  - { domain: 'com.apple.CloudPhotosConfiguration', key: 'com.apple.photo.icloud.myphotostream', type: bool, value: false } # Disable iCloud Photo Stream
+  - { domain: 'com.apple.CloudPhotosConfiguration', key: 'com.apple.photo.icloud.cloudphoto', type: int, value: 1 } # Enable iCloud Photo Library
+  - { domain: 'com.apple.CloudPhotosConfiguration', key: 'com.apple.photo.icloud.myphotostream', type: int, value: 0 } # Disable iCloud Photo Stream
 
   ### Apple App: Safari
   - { domain: 'com.apple.Safari', key: 'IncludeInternalDebugMenu', type: bool, value: true } # Enable Debug menu in Safari
