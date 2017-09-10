@@ -1,9 +1,14 @@
 ---
 
+# Symlinks =====================================================================
+#
 # Application files and folders that need symlinked to or from iCloud Drive
+#
 symlinks:
 
-## Alfred
+## Symlinks: Utilities
+
+### Symlinks: Utilities: Alfred
 - src:  '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/clipboard.alfdb'
   dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb'
 - src:  '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/urlhistory.alfdb'
@@ -12,3 +17,7 @@ symlinks:
   dest: '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/usage.data'
 - src:  '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/license.plist'
   dest: '/Users/cwhite/Library/Application Support/Alfred 3/license.plist'
+
+### Symlinks: Utilities: Forklift
+- src:  '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Forklift/Preferences/com.binarynights.ForkLift-3.plist'
+  dest: '/Users/cwhite/Library/Preferences/com.binarynights.ForkLift-3.plist'
