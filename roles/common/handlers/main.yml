@@ -1,13 +1,15 @@
 ---
 
 ### Restart macOS preferences
-# 
+#
 # Description:
 #   This handler will kill the three primary macOS processes that need to be restarted after common defaults write commands
 #   Note that this does not start the processes, however, macOS restarts them automatically.
 #
-#   TODO: Find a module for working with macOS prcoesses, the services module does not work on macOS.
+#   TODO: Find a module for working with macOS processes, the services module does not work on macOS.
 #
+
+## system
 - name: restart Finder
   shell: killall Finder
   listen: "restart macos preferences"
@@ -16,4 +18,18 @@
   listen: "restart macos preferences"
 - name: restart SystemUIServer
   shell: killall SystemUIServer
+  listen: "restart macos preferences"
+
+## firewall
+- name: unload firewall useragent
+  shell: launchctl unload /System/Library/LaunchAgents/com.apple.alf.useragent.plist
+  listen: "restart macos preferences"
+- name: unload firewall agent
+  shell: launchctl unload /System/Library/LaunchDaemons/com.apple.alf.agent.plist
+  listen: "restart macos preferences"
+- name: load firewall agent
+  shell: launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist
+  listen: "restart macos preferences"
+- name: load firewall useragenet
+  shell: launchctl load /System/Library/LaunchAgents/com.apple.alf.useragent.plist
   listen: "restart macos preferences"

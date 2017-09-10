@@ -1,5 +1,9 @@
 ---
 
+# Set computer name
+- hostname:
+    name: "{{ name }}"
+
 # Setup default preferences in macOS
 - name: Write macOS defaults
   osx_defaults:
@@ -31,6 +35,11 @@
 
 # Set dict defaults through shell commands
 - name: Set dict defaults through defaults write
-  command: defaults write {{ item.domain }} {{ item.key }} -dict {{ item.dict_string }}
+  command: defaults write {{ item.domain }} {{ item.key }} -{{ item.type }} {{ item.dict_string }}
   with_items:
     - "{{ dictionaries }}"
+
+# Enable Gatekeeper
+- name: Enable Gatekeeper
+  command: 'spctl --master-enable'
+  become: true
