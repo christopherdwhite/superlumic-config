@@ -33,4 +33,4 @@
 - name: Set dict defaults through defaults write
   command: defaults write {{ item.domain }} {{ item.key }} -dict {{ item.dict_string }}
   with_items:
-    - {{ dictionaries }}
+    - "{{ dictionaries }}"
