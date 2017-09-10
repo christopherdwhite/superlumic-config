@@ -59,7 +59,7 @@ defaults:
   - { domain: 'com.apple.assistant.support', key: 'Dictation Enabled', type: bool, value: false } # Enable dictation
   - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs', key: 'DictationIMMasterDictationEnabled', type: bool, value: true } # Related to enable dictation
   - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs', key: 'DictationIMPresentedOfflineUpgradeSuggestion', type: bool, value: true } # Related to enable dictation
-  - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs', key: 'KeywordOptional', type: float, value: -1 } # Related to enable dictation
+  - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs', key: 'KeywordOptional', type: float, value: "-1" } # Related to enable dictation
 
   ## Trackpad
 
