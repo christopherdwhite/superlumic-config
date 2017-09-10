@@ -2,7 +2,6 @@
 
 # Default preferences for macOS
 defaults:
-
   # Behavior
   - { domain: 'NSGlobalDomain', key: 'ApplePressAndHoldEnabled', type: bool, value: true } # Character accents popup on, key repeate off
   - { domain: 'NSGlobalDomain', key: 'InitialKeyRepeat', type: int, value: 25 } # Set my prefered delay for key repeat
