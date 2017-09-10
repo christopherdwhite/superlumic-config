@@ -6,7 +6,7 @@ defaults:
   - { domain: 'NSGlobalDomain', key: 'ApplePressAndHoldEnabled', type: bool, value: true } # Character accents popup on, key repeate off
   - { domain: 'NSGlobalDomain', key: 'InitialKeyRepeat', type: int, value: 25 } # Set my prefered delay for key repeat
   - { domain: 'NSGlobalDomain', key: 'KeyRepeat', type: int, value: 2 } # Set key repeat to fast
-  - { domain: 'NSGlobalDomain’, key: 'NSQuitAlwaysKeepsWindows', type: int, value: 1 } # Close windows when quitting an app
+  - { domain: 'NSGlobalDomain', key: 'NSQuitAlwaysKeepsWindows', type: int, value: 1 } # Close windows when quitting an app
 
   # UI
   - { domain: 'NSGlobalDomain', key: 'AppleInterfaceStyle', state: absent } # Set Menubar and Dock to Light UI
