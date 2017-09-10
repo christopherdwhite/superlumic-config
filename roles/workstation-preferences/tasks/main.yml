@@ -1,8 +1,8 @@
 ---
 
 # Set computer name
-- hostname:
-    name: "{{ name }}"
+# - hostname:
+#     name: "{{ name }}"
 
 # Setup default preferences in macOS
 - name: Write macOS defaults
