@@ -39,7 +39,7 @@ defaults:
   - { domain: 'com.apple.dock', key: 'minimize-to-application', type: bool, value: true } # Minimize app windows to application icon
 
   # Mission Control
-  - { domain: 'com.apple.dock’, key: 'expose-group-apps', type: int, value: 1 } # Group windows by application
+  - { domain: 'com.apple.dock', key: expose-group-apps', type: int, value: 1 } # Group windows by application
 
   # MultiTouch Trackpad Behavior
   - { domain: 'com.apple.AppleMultitouchTrackpad', key: 'TrackpadThreeFingerTapGesture', type: int, value: 2 } # Enable look up and data detectors for Mac trackpad
