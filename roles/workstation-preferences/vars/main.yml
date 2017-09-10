@@ -30,7 +30,7 @@ defaults:
 
   ## Mission Control
 
-  - { domain: 'com.apple.dock’, key: 'mru-spaces', type: bool, value: false } # Do not automatically rearange spaces
+  - { domain: 'com.apple.dock', key: 'mru-spaces', type: bool, value: false } # Do not automatically rearange spaces
   - { domain: 'com.apple.dock', key: expose-group-apps', type: int, value: 1 } # Group windows by application
 
   ## Displays: Display
@@ -47,14 +47,19 @@ defaults:
   - { domain: 'NSGlobalDomain', key: 'KeyRepeat', type: int, value: 2 } # Set key repeat to fast
   - { domain: 'NSGlobalDomain', key: 'ApplePressAndHoldEnabled', type: bool, value: true } # Character accents popup on, key repeate off (plist only)
 
+  ### Keyboard: Text
+
+  - { domain: 'NSGlobalDomain', key: 'NSAutomaticDashSubstitutionEnabled', type: bool, value: false } # Do not use smarty dashes
+  - { domain: 'NSGlobalDomain', key: 'NSAutomaticQuoteSubstitutionEnabled', type: bool, value: false } # Do note use smarty quotes
+
   ### Keyboard: Dictation
 
-  - { domain: 'com.apple.HIToolbox’, key: 'AppleDictationAutoEnable', type: bool, value: true } # Enable dictation
-  - { domain: 'com.apple.SpeechRecognitionCore’, key: 'AllowAudioDucking', type: bool, value: false } # Related to enable dictation
-  - { domain: 'com.apple.assistant.support’, key: 'Dictation Enabled', type: bool, value: false } # Enable dictation
-  - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs’, key: 'DictationIMMasterDictationEnabled', type: bool, value: true } # Related to enable dictation
-  - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs’, key: 'DictationIMPresentedOfflineUpgradeSuggestion', type: bool, value: true } # Related to enable dictation
-  - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs’, key: 'KeywordOptional', type: float, value: -1 } # Related to enable dictation
+  - { domain: 'com.apple.HIToolbox', key: 'AppleDictationAutoEnable', type: bool, value: true } # Enable dictation
+  - { domain: 'com.apple.SpeechRecognitionCore', key: 'AllowAudioDucking', type: bool, value: false } # Related to enable dictation
+  - { domain: 'com.apple.assistant.support', key: 'Dictation Enabled', type: bool, value: false } # Enable dictation
+  - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs', key: 'DictationIMMasterDictationEnabled', type: bool, value: true } # Related to enable dictation
+  - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs', key: 'DictationIMPresentedOfflineUpgradeSuggestion', type: bool, value: true } # Related to enable dictation
+  - { domain: 'com.apple.speech.recognition.AppleSpeechRecognition.prefs', key: 'KeywordOptional', type: float, value: -1 } # Related to enable dictation
 
   ## Trackpad
 
@@ -119,9 +124,9 @@ defaults:
   ## Date & Time: Clock
 
   - { domain: 'com.apple.systemuiserver', key: 'NSStatusItem Visible com.apple.menuextra.clock', type: bool, value: true } # Enable Clock menu bar item
-  - { domain: 'com.apple.menuextra.clock’, key: 'DateFormat', type: string, value: 'MMM d  h:mm ' } # Set date format to `Month day hour:minutes`
-  - { domain: 'com.apple.menuextra.clock’, key: 'FlashDateSeparators', type: bool, value: false } # Do not flash seperators
-  - { domain: 'com.apple.menuextra.clock’, key: 'IsAnalog', type: bool, value: false } # Digital clock
+  - { domain: 'com.apple.menuextra.clock', key: 'DateFormat', type: string, value: 'MMM d  h:mm ' } # Set date format to `Month day hour:minutes`
+  - { domain: 'com.apple.menuextra.clock', key: 'FlashDateSeparators', type: bool, value: false } # Do not flash seperators
+  - { domain: 'com.apple.menuextra.clock', key: 'IsAnalog', type: bool, value: false } # Digital clock
 
   ## Time Machine
 
@@ -176,8 +181,8 @@ defaults:
 
   ### Apple App: Photos
 
-  - { domain: 'com.apple.CloudPhotosConfiguration’, key: 'com.apple.photo.icloud.cloudphoto', type: bool, value: true } # Enable iCloud Photo Library
-  - { domain: 'com.apple.CloudPhotosConfiguration’, key: 'com.apple.photo.icloud.myphotostream', type: bool, value: false } # Disable iCloud Photo Stream
+  - { domain: 'com.apple.CloudPhotosConfiguration', key: 'com.apple.photo.icloud.cloudphoto', type: bool, value: true } # Enable iCloud Photo Library
+  - { domain: 'com.apple.CloudPhotosConfiguration', key: 'com.apple.photo.icloud.myphotostream', type: bool, value: false } # Disable iCloud Photo Stream
 
   ### Apple App: Safari
   - { domain: 'com.apple.Safari', key: 'IncludeInternalDebugMenu', type: bool, value: true } # Enable Debug menu in Safari
