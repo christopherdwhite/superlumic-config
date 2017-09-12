@@ -13,6 +13,7 @@ dotfiles:
   - { src: '/Users/cwhite/Source/csystems/dotfiles/.functions', dest: '~/.functions' }       # .functions    | Functions
   - { src: '/Users/cwhite/Source/csystems/dotfiles/.inputrc', dest: '~/.inputrc' }           # .inputrc      |
   - { src: '/Users/cwhite/Source/csystems/dotfiles/.prompt', dest: '~/.prompt' }             # .prompt       | Prompt Configuration
+  - { src: '/Users/cwhite/Source/csystems/dotfiles/.bashrc', dest: '~/.bashrc' }             # .bashrc       | 
 
   ## dotfiles: git
   - { src: '/Users/cwhite/Source/csystems/dotfiles/git/.gitconfig', dest: '~/.gitconfig' }   # .gitconfig    | Prompt Configuration

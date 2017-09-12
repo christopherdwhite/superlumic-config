@@ -2,11 +2,29 @@
 
 # Homebrew Packages to Install
 
-## Bash command line tools
-bash:
-  - brew-cask-completion # hombrew cask tab completion for Bash
-  - vitorgalvao/tiny-scripts/cask-repair # homebrew cask update script
+# Shell ========================================================================
+shell:
 
-## ZSH command line tools
+  ## Shell: Package Managers ---------------------------------------------------
+
+  ### Shell: Package Managers: Mac App Store
+  - mas # mac app store cli
+
+  ## Shell: Utilities ----------------------------------------------------------
+
+  ### Shell: Utilities: macOS Settings
+  - dockutil # Command line tool for managing dock items
+  - mackup # Keep your application settings in sync (OS X/Linux)
+
+# Bash =========================================================================
+bash:
+
+  ## Bash: Package Managers ----------------------------------------------------
+  - brew-cask-completion # hombrew cask tab completion for Bash
+
+# # ZSH ==========================================================================
+#
 # zsh:
+#
+#   ## ZSH: Package Managers -----------------------------------------------------
 #   - zsh-completions # Hombrew Cask tab completion for ZSH

@@ -21,6 +21,7 @@
     name: "{{ item }}"
     state: present
   with_items:
+    - "{{ homebrew.shell }}"
     - "{{ homebrew.bash }}"
 
 # Install apps from Homebrew Cask

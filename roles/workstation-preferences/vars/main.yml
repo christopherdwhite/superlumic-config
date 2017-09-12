@@ -49,6 +49,7 @@ defaults:
 
   ### Keyboard: Text
 
+  - { domain: 'NSGlobalDomain', key: 'NSAutomaticCapitalizationEnabled', type: bool, value: false } # Do not capitalize words automatically
   - { domain: 'NSGlobalDomain', key: 'NSAutomaticDashSubstitutionEnabled', type: bool, value: false } # Do not use smarty dashes
   - { domain: 'NSGlobalDomain', key: 'NSAutomaticQuoteSubstitutionEnabled', type: bool, value: false } # Do note use smarty quotes
 
