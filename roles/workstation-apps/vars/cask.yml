@@ -11,7 +11,7 @@ cloud:
 
 # General Development Apps
 dev:
-  ## IDEs & Text Editors
+  ## IDEs & Code Editors
   - atom
   - atom-beta
   - bbedit
@@ -74,7 +74,7 @@ web:
 
 # Write
 write:
-  - foldingtext
+  - foldingtext-dev
 
 # TestLab
 test:
