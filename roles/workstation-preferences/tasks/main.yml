@@ -33,11 +33,18 @@
   become: true
   ignore_errors: true
 
-# Set dict defaults through shell commands
-- name: Set dict defaults through defaults write
+# Set two dimensional dict defaults through shell commands
+- name: Set two dimensional dict defaults through defaults write
   command: defaults write '{{ item.domain }}' '{{ item.key }}' -{{ item.type }} {{ item.dict_string }}
   with_items:
     - "{{ dictionaries }}"
+
+# Execute a complex default variable
+- name: Execute a complex default variable
+  command: defaults write '{{ item }}'
+  with_items:
+    - "{{ complex }}"
+  ignore_errors: true
 
 # Enable Gatekeeper
 - name: Enable Gatekeeper

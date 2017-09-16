@@ -21,3 +21,5 @@ symlinks:
 ### Symlinks: Utilities: Forklift
 - src:  '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Forklift/Preferences/com.binarynights.ForkLift-3.plist'
   dest: '/Users/cwhite/Library/Preferences/com.binarynights.ForkLift-3.plist'
+- src:  '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Forklift/Application Support/ForkLift'
+  dest: '/Users/cwhite/Library/Application Support/ForkLift'
