@@ -233,14 +233,3 @@ dictionaries:
 
   ## Siri
   - { domain: 'com.apple.assistant.backedup', key: 'Output Voice', type: 'dict', dict_string: 'Language en-GB' } # Set Siri to British voice
-
-# Complex Defaults Command String ==============================================
-#
-# This is another temporary variable that basically just takes a full defaults write command and executes it for more complicated commands such as setting defaults several levels into a dictionary.
-# If the aformentioned pull requests are merges I don't think this will be necessary.
-complex:
-
-  ## Apple App Preferences
-
-  ### Apple App: Safari
-  - "-g NSPreferredWebServices '{NSWebServicesProviderWebSearch = { NSDefaultDisplayName = Bing; NSProviderIdentifier = "com.bing.www"; }; }\';" # Set Bing as default search engine

@@ -39,11 +39,9 @@
   with_items:
     - "{{ dictionaries }}"
 
-# Execute a complex default variable
+# Set Bing as Default Search Engine
 - name: Execute a complex default variable
-  command: defaults write '{{ item }}'
-  with_items:
-    - "{{ complex }}"
+  command: "defaults write -g NSPreferredWebServices '{NSWebServicesProviderWebSearch = { NSDefaultDisplayName = Bing; NSProviderIdentifier = "com.bing.www"; }; }\';"
   ignore_errors: true
 
 # Enable Gatekeeper
