@@ -243,4 +243,4 @@ complex:
   ## Apple App Preferences
 
   ### Apple App: Safari
-  - '-g NSPreferredWebServices \'{NSWebServicesProviderWebSearch = { NSDefaultDisplayName = Bing; NSProviderIdentifier = "com.bing.www"; }; }\';' # Set Bing as default search engine
+  - "-g NSPreferredWebServices '{NSWebServicesProviderWebSearch = { NSDefaultDisplayName = Bing; NSProviderIdentifier = "com.bing.www"; }; }\';" # Set Bing as default search engine
