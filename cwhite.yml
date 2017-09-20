@@ -1,30 +1,10 @@
 ---
 
-### Superlumic Playbook
+# # Superlumic Playbook ========================================================
 #
 # Overview: Superlumic configuration for setting up my production system quickly and making sure everything remains in compliance
 # Applies to: Workstation
 #
-# Description:
-#   Ensures that my development systems are easy to setup and are martained to my specification.
-#
-#   This configuration includes the following elements:
-#     - Set computer name
-#     - Set git settings
-#     - Set macOS preferences
-#     - Install apps
-#       - From Homebrew Cask
-#     - Run profile-all role
-#
-# Notes:
-#   - I have tagged lines as (defaulted) below where the role has default settings that will be used if you do not set them.
-#       Unless you want defaults make sure they are set.
-#
-# Credit: I borrowed a lot of the style, documentation and organization from the amazing gist below but note that it is an old and sometimes out of date playbook with some problems.
-#   https://gist.github.com/marktheunissen/2979474
-#
-###
-
 - name: superlumic    # Playbook name
   hosts: localhost    # Run on localhost
   connection: local   # Run locally
@@ -32,7 +12,7 @@
   # strategy: debug     # Enable debugger for failed tasks
   # remote_user: root   # User to run tasks as
 
-  ### Variables
+  # ## Variables ---------------------------------------------------------------
   #
   # Default: none
   # Required: no

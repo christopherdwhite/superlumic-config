@@ -8,6 +8,8 @@ cloud:
   - droplr
 
 # Design
+design:
+  # - sketch
 
 # General Development Apps
 dev:
