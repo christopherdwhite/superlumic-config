@@ -1,9 +1,11 @@
 ---
 
-# # Superlumic Playbook ========================================================
+# Superlumic Playbook ==========================================================
 #
-# Overview: Superlumic configuration for setting up my production system quickly and making sure everything remains in compliance
-# Applies to: Workstation
+# Superlumic configuration for setting up my production system quickly and making sure everything remains in compliance
+#
+# Note: I have tagged lines as (defaulted) below where the role has default settings that will be used if you do not set them.
+#       Unless you want defaults make sure they are set.
 #
 - name: superlumic    # Playbook name
   hosts: localhost    # Run on localhost
@@ -12,103 +14,57 @@
   # strategy: debug     # Enable debugger for failed tasks
   # remote_user: root   # User to run tasks as
 
-  # ## Variables ---------------------------------------------------------------
+  # Variables ==================================================================
   #
-  # Default: none
-  # Required: no
-  #
-  # Description:
-  #   Set configuration variables passed to templates & included playbooks
+  # Set configuration variables passed to templates & included playbooks
   #
   vars:
 
     # Computer Name (used by superlumic-computername module)
     - computername: cportable # (defaulted)
 
-    # Git Settings (used by superlumic-homebrew)
-    - git_user_name: Chris White                  # (defaulted)
-    - git_user_email: chris@christopherdwhite.com # (defaulted)
-
-  ### Variable Files
+  # Variable Files =============================================================
   #
-  # Required: no
-  # Description:
-  #   Specifies a list of YAML files to load variables from.
+  # Specifies a list of YAML files to load variables from.
   #
   # vars_files:
 
-  ### Tasks
+  # Tasks ======================================================================
   #
-  # Playbook attribute: tasks
-  # Required: yes
-  # Description:
-  #   A list of tasks to perform in this playbook.
+  # A list of tasks to perform in this playbook.
   #
   tasks:
-    # Setup SSH (to be moved to SSH or user role)
     - user:
         name: cwhite
-        generate_ssh_key: yes
-        ssh_key_bits: 4096
-    #   ssh_key_passphrase: "{{ssh_passphrase}}" # Non-interactive, review this later
-    # - name: Set authorized key took from file
-    #   authorized_key:
-    #     user: cwhite
-    #     state: present
-    #     key: "{{ lookup('file', '~/.ssh/id_rsa') }}"
 
-    # - name: create user ssh directory
-    #   # become: yes
-    #   file:
-    #     path: "{{item}}"
-    #     state: directory
-    #     mode: 0777
-    #   with_items:
-    #     - ~/.ssh
-
-  ### Roles
+  # Roles ======================================================================
   #
-  # Playbook attribute: roles
-  # Required: yes
-  # Description:
-  #   The roles each of my Ansible managed clients may be setup for
+  # The roles each of my Ansible managed clients may be setup for
   #
   roles:
 
-    ### Role: Common
+    # ## Roles: Common ---------------------------------------------------------
     #
-    # Description:
-    #   This role should includes anything that should be the same across each and every system.
+    # This role should includes anything that should be the same across each and every system.
     #
     - common
 
-    ### Role: Workstation
+    # ## Roles: Workstation ----------------------------------------------------
     #
-    # Description:
-    #   This is my primary working computer role with everything I want on my day-to-day
-    #     This role uses dependencies to organize and modularize into sub-roles by focus or actions
+    # This is my primary working computer role with everything I want on my day-to-day
+    # This role uses dependencies to organize and modularize into sub-roles by focus or actions
     #
     - workstation
 
-    ### Role: Clients
+    # ## Roles: Clients --------------------------------------------------------
     #
-    # Description:
-    #   These are configuration roles that will setup things I need only for a specefic client
-    #     This role uses dependencies to organize and modularize into sub-roles by client
+    # These are configuration roles that will setup things I need only for a specefic client
+    # This role uses dependencies to organize and modularize into sub-roles by client
     #
     - clients
 
-    ### Contextual Profiles
+    # ## Contextual Profiles ---------------------------------------------------
     #
-    # Description:
-    #   These are profiles that will change my workstation depending on what I'm working on
-    #     For example, if I'm working on a PHP project I may want different dev packages in Atom or Sublime
+    # These are profiles that will change my workstation depending on what I'm working on.
+    # For example, if I'm working on a PHP project I may want different dev packages in Atom or Sublime
     #
-
-    ### Task Specific Roles
-    #
-    # Description
-    #   These are task specefic roles applied to servers, virtual machines or other clients designed for or as part of that specific task
-    #     This might include an Apache, PHP and MySQL server for doing PHP-centric web-development
-    #
-    # - roles-parallels-vm # Sets natural scrolling to off since nesting inverts it on mouse wheel

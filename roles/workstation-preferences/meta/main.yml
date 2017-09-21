@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Chris White
-  description: Ansible role to setup my macOS system preferences
+  description: Set macOS and Apple app preferences
   license: MIT
   min_ansible_version: 1.2
   platforms:

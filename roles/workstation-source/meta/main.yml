@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Chris White
-  description: Sets up git and clones active projects
+  description: Configure git for system and clone long-term persistent repositories
   license: MIT
   min_ansible_version: 1.2
   platforms:

@@ -1,9 +1,5 @@
 ---
 
-# Set computer name
-# - hostname:
-#     name: "{{ name }}"
-
 # Setup default preferences in macOS
 - name: Write macOS defaults
   osx_defaults:
@@ -40,9 +36,9 @@
     - "{{ dictionaries }}"
 
 # Set Bing as Default Search Engine
-# - name: Execute a complex default variable
-#   command: "defaults write -g NSPreferredWebServices '{NSWebServicesProviderWebSearch = { NSDefaultDisplayName = Bing; NSProviderIdentifier = \"com.bing.www\"; }; }\\';"
-#   ignore_errors: true
+- name: Execute a complex default variable
+  command: 'defaults write -g NSPreferredWebServices ''{NSWebServicesProviderWebSearch = { NSDefaultDisplayName = Bing; NSProviderIdentifier = "com.bing.www"; }; }'';'
+  ignore_errors: true
 
 # Enable Gatekeeper
 - name: Enable Gatekeeper
