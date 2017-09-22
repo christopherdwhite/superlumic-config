@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Chris White
-  description: Ansible role to install and setup my general apps
+  description: Install and configure third-party apps
   license: MIT
   min_ansible_version: 1.2
   platforms:

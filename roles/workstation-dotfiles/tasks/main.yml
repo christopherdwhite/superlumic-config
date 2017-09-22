@@ -1,6 +1,16 @@
 ---
 
-# TODO: Add Git clone
+# workstation-dotfiles: tasks ==================================================
+#
+# Clone dotfiles repo and symlink them into place
+#
+
+# clone dotfiles repo
+- git:
+    repo: 'git@gitlab.com:csystems/dotfiles.git'
+    dest: '~/Source/csystems/dotfiles'
+    clone: yes
+    update: no
 
 # Symlink dotfiles into position
 - name: Symlink dotfiles into position

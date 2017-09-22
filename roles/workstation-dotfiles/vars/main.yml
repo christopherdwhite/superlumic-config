@@ -1,9 +1,11 @@
 ---
 
+# workstation-dotfiles: tasks ==================================================
+#
+# Clone dotfiles repo and symlink them into place
+#
+
 # dotfiles =====================================================================
-#
-# Dotfile Symlink Details
-#
 dotfiles:
 
   ## dotfiles: bash
@@ -19,4 +21,4 @@ dotfiles:
   - { src: '/Users/cwhite/Source/csystems/dotfiles/git/.gitconfig', dest: '~/.gitconfig' }   # .gitconfig    | Prompt Configuration
 
   ## dotfiles: apps
-  - { src: '~/Source/csystems/dotfiles/apps/.hyper.js', dest: '~/.hyper.js' }                     # .hyper.js     | Hyper
+  - { src: '~/Source/csystems/dotfiles/apps/.hyper.js', dest: '~/.hyper.js' }                # .hyper.js     | Hyper

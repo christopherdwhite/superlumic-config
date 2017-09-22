@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Chris White
-  description: This role manages dotfiles
+  description: Clone dotfiles repo and symlink them into place
   license: MIT
   min_ansible_version: 1.2
   platforms:

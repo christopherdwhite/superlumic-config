@@ -1,3 +1,22 @@
 ---
 
-# Mac App Store Apps to Install
+# workstation-apps: mac app store variables ====================================
+#
+# Install third-party apps from the Mac App Store
+#
+# These items are installed using the mas-cli for installation and requires product identifiers for installation
+# If no Apple account email and password are provided and the signin_dialog is set to no than MAS assumes you've already logged in through the app.
+#
+# https://github.com/mas-cli/mas
+#
+
+# mas_email: "" # Email for Apple Account
+# mas_password: "" # Password for Apple Account
+mas_signin_dialog: no # If no email and password prompt for signin
+
+# TODO: Once I've figured out Ansible vault use these variables
+
+mas_installed_apps:
+  # - { id: 425264550, name: "Blackmagic Disk Speed Test (3.0)" }
+
+mas_upgrade_all_apps: no # Do not update apps
