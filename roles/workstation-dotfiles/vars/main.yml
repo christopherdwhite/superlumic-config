@@ -1,24 +1,25 @@
 ---
 
-# workstation-dotfiles: tasks ==================================================
-#
-# Clone dotfiles repo and symlink them into place
-#
+# | # workstation-dotfiles: tasks
+# |
+# | Clone dotfiles repo and symlink them into place
+# |
 
-# dotfiles =====================================================================
+# | # dotfiles
 dotfiles:
 
-  ## dotfiles: bash
-  - { src: '/Users/cwhite/Source/csystems/dotfiles/.alias', dest: '~/.alias' }               # .alias        | Aliases
-  - { src: '/Users/cwhite/Source/csystems/dotfiles/.bash_profile', dest: '~/.bash_profile' } # .bash_profile |
-  - { src: '/Users/cwhite/Source/csystems/dotfiles/.env', dest: '~/.env' }                   # .env          | Environment Variables
+  # | ## dotfiles: bash
+  - { src: '/Users/cwhite/Source/csystems/dotfiles/.aliases', dest: '~/.aliases' }           # .aliases      | Aliases
+  - { src: '/Users/cwhite/Source/csystems/dotfiles/.bash_profile', dest: '~/.bash_profile' } # .bash_profile | Bash profile
+  - { src: '/Users/cwhite/Source/csystems/dotfiles/.bash_prompt', dest: '~/.bash_prompt' }   # .bash_prompt  | Bash prompt configuration
+  - { src: '/Users/cwhite/Source/csystems/dotfiles/.bashrc', dest: '~/.bashrc' }             # .bashrc       | bash runcom
+  - { src: '/Users/cwhite/Source/csystems/dotfiles/.exports', dest: '~/.exports' }           # .exports      | Exports (environmental variables)
   - { src: '/Users/cwhite/Source/csystems/dotfiles/.functions', dest: '~/.functions' }       # .functions    | Functions
-  - { src: '/Users/cwhite/Source/csystems/dotfiles/.inputrc', dest: '~/.inputrc' }           # .inputrc      |
-  - { src: '/Users/cwhite/Source/csystems/dotfiles/.prompt', dest: '~/.prompt' }             # .prompt       | Prompt Configuration
-  - { src: '/Users/cwhite/Source/csystems/dotfiles/.bashrc', dest: '~/.bashrc' }             # .bashrc       |
+  - { src: '/Users/cwhite/Source/csystems/dotfiles/.path', dest: '~/.path' }                 # .path         | $PATH extensions
 
-  ## dotfiles: git
-  - { src: '/Users/cwhite/Source/csystems/dotfiles/git/.gitconfig', dest: '~/.gitconfig' }   # .gitconfig    | Prompt Configuration
+  # | ## dotfiles: git
+  - { src: '/Users/cwhite/Source/csystems/dotfiles/git/.gitconfig', dest: '~/.gitconfig' }   # .gitconfig    | Git configuration
+  - { src: '/Users/cwhite/Source/csystems/dotfiles/git/.gitignore', dest: '~/.gitignore' }   # .gitignore    | Global .gitignore file
 
-  ## dotfiles: apps
-  - { src: '~/Source/csystems/dotfiles/apps/.hyper.js', dest: '~/.hyper.js' }                # .hyper.js     | Hyper
+  # | ## dotfiles: apps
+  - { src: '~/Source/csystems/dotfiles/apps/.hyper.js', dest: '~/.hyper.js' }                # .hyper.js     | Hyper configuration

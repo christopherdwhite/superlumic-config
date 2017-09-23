@@ -3,8 +3,8 @@
 - src: https://github.com/christopherdwhite/ansible-role-atom.git
   name: christopherdwhite.ansible-role-atom
 
-- src: https://github.com/superlumic/ansible-role-computername.git
-  name: roderik.superlumic-computername
+# - src: https://github.com/superlumic/ansible-role-computername.git
+#   name: roderik.superlumic-computername
 
 - src: https://github.com/geerlingguy/ansible-role-mas.git
   name: geerlingguy.ansible-role-mas
