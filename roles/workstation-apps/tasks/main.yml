@@ -71,4 +71,5 @@
     - "{{ preferences.defaults }}"
   ignore_errors: true
 
+- name: Install Mac App Store Apps
 # - mas_installed_apps: []
