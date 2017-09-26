@@ -70,3 +70,5 @@
   with_items:
     - "{{ preferences.defaults }}"
   ignore_errors: true
+
+- mas_installed_apps: []
