@@ -57,6 +57,7 @@
     state: link
   with_items:
     - "{{ sync.symlinks }}"
+  become: true
 
 # Set app preferences
 - name: Write app defaults
