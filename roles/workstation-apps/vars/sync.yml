@@ -13,6 +13,7 @@ symlinks:
   state: 'directory'
 - src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/clipboard.alfdb'
   path:  '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb'
+  state: 'link'
 - src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/urlhistory.alfdb'
   path:  '/Users/cwhite/Library/Application Support/Alfred 3/Databases/urlhistory.alfdb'
 - src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/usage.data'
