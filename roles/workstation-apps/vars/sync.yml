@@ -8,12 +8,15 @@ symlinks:
 
 ## Symlinks: Utilities
 
+### Symlinks: Utilities: 1Password
+- src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/1Password/Preferences/com.agilebits.onepassword4.plist'
+  path:  '/Users/cwhite/Library/Preferences/com.agilebits.onepassword4.plist'
+
 ### Symlinks: Utilities: Alfred
 - path:  '/Users/cwhite/Library/Application Support/Alfred 3/Databases'
   state: 'directory'
 - src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/clipboard.alfdb'
   path:  '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb'
-  state: 'link'
 - src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/urlhistory.alfdb'
   path:  '/Users/cwhite/Library/Application Support/Alfred 3/Databases/urlhistory.alfdb'
 - src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/usage.data'
