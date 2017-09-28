@@ -1,0 +1,82 @@
+---
+
+# Homebrew Cask Apps to Install
+casks:
+
+  # Cloud
+  - dropbox
+  - droplr
+
+  # Design
+  # - sketch
+
+  # General Development Apps
+  ## IDEs & Code Editors
+  - atom
+  - atom-beta
+  - bbedit
+  - coderunner
+  - sublime-text-dev
+
+  ## Diff
+  - kaleidoscope
+
+  ## Documentation
+  - dash
+
+  ## Git
+  - tower
+
+  ## Devops
+  - docker
+
+  ## Testing
+  - firefoxdeveloperedition
+  - google-chrome-canary
+  - opera-developer
+  - safari-technology-preview
+
+  # Productivity
+  - 1password-beta
+  - fantastical
+  - thingsmacsandboxhelper
+
+  # Social
+  - franz
+  - gitter
+  - skype
+  - slack
+
+  # Utilities
+  - a-better-finder-rename
+  - alfred
+  - appcleaner
+  - bartender
+  - data-rescue
+  - default-folder-x
+  - duet
+  - forklift
+  - hazel
+  - houdahspot
+  - hyper
+  - istat-menus
+  - keyboard-maestro
+  - lingon-x
+  - moom
+  - parallels-desktop
+  - textexpander
+
+  # web
+  - firefox
+  - google-chrome
+  - opera
+
+  # Write
+  - foldingtext-dev
+
+  # TestLab
+  - brackets
+  - coda
+  - lighttable
+  - opera-neon
+  - visual-studio-code
