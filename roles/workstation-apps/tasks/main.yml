@@ -68,7 +68,7 @@
     group: "{{ item.group | default(omit) }}"
     mode: "{{ item.mode | default(omit) }}"
     owner: "{{ item.owner | default(omit) }}"
-    state: "{{ item.state | default(link) }}"
+    state: "{{ item.state | default('link') }}"
   with_items:
     - "{{ sync.symlinks }}"
   become: true
