@@ -9,17 +9,19 @@ symlinks:
 ## Symlinks: Utilities
 
 ### Symlinks: Utilities: Alfred
-- src:  '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/clipboard.alfdb'
-  dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb'
-# - src:  '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/urlhistory.alfdb'
-#   dest: '/Users/cwhite/Library/Application Support/Alfred 3/Databases/urlhistory.alfdb'
-# - src:  '/Users/cwhite/Library/Application Support/Alfred 3/usage.data'
-#   dest: '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/usage.data'
-# - src:  '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/license.plist'
-#   dest: '/Users/cwhite/Library/Application Support/Alfred 3/license.plist'
+- path:  '/Users/cwhite/Library/Application Support/Alfred 3/Databases'
+  state: 'directory'
+- src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/clipboard.alfdb'
+  path:  '/Users/cwhite/Library/Application Support/Alfred 3/Databases/clipboard.alfdb'
+- src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/Databases/urlhistory.alfdb'
+  path:  '/Users/cwhite/Library/Application Support/Alfred 3/Databases/urlhistory.alfdb'
+- src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/usage.data'
+  path:  '/Users/cwhite/Library/Application Support/Alfred 3/usage.data'
+- src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Alfred/Application Support/license.plist'
+  path:  '/Users/cwhite/Library/Application Support/Alfred 3/license.plist'
 
 ### Symlinks: Utilities: Forklift
-- src:  '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Forklift/Preferences/com.binarynights.ForkLift-3.plist'
-  dest: '/Users/cwhite/Library/Preferences/com.binarynights.ForkLift-3.plist'
-- src:  '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Forklift/Application Support/ForkLift'
-  dest: '/Users/cwhite/Library/Application Support/ForkLift'
+- src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Forklift/Preferences/com.binarynights.ForkLift-3.plist'
+  path:  '/Users/cwhite/Library/Preferences/com.binarynights.ForkLift-3.plist'
+- src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Forklift/Application Support/ForkLift'
+  path:  '/Users/cwhite/Library/Application Support/ForkLift'
