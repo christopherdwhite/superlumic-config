@@ -19,7 +19,7 @@
 - name: Include base vars from variable files
   include_vars: {{ item }}
   with_items:
-    - 'app-store.yml'
+    - "{{ app-store.yml }}"
 
 # Homebrew Taps
 - homebrew_tap:
