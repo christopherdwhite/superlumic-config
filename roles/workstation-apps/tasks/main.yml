@@ -17,10 +17,9 @@
     - { file: 'preferences.yml', name: 'preferences' } # application sync variable file
 
 - name: Include base vars from variable files
-  include_vars: 'app-store.yml'
-
-- name: print local $path
-  debug: msg="{{ mas_installed_apps }}"
+  include_vars: {{ item }}
+  with_items:
+    - 'app-store.yml'
 
 # Homebrew Taps
 - homebrew_tap:
