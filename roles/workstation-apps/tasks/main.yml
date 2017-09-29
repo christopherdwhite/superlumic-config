@@ -9,7 +9,7 @@
 - name: Include vars from casks.yml as {{ casks }}
   include_vars:
     file: "{{ item.file }}"
-    name: "{{ item.name }}"
+    name: "{{ item.name | default(omit) }}"
   with_items:
     - { file: 'casks.yml', name: 'casks' } # homebrew casks variable file
     - { file: 'homebrew.yml', name: 'homebrew' } # homebrew variable file
