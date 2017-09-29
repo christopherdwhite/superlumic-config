@@ -16,8 +16,8 @@
     - { file: 'sync.yml', name: 'sync' } # application sync variable file
     - { file: 'preferences.yml', name: 'preferences' } # application sync variable file
 
-- name: print mas_installed_apps
-  debug: msg="{{ mas_installed_apps }}"
+# - name: print mas_installed_apps
+#   debug: msg="{{ mas_installed_apps }}"
 
 # Homebrew Taps
 - homebrew_tap:
