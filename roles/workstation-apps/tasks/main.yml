@@ -13,9 +13,14 @@
   with_items:
     - { file: 'casks.yml', name: 'casks' } # homebrew casks variable file
     - { file: 'homebrew.yml', name: 'homebrew' } # homebrew variable file
-    - { file: 'app-store.yml' }
     - { file: 'sync.yml', name: 'sync' } # application sync variable file
     - { file: 'preferences.yml', name: 'preferences' } # application sync variable file
+
+- name: Include base vars from variable files
+  include_vars:
+    file: "{{ item }}"
+  with_items:
+    - 'app-store.yml'
 
 # Homebrew Taps
 - homebrew_tap:
