@@ -18,6 +18,9 @@ mas_signin_dialog: no # If no email and password prompt for signin
 
 mas_installed_apps:
 
+  ## Dev
+  - { id: 497799835, name: "Xcode" }
+
   ## Web
   - { id: 1107421413, name: "1Blocker" }
 
