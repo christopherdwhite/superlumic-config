@@ -6,11 +6,20 @@
 #
 symlinks:
 
-## Symlinks: Utilities
+## Symlinks: Productivity
 
-### Symlinks: Utilities: 1Password
+### Symlinks: Productivity: 1Password
+- path:  '/Users/cwhite/Library/Containers/net.shinyfrog.bear/Data/Library/Preferences/'
+  state: 'directory'
+- src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Bear/Containers/net.shinyfrog.bear/Data/Library/Preferences/net.shinyfrog.bear.plist'
+  path:  '/Users/cwhite/Library/Containers/net.shinyfrog.bear/Data/Library/Preferences/net.shinyfrog.bear.plist'
+
+### Symlinks: Productivity: Bear
 - src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/1Password/Preferences/com.agilebits.onepassword4.plist'
   path:  '/Users/cwhite/Library/Preferences/com.agilebits.onepassword4.plist'
+
+
+## Symlinks: Utilities
 
 ### Symlinks: Utilities: Alfred
 - path:  '/Users/cwhite/Library/Application Support/Alfred 3/Databases'
