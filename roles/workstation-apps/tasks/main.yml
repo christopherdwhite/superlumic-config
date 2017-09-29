@@ -19,6 +19,9 @@
 - name: Include base vars from variable files
   include_vars: "{{ app-store.yml }}"
 
+- name: print local $path
+  debug: msg="{{ mas_installed_apps }}"
+
 # Homebrew Taps
 - homebrew_tap:
     name: caskroom/versions
