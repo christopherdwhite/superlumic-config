@@ -24,22 +24,22 @@
 #     - { name: "apps-atom" }
 #     - { name: "workstation-preferences" }
 
-- name: Include workstations-source role
-  include_role:
-    name: workstation-source
+# - name: Include workstations-source role
+#   include_role:
+#     name: workstation-source
 
-- name: Include workstation-dotfiles role
-  include_role:
-    name: workstation-dotfiles
+# - name: Include workstation-dotfiles role
+#   include_role:
+#     name: workstation-dotfiles
 
 - name: Include workstation-apps role
   include_role:
     name: workstation-apps
 
-- name: Include apps-atom role
-  include_role:
-    name: apps-atom
+# - name: Include apps-atom role
+#   include_role:
+#     name: apps-atom
 
-- name: Include workstation-preferences role
-  include_role:
-    name: workstation-preferences
+# - name: Include workstation-preferences role
+#   include_role:
+#     name: workstation-preferences
