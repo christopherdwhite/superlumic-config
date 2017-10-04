@@ -9,7 +9,7 @@ casks:
 
   # Design
   # - sketch
-
+ 
   # General Development Apps
   ## IDEs & Code Editors
   - atom
@@ -29,6 +29,7 @@ casks:
 
   ## Devops
   - docker
+  - vagrant
 
   ## Testing
   - firefoxdeveloperedition

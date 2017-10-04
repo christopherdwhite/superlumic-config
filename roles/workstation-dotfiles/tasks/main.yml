@@ -7,7 +7,7 @@
 
 # clone dotfiles repo
 - git:
-    repo: 'git@gitlab.com:csystems/dotfiles.git'
+    repo: 'git@github.com:christopherdwhite/dotfiles.git'
     dest: '~/Source/csystems/dotfiles'
     clone: yes
     update: no

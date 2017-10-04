@@ -8,13 +8,17 @@ symlinks:
 
 ## Symlinks: Productivity
 
-### Symlinks: Productivity: 1Password
-- path:  '/Users/cwhite/Library/Containers/net.shinyfrog.bear/Data/Library/Preferences/'
-  state: 'directory'
-- src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Bear/Containers/net.shinyfrog.bear/Data/Library/Preferences/net.shinyfrog.bear.plist'
-  path:  '/Users/cwhite/Library/Containers/net.shinyfrog.bear/Data/Library/Preferences/net.shinyfrog.bear.plist'
-
 ### Symlinks: Productivity: Bear
+#
+# It seems that Bear's preference needs to be symlinked from ~/Library into iCloud or it fails to load and set Preferences.
+# I'm not yet sure how to handle this yet, I could copy the file from iCloud to ~/Library and then symlink it back into place but not sure how to handle the idempotence.
+#
+# - path:  '/Users/cwhite/Library/Containers/net.shinyfrog.bear/Data/Library/Preferences/'
+#   state: 'directory'
+# - src:   '/Users/cwhite/Library/Containers/net.shinyfrog.bear/Data/Library/Preferences/net.shinyfrog.bear.plist'
+#   path:  '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/Bear/Containers/net.shinyfrog.bear/Data/Library/Preferences/net.shinyfrog.bear.plist'
+
+### Symlinks: Productivity: 1Password
 - src:   '/Users/cwhite/Library/Mobile Documents/com~apple~CloudDocs/Application Sync/1Password/Preferences/com.agilebits.onepassword4.plist'
   path:  '/Users/cwhite/Library/Preferences/com.agilebits.onepassword4.plist'
 
